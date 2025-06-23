@@ -1,0 +1,246 @@
+{
+	Tools = ordered() {
+		MaskTransitionIn1 = GroupOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = ordered() {
+				Input1 = InstanceInput {
+					SourceOp = "Transform1_4",
+					Source = "Input",
+				}
+			},
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "CustomTool2",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 66.8834, 201.034 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 334.973, 183.004, 167.486, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { -56.9834, -147.877 }
+			},
+			Tools = ordered() {
+				Transform1_4 = Transform {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path1_2",
+							Source = "Position",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 65.5615, 273.154 } },
+				},
+				Background3 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 524, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -47.503, 232.979 } },
+				},
+				Rectangle1_6 = RectangleMask {
+					CtrlWShown = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 1, },
+						Height = Input {
+							SourceOp = "Rectangle1_6Height",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 169.532, 233.445 } },
+				},
+				Merge14 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_6",
+							Source = "Mask",
+						},
+						Blend = Input {
+							SourceOp = "Merge14Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Background3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1_4",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 66.2795, 233.554 } },
+				},
+				TimeStretcher2 = TimeStretcher {
+					CtrlWShown = false,
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher2SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge14",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 66.2795, 200.554 } },
+				},
+				CustomTool2 = Custom {
+					CtrlWShown = false,
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool2LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool2LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool2LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool2LUTIn4",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool2Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 89.2199, 156.513 } },
+				}
+			},
+		},
+		Path1_2 = PolyPath {
+			DrawMode = "InsertAndModify",
+			CtrlWZoom = false,
+			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path1_2Displacement",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = -1.013, Y = 0, RX = 0.337666666666667, RY = 0 },
+							{ Linear = true, LockY = true, X = 0, Y = 0, LX = -0.337666666666667, LY = 0 }
+						}
+					},
+				}
+			},
+		},
+		Path1_2Displacement = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CtrlWZoom = false,
+			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+			KeyFrames = {
+				[0] = { 0, RH = { 0.66, 0.777999999999998 }, Flags = { LockedY = true } },
+				[5] = { 1, LH = { 1.085, 0.919999999999999 }, Flags = { LockedY = true } }
+			}
+		},
+		Rectangle1_6Height = BezierSpline {
+			SplineColor = { Red = 0, Green = 255, Blue = 255 },
+			CtrlWZoom = false,
+			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+			KeyFrames = {
+				[5] = { 0.047, RH = { 6.666665, 1 }, Flags = { Linear = true } },
+				[10] = { 1, LH = { 8.333335, 1 } }
+			}
+		},
+		Merge14Blend = BezierSpline {
+			SplineColor = { Red = 205, Green = 205, Blue = 205 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[10] = { 1, Flags = { Linear = true } }
+			}
+		},
+		TimeStretcher2SourceTime = BezierSpline {
+			SplineColor = { Red = 233, Green = 217, Blue = 243 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.33333333333333, 3.33333333333333 }, Flags = { Linear = true } },
+				[10] = { 10, LH = { 6.66666666666667, 6.66666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		CustomTool2LUTIn1 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn2 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn3 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn4 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2Setup1 = BezierSpline {
+			SplineColor = { Red = 225, Green = 244, Blue = 193 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.33333333333333, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+					} },
+				[10] = { 1, LH = { 6.66666666666667, 0.666666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+					} }
+			}
+		}
+	},
+	ActiveTool = "MaskTransitionIn1"
+}

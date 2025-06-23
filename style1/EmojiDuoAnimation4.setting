@@ -1,0 +1,1982 @@
+{
+	Tools = ordered() {
+		EmojiDuoAnimation4 = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "CustomTool1",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "TimeStretcher1SourceTime",
+					Source = "Value",
+				},
+				Output2 = InstanceOutput {
+					SourceOp = "Path2",
+					Source = "Heading",
+				},
+				Output3 = InstanceOutput {
+					SourceOp = "Path4",
+					Source = "Heading",
+				},
+				Output4 = InstanceOutput {
+					SourceOp = "Path4Displacement",
+					Source = "Value",
+				},
+				Output5 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				},
+				Output6 = InstanceOutput {
+					SourceOp = "Path3",
+					Source = "Heading",
+				},
+				Output7 = InstanceOutput {
+					SourceOp = "Path3Displacement",
+					Source = "Value",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				CustomTool1 = Custom {
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn11",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn21",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn31",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn41",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool1Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1336.85, 263.995 } },
+				},
+				CustomTool1LUTIn11 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn21 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn31 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn41 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1Setup1 = BezierSpline {
+					SplineColor = { Red = 225, Green = 244, Blue = 193 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.33333333333333, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[10] = { 1, LH = { 6.66666666666667, 0.666666666666667 }, RH = { 16.6666666666667, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+								Value = "Icon1"
+							} },
+						[30] = { 2, LH = { 23.3333333333333, 1.66666666666667 }, RH = { 35, 2.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+								Value = "Icon2"
+							} },
+						[45] = { 3, LH = { 40, 2.66666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} }
+					}
+				},
+				TimeStretcher1 = TimeStretcher {
+					CtrlWZoom = false,
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher1SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1359.68, 313.292 } },
+				},
+				TimeStretcher1SourceTime = BezierSpline {
+					SplineColor = { Red = 233, Green = 217, Blue = 243 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 15, 15 }, Flags = { Linear = true } },
+						[45] = { 45, LH = { 30, 30 }, Flags = { Linear = true } }
+					}
+				},
+				Merge5 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform4",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -1359.68, 346.292 } },
+				},
+				Merge4 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge4Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform3",
+							Source = "Output",
+						},
+						Center = Input {
+							SourceOp = "Path2",
+							Source = "Position",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -1361.23, 399.479 } },
+				},
+				Merge4Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[5] = { 0, RH = { 6.66666666666667, 0 } },
+						[10] = { 1, LH = { 8.33333333333333, 1 } }
+					}
+				},
+				Path2 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path2Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = -0.738, Y = 0, RX = 0.246, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = -0.246, LY = -0 }
+								}
+							},
+						}
+					},
+				},
+				Path2Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[5] = { 0, RH = { 5.9, 0.94 }, Flags = { LockedY = true } },
+						[10] = { 1, LH = { 8.33333333333333, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Merge2 = Merge {
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge2Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -1358.49, 469.532 } },
+				},
+				Merge2Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[35] = { 1, RH = { 36.1, 0.24 } },
+						[40] = { 0, LH = { 38.3333333333333, 0 } }
+					}
+				},
+				Transform1 = Transform {
+					Inputs = {
+						Size = Input { Value = 0.4, },
+						Input = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1358.62, 517.531 } },
+				},
+				Transform3 = Transform {
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path4",
+							Source = "Position",
+						},
+						Size = Input { Value = 0.065, },
+						Input = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1478.89, 399.193 } },
+				},
+				Path4 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path4Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0.00460687960687955, RX = 0.0556512691048035, RY = 0 },
+									{ Linear = true, LockY = true, X = 0.166953807314411, Y = 0.00460687960687955, LX = -0.0556512691048035, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path4Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[18] = { 0, RH = { 19.48, 0.89 }, Flags = { LockedY = true } },
+						[25] = { 1, LH = { 22.6666666666667, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform2 = Transform {
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						Size = Input {
+							SourceOp = "Transform2Size",
+							Source = "Value",
+						},
+						Angle = Input {
+							SourceOp = "Transform2Angle",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1474.61, 469.246 } },
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0.0103626501091705, Y = -0.0207309582309584, RX = 0.0049894241266375, RY = 0.0264895577395579 },
+									{ Linear = true, LockY = true, X = 0.025330922489083, Y = 0.0587377149877153, LX = -0.0049894241266375, LY = -0.0264895577395579, RX = 0, RY = 0.0260000950040949 },
+									{ Linear = true, LockY = true, X = 0.025330922489083, Y = 0.136738, LX = 0, LY = -0.0260000950040949, RX = 0, RY = 0 },
+									{ Linear = true, LockY = true, X = 0.025330922489083, Y = 0.136738, LX = 0, LY = 0, RX = 0, RY = -0.0260000950041 },
+									{ Linear = true, LockY = true, X = 0.025330922489083, Y = 0.0587377149877, LX = 0, LY = 0.0260000950041, RX = -0.00997884825327503, RY = -0.0265838525798477 },
+									{ Linear = true, LockY = true, X = -0.00460562227074213, Y = -0.021013842751843, LX = 0.00997884825327503, LY = 0.0265838525798477 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.74729291461361, 0.20718233410057 }, Flags = { LockedY = true } },
+						[9.7034] = { 0.250996107162804, LH = { 6.38428740032004, 0.248739990367856 }, RH = { 9.80347386384572, 0.251064162918973 } },
+						[10] = { 0.251096457141697, LH = { 9.92467000917741, 0.258911430678083 }, RH = { 11.87, 0.478070063539092 }, Flags = { LockedY = true } },
+						[17] = { 0.493294431293203, LH = { 14.57, 0.478070063539092 }, RH = { 19.6666666666667, 0.493294431293203 }, Flags = { LockedY = true } },
+						[25] = { 0.493294431293203, LH = { 22.3333333333333, 0.493294431293203 }, RH = { 25.72, 0.709356649863735 }, Flags = { Linear = true, LockedY = true } },
+						[30] = { 0.735492405444756, LH = { 27.33, 0.755469737752526 }, RH = { 30.1373666666667, 0.742759215323707 }, Flags = { LockedY = true } },
+						[30.4121] = { 0.757292835081608, LH = { 30.2747333333333, 0.750026025202657 }, RH = { 31.13, 1.01056502402699 }, Flags = { Linear = true } },
+						[35] = { 1, LH = { 33.4707, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform2Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 157 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0.13, RH = { 2.26, 0.318 } },
+						[10] = { 0.33, LH = { 6.66666666666667, 0.33 }, RH = { 16.6666666666667, 0.33 } },
+						[30] = { 0.33, LH = { 23.3333333333333, 0.33 }, RH = { 31.4, 0.02 }, Flags = { Linear = true } },
+						[35] = { 0.12, LH = { 33.3333333333333, 0.12 } }
+					}
+				},
+				Transform2Angle = BezierSpline {
+					SplineColor = { Red = 14, Green = 221, Blue = 144 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.43992123138497, 98.3839206203617 } },
+						[9.8377] = { 124.98020111905, LH = { 6.53179268555541, 124.172372465971 }, RH = { 9.89203850855221, 124.993470718597 } },
+						[10] = { 125, LH = { 9.94872599687093, 125.84602105163 }, RH = { 12, 92 } },
+						[17] = { 91.1, LH = { 14.6666666666667, 91.1 }, RH = { 19.6666666666667, 91.1 } },
+						[25] = { 91.1, LH = { 22.3333333333333, 91.1 }, RH = { 25.9, 128 }, Flags = { Linear = true } },
+						[30] = { 125, LH = { 28, 130 }, RH = { 30.1490979267351, 124.627255183162 } },
+						[30.4473] = { 117.185662615726, LH = { 30.4158915515882, 122.957340744604 }, RH = { 30.6893079169465, 72.7156185922074 } },
+						[35] = { -40, LH = { 30.6, -46 } }
+					}
+				},
+				Background2 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							SourceOp = "Background2TopLeftRed",
+							Source = "Value",
+						},
+						TopLeftGreen = Input {
+							SourceOp = "Background2TopLeftGreen",
+							Source = "Value",
+						},
+						TopLeftBlue = Input {
+							SourceOp = "Background2TopLeftBlue",
+							Source = "Value",
+						},
+						TopLeftAlpha = Input {
+							SourceOp = "Background2TopLeftAlpha",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1358.74, 560.34 } },
+				},
+				Background2TopLeftRed = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 1.88, -0.25 } },
+						[10] = { 0, LH = { 6.66666666666667, 0 }, RH = { 16.6666666666667, 0 } },
+						[30] = { 0, LH = { 23.3333333333333, 0 }, RH = { 31.6666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+						[35] = { 1, LH = { 33.3333333333333, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftGreen = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 0 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 2.58, -0.31 } },
+						[10] = { 0, LH = { 6.66666666666667, 0 }, RH = { 16.6666666666667, 0 } },
+						[30] = { 0, LH = { 23.3333333333333, 0 }, RH = { 31.6666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+						[35] = { 1, LH = { 33.3333333333333, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftBlue = BezierSpline {
+					SplineColor = { Red = 0, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 2.42, -0.26 } },
+						[10] = { 0, LH = { 6.66666666666667, 0 }, RH = { 16.6666666666667, 0 } },
+						[30] = { 0, LH = { 23.3333333333333, 0 }, RH = { 31.6666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+						[35] = { 1, LH = { 33.3333333333333, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftAlpha = BezierSpline {
+					SplineColor = { Red = 180, Green = 180, Blue = 180 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 2.5, -0.3 } },
+						[10] = { 0, LH = { 6.66666666666667, 0 }, RH = { 16.6666666666667, 0 } },
+						[30] = { 0, LH = { 23.3333333333333, 0 }, Flags = { Linear = true } }
+					}
+				},
+				Transform4 = Transform {
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path3",
+							Source = "Position",
+						},
+						Size = Input {
+							SourceOp = "Transform4Size",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1482.78, 343.129 } },
+				},
+				Path3 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path3Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = -0.15, Y = 0.00575859950860003, RX = 0.05, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.00575859950860003, LX = -0.05, LY = 0, RX = 0, RY = -1.85037170770859e-16 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.00575859950859947, LX = 0, LY = 1.85037170770859e-16 }
+								}
+							},
+						}
+					},
+				},
+				Path3Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[18] = { 0, RH = { 20, 1.07 }, Flags = { LockedY = true } },
+						[25] = { 1, LH = { 22.6666666666667, 1 }, RH = { 26.6666666666667, 1 }, Flags = { LockedY = true } },
+						[30] = { 1, LH = { 28.3333333333333, 1 }, Flags = { Linear = true, LockedY = true } }
+					}
+				},
+				Transform4Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 157 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[25] = { 0.04, RH = { 26.02, 0.0656999999999999 } },
+						[30] = { 0.065, LH = { 28.3333333333333, 0.065 } }
+					}
+				},
+				Ellipse1 = EllipseMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -1358.74, 602.582 } },
+				},
+				Icon1 = GroupOperator {
+					NameSet = true,
+					CustomData = {
+						metadata = {
+							lastModified = "Mon May 19 09:28:21 2025",
+							GroupID = "Icon1",
+							ID = "",
+							Description = "",
+							Filled = false
+						}
+					},
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background6",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background6",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background6",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { -1596.03, 397.896 } },
+					Tools = ordered() {
+						line3 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.319444444444444, Y = 0, LX = 0, LY = 0.176424295084837, RX = 0, RY = -0.176424295084837 },
+											{ X = 0, Y = -0.319444444444444, LX = 0.176424295084837, LY = 0, RX = -0.176424295084837, RY = 0 },
+											{ X = -0.319444444444444, Y = 0, LX = 0, LY = -0.176424295084837, RX = -5.55111512312578e-17, RY = 0.176424295084837 },
+											{ X = -1.11022302462516e-16, Y = 0.319444444444444, LX = -0.176424295084837, LY = 0, RX = 0.176424295084837, RY = 5.55111512312578e-17 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 8.25757 } },
+						},
+						line11 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line3",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.235083333333333, Y = 0.0776763888888889, LX = 0.00730833333333331, LY = 0.0635416666666666, RX = 0, RY = 0 },
+											{ X = -0.139794444444444, Y = -0.0323027777777778, LX = -0.108525, LY = -0.00878194444444447, RX = 0.0363847222222223, RY = 0.00294444444444453 },
+											{ X = -0.0305305555555556, Y = 0.0835680555555556, LX = -0.000702777777777719, LY = -0.106833333333333, RX = 6.38888888889189e-05, RY = 0.00969305555555555 },
+											{ X = -0.0417916666666667, Y = 0.120093055555556, LX = 0.0111527777777777, LY = -0.0143180555555555, RX = -0.0147875, RY = 0.0189847222222223 },
+											{ X = -0.179911111111111, Y = 0.139843055555556, LX = 0.0885138888888889, LY = 0.00762638888888884, RX = 1.38888888889799e-06, RY = -1.38888888889799e-06 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 41.2576 } },
+						},
+						line21 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line11",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ Linear = true, X = -0.234101388888889, Y = 0.0850805555555556, RX = -0.00200462962962966, RY = 0.0156078703703704 },
+											{ Linear = true, X = -0.240115277777778, Y = 0.131904166666667, LX = 0.00200462962962961, LY = -0.0156078703703703, RX = 0.0177449074074074, RY = 0.00244305555555557 },
+											{ Linear = true, X = -0.186880555555556, Y = 0.139233333333333, LX = -0.0177449074074074, LY = -0.00244305555555552 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 74.2576 } },
+						},
+						line31 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line21",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.235173611111111, Y = 0.0776763888888889, LX = -0.00730694444444446, LY = 0.0635416666666666, RX = 0, RY = 0 },
+											{ X = 0.139884722222222, Y = -0.0323027777777778, LX = 0.108525, LY = -0.00878194444444447, RX = -0.0363847222222222, RY = 0.00294444444444453 },
+											{ X = 0.0306208333333333, Y = 0.0835680555555556, LX = 0.000702777777777719, LY = -0.106833333333333, RX = -6.38888888888633e-05, RY = 0.00969305555555555 },
+											{ X = 0.0418819444444445, Y = 0.120093055555556, LX = -0.0111527777777778, LY = -0.0143180555555555, RX = 0.0147875, RY = 0.0189847222222223 },
+											{ X = 0.180001388888889, Y = 0.139843055555556, LX = -0.0885138888888889, LY = 0.00762638888888884, RX = -1.11022302462516e-16, RY = -1.38888888889799e-06 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 107.258 } },
+						},
+						line4 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line31",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.059775, Y = 0.133898611111111, RX = 0, RY = 0 },
+											{ X = 0.0604597222222222, Y = 0.133898611111111, LX = -0.0629555555555555, LY = -0.0351930555555555 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 140.258 } },
+						},
+						line5 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line4",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.030525, Y = 0.0658138888888889, RX = 0, RY = 0 },
+											{ X = 0.03035, Y = 0.0658138888888889, LX = -0.0313263888888889, LY = 0.0520958333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 173.258 } },
+						},
+						line6 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line5",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ Linear = true, X = 0.2341, Y = 0.0850458333333334, RX = 0.00200509259259263, RY = 0.0156078703703703 },
+											{ Linear = true, X = 0.240115277777778, Y = 0.131869444444444, LX = -0.00200509259259252, LY = -0.0156078703703703, RX = -0.0177449074074074, RY = 0.00244305555555557 },
+											{ Linear = true, X = 0.186880555555555, Y = 0.139198611111111, LX = 0.0177449074074074, LY = -0.00244305555555557 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 206.258 } },
+						},
+						line7 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line6",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.0257458333333334, Y = 0.0837416666666667, RX = 0, RY = 0 },
+											{ X = 0.0256263888888888, Y = 0.0837416666666667, LX = -0.0264361111111111, LY = 0.0520958333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 239.258 } },
+						},
+						line8 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line7",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.0535638888888889, Y = -0.157975, RX = -0.00391666666666668, RY = -0.023936111111111 },
+											{ X = 0, Y = -0.222419444444444, LX = -0.0595972222222222, LY = -0.0117819444444445, RX = 0, RY = 0.0202300925925926 },
+											{ Linear = true, X = 0, Y = -0.161729166666667, LX = 0, LY = -0.0202300925925927 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 272.258 } },
+						},
+						line9 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line8",
+									Source = "Mask",
+								},
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.0833333333333334, Y = 0.0694444444444445, LX = 0, LY = 0, RX = 0, RY = -0.0230111111111111 },
+											{ X = -0.125, Y = 0.0277777777777778, LX = 0.0229888888888889, LY = 0, RX = -0.0229902777777778, RY = 0 },
+											{ X = -0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = -0.0230097222222223, RX = 0, RY = 0.0229888888888889 },
+											{ X = -0.125, Y = 0.111111111111111, LX = -0.0229902777777778, LY = 0, RX = 0.0229888888888889, RY = 0 },
+											{ X = -0.0833333333333334, Y = 0.0694444444444445, LX = 0, LY = 0.0229888888888889, RX = 0, RY = 0 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 305.258 } },
+						},
+						line10 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line9",
+									Source = "Mask",
+								},
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = 0, RX = 0, RY = -0.0230111111111111 },
+											{ X = 0.125, Y = 0.0277777777777778, LX = 0.0229902777777777, LY = 0, RX = -0.0229902777777777, RY = 0 },
+											{ X = 0.0833333333333333, Y = 0.0694444444444445, LX = 0, LY = -0.0230097222222223, RX = 0, RY = 0.0229888888888889 },
+											{ X = 0.125, Y = 0.111111111111111, LX = -0.0229902777777777, LY = 0, RX = 0.0229902777777777, RY = 0 },
+											{ X = 0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = 0.0229888888888889, RX = 0, RY = 0 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 338.258 } },
+						},
+						line111 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line10",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = 0.0535638888888889, Y = -0.157975, RX = 0.00391666666666657, RY = -0.023936111111111 },
+											{ X = 0, Y = -0.222419444444444, LX = 0.0595972222222222, LY = -0.0117819444444445, RX = 0, RY = 0.0202300925925926 },
+											{ Linear = true, X = 0, Y = -0.161729166666667, LX = 0, LY = -0.0202300925925927 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 371.258 } },
+						},
+						line12 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line111",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = 0.136316666666667, Y = -0.122298611111111, RX = -0.0913055555555555, RY = -0.0489555555555555 },
+											{ X = -0.136315277777778, Y = -0.122298611111111, LX = 0.0775569444444444, LY = -0.0508000000000001 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 404.258 } },
+						},
+						Background5 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line12",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 437.258 } },
+						},
+						Background6 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 8.25757 } },
+						},
+						Merge3 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background6",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background5",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 41.2576 } },
+						}
+					},
+					UserControls = ordered() {
+						Color = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Color"
+						},
+						BackgroundNest = BeginNest {
+							LINKS_Name = "Background",
+							ICS_ControlPage = "Color",
+						},
+						Red = InstanceInput {
+							SourceOp = "Background6",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background6",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background6",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background6",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftAlpha",
+						},
+						EndBackgroundNest = EndNest {
+						},
+						Image = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Image"
+						},
+						ImageNest = BeginNest {
+							LINKS_Name = "Image",
+							ICS_ControlPage = "Image",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background6",
+							ICS_ControlPage = "Image",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background6",
+							ICS_ControlPage = "Image",
+							Source = "Width",
+							INP_Default = 4096,
+						},
+						Height = InstanceInput {
+							SourceOp = "Background6",
+							ICS_ControlPage = "Image",
+							Source = "Height",
+							INP_Default = 4096,
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background6",
+							ICS_ControlPage = "Image",
+							Source = "Depth",
+						},
+						EndImageNest = EndNest {
+						}
+					}
+				},
+				Icon2 = GroupOperator {
+					NameSet = true,
+					CustomData = {
+						metadata = {
+							GroupID = "Icon2",
+							Description = "",
+							Filled = false,
+							lastModified = "Mon May 19 09:28:04 2025",
+							ID = ""
+						}
+					},
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { -1592.78, 344.426 } },
+					Tools = ordered() {
+						line3_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.319444444444444, Y = 0, LX = 0, LY = 0.176424295084837, RX = 0, RY = -0.176424295084837 },
+											{ X = 0, Y = -0.319444444444444, LX = 0.176424295084837, LY = 0, RX = -0.176424295084837, RY = 0 },
+											{ X = -0.319444444444444, Y = 0, LX = 0, LY = -0.176424295084837, RX = -5.55111512312578e-17, RY = 0.176424295084837 },
+											{ X = -1.11022302462516e-16, Y = 0.319444444444444, LX = -0.176424295084837, LY = 0, RX = 0.176424295084837, RY = 5.55111512312578e-17 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 8.25757 } },
+						},
+						line11_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line3_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.235083333333333, Y = 0.0776763888888889, LX = 0.00730833333333331, LY = 0.0635416666666666, RX = 0, RY = 0 },
+											{ X = -0.139794444444444, Y = -0.0323027777777778, LX = -0.108525, LY = -0.00878194444444447, RX = 0.0363847222222223, RY = 0.00294444444444453 },
+											{ X = -0.0305305555555556, Y = 0.0835680555555556, LX = -0.000702777777777719, LY = -0.106833333333333, RX = 6.38888888889189e-05, RY = 0.00969305555555555 },
+											{ X = -0.0417916666666667, Y = 0.120093055555556, LX = 0.0111527777777777, LY = -0.0143180555555555, RX = -0.0147875, RY = 0.0189847222222223 },
+											{ X = -0.179911111111111, Y = 0.139843055555556, LX = 0.0885138888888889, LY = 0.00762638888888884, RX = 1.38888888889799e-06, RY = -1.38888888889799e-06 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 41.2576 } },
+						},
+						line21_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line11_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ Linear = true, X = -0.234101388888889, Y = 0.0850805555555556, RX = -0.00200462962962966, RY = 0.0156078703703704 },
+											{ Linear = true, X = -0.240115277777778, Y = 0.131904166666667, LX = 0.00200462962962961, LY = -0.0156078703703703, RX = 0.0177449074074074, RY = 0.00244305555555557 },
+											{ Linear = true, X = -0.186880555555556, Y = 0.139233333333333, LX = -0.0177449074074074, LY = -0.00244305555555552 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 74.2576 } },
+						},
+						line31_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line21_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.235173611111111, Y = 0.0776763888888889, LX = -0.00730694444444446, LY = 0.0635416666666666, RX = 0, RY = 0 },
+											{ X = 0.139884722222222, Y = -0.0323027777777778, LX = 0.108525, LY = -0.00878194444444447, RX = -0.0363847222222222, RY = 0.00294444444444453 },
+											{ X = 0.0306208333333333, Y = 0.0835680555555556, LX = 0.000702777777777719, LY = -0.106833333333333, RX = -6.38888888888633e-05, RY = 0.00969305555555555 },
+											{ X = 0.0418819444444445, Y = 0.120093055555556, LX = -0.0111527777777778, LY = -0.0143180555555555, RX = 0.0147875, RY = 0.0189847222222223 },
+											{ X = 0.180001388888889, Y = 0.139843055555556, LX = -0.0885138888888889, LY = 0.00762638888888884, RX = -1.11022302462516e-16, RY = -1.38888888889799e-06 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 107.258 } },
+						},
+						line4_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line31_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.059775, Y = 0.133898611111111, RX = 0, RY = 0 },
+											{ X = 0.0604597222222222, Y = 0.133898611111111, LX = -0.0629555555555555, LY = -0.0351930555555555 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 140.258 } },
+						},
+						line5_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line4_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.030525, Y = 0.0658138888888889, RX = 0, RY = 0 },
+											{ X = 0.03035, Y = 0.0658138888888889, LX = -0.0313263888888889, LY = 0.0520958333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 173.258 } },
+						},
+						line6_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line5_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ Linear = true, X = 0.2341, Y = 0.0850458333333334, RX = 0.00200509259259263, RY = 0.0156078703703703 },
+											{ Linear = true, X = 0.240115277777778, Y = 0.131869444444444, LX = -0.00200509259259252, LY = -0.0156078703703703, RX = -0.0177449074074074, RY = 0.00244305555555557 },
+											{ Linear = true, X = 0.186880555555555, Y = 0.139198611111111, LX = 0.0177449074074074, LY = -0.00244305555555557 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 206.258 } },
+						},
+						line7_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line6_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.0257458333333334, Y = 0.0837416666666667, RX = 0, RY = 0 },
+											{ X = 0.0256263888888888, Y = 0.0837416666666667, LX = -0.0264361111111111, LY = 0.0520958333333333 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 239.258 } },
+						},
+						line8_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line7_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = -0.0535638888888889, Y = -0.157975, RX = -0.00391666666666668, RY = -0.023936111111111 },
+											{ X = 0, Y = -0.222419444444444, LX = -0.0595972222222222, LY = -0.0117819444444445, RX = 0, RY = 0.0202300925925926 },
+											{ Linear = true, X = 0, Y = -0.161729166666667, LX = 0, LY = -0.0202300925925927 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 272.258 } },
+						},
+						line9_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line8_1",
+									Source = "Mask",
+								},
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = -0.0833333333333334, Y = 0.0694444444444445, LX = 0, LY = 0, RX = 0, RY = -0.0230111111111111 },
+											{ X = -0.125, Y = 0.0277777777777778, LX = 0.0229888888888889, LY = 0, RX = -0.0229902777777778, RY = 0 },
+											{ X = -0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = -0.0230097222222223, RX = 0, RY = 0.0229888888888889 },
+											{ X = -0.125, Y = 0.111111111111111, LX = -0.0229902777777778, LY = 0, RX = 0.0229888888888889, RY = 0 },
+											{ X = -0.0833333333333334, Y = 0.0694444444444445, LX = 0, LY = 0.0229888888888889, RX = 0, RY = 0 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 305.258 } },
+						},
+						line10_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line9_1",
+									Source = "Mask",
+								},
+								JoinStyle = Input { Value = 2, },
+								MiterLimit = Input { Value = 4, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = 0, RX = 0, RY = -0.0230111111111111 },
+											{ X = 0.125, Y = 0.0277777777777778, LX = 0.0229902777777777, LY = 0, RX = -0.0229902777777777, RY = 0 },
+											{ X = 0.0833333333333333, Y = 0.0694444444444445, LX = 0, LY = -0.0230097222222223, RX = 0, RY = 0.0229888888888889 },
+											{ X = 0.125, Y = 0.111111111111111, LX = -0.0229902777777777, LY = 0, RX = 0.0229902777777777, RY = 0 },
+											{ X = 0.166666666666667, Y = 0.0694444444444445, LX = 0, LY = 0.0229888888888889, RX = 0, RY = 0 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 338.258 } },
+						},
+						line111_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line10_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								JoinStyle = Input { Value = 2, },
+								CapStyle = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = 0.0535638888888889, Y = -0.157975, RX = 0.00391666666666657, RY = -0.023936111111111 },
+											{ X = 0, Y = -0.222419444444444, LX = 0.0595972222222222, LY = -0.0117819444444445, RX = 0, RY = 0.0202300925925926 },
+											{ Linear = true, X = 0, Y = -0.161729166666667, LX = 0, LY = -0.0202300925925927 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 371.258 } },
+						},
+						line12_1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line111_1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Points = {
+											{ X = 0.136316666666667, Y = -0.122298611111111, RX = -0.0913055555555555, RY = -0.0489555555555555 },
+											{ X = -0.136315277777778, Y = -0.122298611111111, LX = 0.0775569444444444, LY = -0.0508000000000001 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 404.258 } },
+						},
+						Background5_1 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line12_1",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 437.258 } },
+						},
+						Background6_1 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 8.25757 } },
+						},
+						Merge3_1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background6_1",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background5_1",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background6_1",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 41.2576 } },
+						}
+					},
+					UserControls = ordered() {
+						Color = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Color"
+						},
+						BackgroundNest = BeginNest {
+							ICS_ControlPage = "Color",
+							LINKS_Name = "Background",
+						},
+						Red = InstanceInput {
+							Source = "TopLeftRed",
+							ICS_ControlPage = "Color",
+							SourceOp = "Background6_1",
+							INP_Default = 0,
+						},
+						Green = InstanceInput {
+							Source = "TopLeftGreen",
+							ICS_ControlPage = "Color",
+							SourceOp = "Background6_1",
+							INP_Default = 0,
+						},
+						Blue = InstanceInput {
+							Source = "TopLeftBlue",
+							ICS_ControlPage = "Color",
+							SourceOp = "Background6_1",
+							INP_Default = 0,
+						},
+						Alpha = InstanceInput {
+							Source = "TopLeftAlpha",
+							ICS_ControlPage = "Color",
+							SourceOp = "Background6_1",
+							INP_Default = 0,
+						},
+						EndBackgroundNest = EndNest {
+						},
+						Image = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Image"
+						},
+						ImageNest = BeginNest {
+							ICS_ControlPage = "Image",
+							LINKS_Name = "Image",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "UseFrameFormatSettings",
+							ICS_ControlPage = "Image",
+						},
+						Width = InstanceInput {
+							Source = "Width",
+							ICS_ControlPage = "Image",
+							SourceOp = "Background6_1",
+							INP_Default = 4096,
+						},
+						Height = InstanceInput {
+							Source = "Height",
+							ICS_ControlPage = "Image",
+							SourceOp = "Background6_1",
+							INP_Default = 4096,
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background6_1",
+							Source = "Depth",
+							ICS_ControlPage = "Image",
+						},
+						EndImageNest = EndNest {
+						}
+					}
+				},
+				loupe = GroupOperator {
+					NameSet = true,
+					Inputs = ordered() {
+						Red = InstanceInput {
+							SourceOp = "Background4",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background4",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background4",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background4",
+							Source = "TopLeftAlpha",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background4",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background4",
+							Source = "Width",
+						},
+						Height = InstanceInput {
+							SourceOp = "Background4",
+							Source = "Height",
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background4",
+							Source = "Depth",
+						}
+					},
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Merge1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo { Pos = { -1587.47, 469.246 } },
+					Tools = ordered() {
+						line = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								BorderWidth = Input { Value = 0.0277777916667, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.0736673494444444, Y = 0.276959494722222, LX = -0.0672760316980805, LY = 0.0898885029664273, RX = 0.0672760316980805, RY = -0.0898885029664273 },
+											{ X = 0.0327238483333333, Y = -0.00761206861111119, LX = 0.0898885029664274, LY = 0.0672760316980804, RX = -0.0898885029664274, RY = -0.0672760316980805 },
+											{ X = -0.251847715, Y = 0.0333314324999999, LX = 0.0672760316980806, LY = -0.0898885029664273, RX = -0.0672760316980805, RY = 0.0898885029664273 },
+											{ X = -0.210904213888889, Y = 0.317902995833333, LX = -0.0898885029664274, LY = -0.0672760316980806, RX = 0.0898885029664274, RY = 0.0672760316980805 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 8.25758 } },
+						},
+						line1 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777916667, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ X = 0.035065086111111, Y = 0.248069456944444, LX = -0.0513201969728676, LY = 0.0685696757284343, RX = 0.0513201969728675, RY = -0.0685696757284342 },
+											{ X = 0.00383325388888889, Y = 0.0309904716666666, LX = 0.0685690616184749, LY = 0.0513197373492257, RX = -0.068569061618475, RY = -0.0513197373492258 },
+											{ X = -0.213245451666667, Y = 0.0622242480555555, LX = 0.0513201969728675, LY = -0.0685696757284342, RX = -0.0513201969728676, RY = 0.0685696757284342 },
+											{ X = -0.182013619444444, Y = 0.279303233333333, LX = -0.0685690616184749, LY = -0.0513197373492258, RX = 0.0685690616184749, RY = 0.0513197373492258 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 41.2576 } },
+						},
+						line2 = PolylineMask {
+							DrawMode = "ModifyOnly",
+							DrawMode2 = "InsertAndModify",
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line1",
+									Source = "Mask",
+								},
+								BorderWidth = Input { Value = 0.0277777777778, },
+								Solid = Input { Value = 0, },
+								MaskWidth = Input { Value = 320, },
+								MaskHeight = Input { Value = 240, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Polyline = Input {
+									Value = Polyline {
+										Closed = true,
+										Points = {
+											{ Linear = true, X = 0.0372291666666666, Y = -0.0803833333333333, LX = 0.0541324074074074, LY = -0.072324074074074, RX = 0.0193699074074074, RY = 0.0144981481481481 },
+											{ Linear = true, X = 0.0953388888888889, Y = -0.0368888888888889, LX = -0.0193699074074073, LY = -0.0144981481481481, RX = 0.0541328703703704, RY = -0.072324074074074 },
+											{ Linear = true, X = 0.2577375, Y = -0.253861111111111, LX = -0.0541328703703704, LY = 0.072324074074074, RX = 0.0116027777777777, RY = -0.0155027777777778 },
+											{ X = 0.249688888888889, Y = -0.303676388888889, LX = 0.0160458333333334, LY = 0.0120111111111111, RX = 0, RY = 0 },
+											{ Linear = true, X = 0.249688888888889, Y = -0.303676388888889, LX = 0, LY = 0, RX = -0.0160472222222222, RY = -0.0120097222222222 },
+											{ X = 0.199626388888889, Y = -0.297355555555555, LX = 0.0116027777777779, LY = -0.015501388888889, RX = -0.0541324074074074, RY = 0.072324074074074 }
+										}
+									},
+								},
+								Polyline2 = Input {
+									Value = Polyline {
+									},
+									Disabled = true,
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -55, 74.2576 } },
+						},
+						Background3 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								EffectMask = Input {
+									SourceOp = "line2",
+									Source = "Mask",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background4",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background4",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background4",
+									Source = "UseFrameFormatSettings",
+								},
+								Depth = InstanceInput {
+									SourceOp = "Background4",
+									Source = "Depth",
+								},
+								TopLeftRed = Input { Value = 1, },
+								TopLeftGreen = Input { Value = 1, },
+								TopLeftBlue = Input { Value = 1, }
+							},
+							ViewInfo = OperatorInfo { Pos = { -56.427, 107.258 } },
+						},
+						Background4 = Background {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								TopLeftAlpha = Input { Value = 0, }
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 8.25758 } },
+						},
+						Merge1 = Merge {
+							CtrlWShown = false,
+							Inputs = {
+								Background = Input {
+									SourceOp = "Background4",
+									Source = "Output",
+								},
+								Foreground = Input {
+									SourceOp = "Background3",
+									Source = "Output",
+								},
+								Width = InstanceInput {
+									SourceOp = "Background4",
+									Source = "Width",
+								},
+								Height = InstanceInput {
+									SourceOp = "Background4",
+									Source = "Height",
+								},
+								UseFrameFormatSettings = InstanceInput {
+									SourceOp = "Background4",
+									Source = "UseFrameFormatSettings",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 41.2576 } },
+						}
+					},
+					UserControls = ordered() {
+						Color = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Color"
+						},
+						BackgroundNest = BeginNest {
+							LINKS_Name = "Background",
+							ICS_ControlPage = "Color",
+						},
+						Red = InstanceInput {
+							SourceOp = "Background4",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftRed",
+						},
+						Green = InstanceInput {
+							SourceOp = "Background4",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftGreen",
+						},
+						Blue = InstanceInput {
+							SourceOp = "Background4",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftBlue",
+						},
+						Alpha = InstanceInput {
+							SourceOp = "Background4",
+							INP_Default = 0,
+							ICS_ControlPage = "Color",
+							Source = "TopLeftAlpha",
+						},
+						EndBackgroundNest = EndNest {
+						},
+						Image = ControlPage {
+							CTID_DIB_ID = "Icons.Tools.Tabs.Image"
+						},
+						ImageNest = BeginNest {
+							LINKS_Name = "Image",
+							ICS_ControlPage = "Image",
+						},
+						UseFrameFormatSettings = InstanceInput {
+							SourceOp = "Background4",
+							ICS_ControlPage = "Image",
+							Source = "UseFrameFormatSettings",
+						},
+						Width = InstanceInput {
+							SourceOp = "Background4",
+							ICS_ControlPage = "Image",
+							Source = "Width",
+							INP_Default = 4096,
+						},
+						Height = InstanceInput {
+							SourceOp = "Background4",
+							ICS_ControlPage = "Image",
+							Source = "Height",
+							INP_Default = 4096,
+						},
+						Depth = InstanceInput {
+							SourceOp = "Background4",
+							ICS_ControlPage = "Image",
+							Source = "Depth",
+						},
+						EndImageNest = EndNest {
+						}
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "EmojiDuoAnimation4"
+}

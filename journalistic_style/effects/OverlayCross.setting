@@ -1,0 +1,1187 @@
+{
+	Tools = ordered() {
+		OverlayCross = GroupOperator {
+			CtrlWZoom = false,
+			NameSet = true,
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "CustomTool1_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -506.197, 214.038 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 832.401, 281.856, 342.849, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { -95.7486, -179.109 }
+			},
+			Tools = ordered() {
+				Polygon3 = PolylineMask {
+					DrawMode = "InsertAndModify",
+					DrawMode2 = "InsertAndModify",
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input {
+							Value = 0.05,
+							Expression = "0.05 * max((AutoDomain2_1.Output.DataWindow[3] - AutoDomain2_1.Output.DataWindow[1])/ AutoDomain2_1.Output.Width, (AutoDomain2_1.Output.DataWindow[4] - AutoDomain2_1.Output.DataWindow[2])/  AutoDomain2_1.Output.Height)",
+						},
+						Solid = Input { Value = 0, },
+						WriteLength = Input {
+							SourceOp = "Polygon3Length",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							SourceOp = "Polygon3Polyline",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						Point0 = Input {
+							Value = { 1, 1 },
+							Expression = "Point(AutoDomain2_1.Output.DataWindow[3]/AutoDomain2_1.Output.Width, AutoDomain2_1.Output.DataWindow[4]/AutoDomain2_1.Output.Height)",
+						},
+						Point1 = Input {
+							Value = { 0, 0 },
+							Expression = "Point(AutoDomain2_1.Output.DataWindow[1]/AutoDomain2_1.Output.Width, AutoDomain2_1.Output.DataWindow[2]/AutoDomain2_1.Output.Height)",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -190.734, 209.979 } },
+				},
+				Background1_1_1_1 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 652, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 136.097, 209.336 } },
+				},
+				Merge6_1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background1_1_1_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Background2_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 136.146, 251.452 } },
+				},
+				Background2_1 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Resize1",
+							Source = "Output",
+						},
+						GlobalOut = Input { Value = 652, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							SourceOp = "Background2_1TopLeftRed",
+							Source = "Value",
+						},
+						TopLeftGreen = Input {
+							SourceOp = "Background2_1TopLeftGreen",
+							Source = "Value",
+						},
+						TopLeftBlue = Input {
+							SourceOp = "Background2_1TopLeftBlue",
+							Source = "Value",
+						},
+						TopLeftAlpha = Input {
+							SourceOp = "Background2_1TopLeftAlpha",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 19.7746, 253.027 } },
+				},
+				Resize1 = BetterResize {
+					Inputs = {
+						Width = Input {
+							Value = 800,
+							Expression = "AutoDomain2_1.Output.OriginalWidth\n",
+						},
+						Height = Input {
+							Value = 1249,
+							Expression = "AutoDomain2_1.Output.OriginalHeight",
+						},
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "Polygon3_1",
+							Source = "Mask",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -90.2252, 253.746 } },
+				},
+				Polygon3_1 = PolylineMask {
+					DrawMode = "InsertAndModify",
+					DrawMode2 = "InsertAndModify",
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Polygon3",
+							Source = "Mask",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input {
+							Value = 0.05,
+							Expression = "0.05 * max((AutoDomain2_1.Output.DataWindow[3] - AutoDomain2_1.Output.DataWindow[1])/ AutoDomain2_1.Output.Width, (AutoDomain2_1.Output.DataWindow[4] - AutoDomain2_1.Output.DataWindow[2])/  AutoDomain2_1.Output.Height)",
+						},
+						Solid = Input { Value = 0, },
+						WriteLength = Input {
+							SourceOp = "Polygon3_1Length",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Polyline = Input {
+							SourceOp = "Polygon3_1Polyline",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						},
+						Point0 = Input {
+							Value = { 0, 1 },
+							Expression = "Point(AutoDomain2_1.Output.DataWindow[1]/AutoDomain2_1.Output.Width, AutoDomain2_1.Output.DataWindow[4]/AutoDomain2_1.Output.Height)",
+						},
+						Point1 = Input {
+							Value = { 1, 0 },
+							Expression = "Point(AutoDomain2_1.Output.DataWindow[3]/AutoDomain2_1.Output.Width, AutoDomain2_1.Output.DataWindow[2]/AutoDomain2_1.Output.Height)",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -192.163, 253.746 } },
+				},
+				Glow3_1 = Glow {
+					Inputs = {
+						Blend = Input { Value = 0.2, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						XGlowSize = Input { Value = 33.9, },
+						Input = Input {
+							SourceOp = "Merge6_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 246.145, 251.452 } },
+				},
+				TargetMerge1 = Merge {
+					NameSet = true,
+					Inputs = {
+						Background = Input {
+							SourceOp = "AutoDomain2_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Glow3_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 362.464, 253.746 } },
+				},
+				CustomTool1_1 = Custom {
+					NameSet = true,
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool2LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool2LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool2LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool2LUTIn4",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool1_1Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 362.464, 187.746 } },
+				},
+				TimeStretcher1 = TimeStretcher {
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher1SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "TargetMerge1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 362.464, 220.746 } },
+				},
+				AutoDomain2_1 = AutoDomain {
+					NameSet = true,
+					Inputs = {
+						Input = Input {
+							SourceOp = "Resize5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 360.462, 311.152 } },
+				},
+				Resize5 = BetterResize {
+					Inputs = {
+						Width = Input {
+							Value = 800,
+							Expression = "AutoDomain1.Output.DataWindow[3] - AutoDomain1.Output.DataWindow[1]",
+						},
+						Height = Input {
+							Value = 1249,
+							Expression = "AutoDomain1.Output.DataWindow[4] - AutoDomain1.Output.DataWindow[2]",
+						},
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "Background4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 238.286, 313.708 } },
+					UserControls = ordered() {
+						TargetNode = {
+							LINKS_Name = "TargetNode",
+							LINKID_DataType = "Text",
+							INPID_InputControl = "TextEditControl",
+							TEC_Wrap = false,
+							TEC_ReadOnly = false,
+							ICS_ControlPage = "Controls",
+						}
+					}
+				},
+				Background4 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 652, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 127.121, 314.766 } },
+				}
+			},
+		},
+		Polygon3Length = BezierSpline {
+			SplineColor = { Red = 141, Green = 167, Blue = 243 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.666663, 1 }, Flags = { Linear = true } },
+				[11] = { 1, LH = { 7.333337, 1 } }
+			}
+		},
+		Polygon3Polyline = BezierSpline {
+			SplineColor = { Red = 173, Green = 255, Blue = 47 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, RH = { 1.33333333333333, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[2] = { 2, LH = { 1.66666666666667, 1.66666666666667 }, RH = { 2.33333333333333, 2.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[3] = { 3, LH = { 2.66666666666667, 2.66666666666667 }, RH = { 3.33333333333333, 3.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[4] = { 4, LH = { 3.66666666666667, 3.66666666666667 }, RH = { 4.33333333333333, 4.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[5] = { 5, LH = { 4.66666666666667, 4.66666666666667 }, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[6] = { 6, LH = { 5.66666666666667, 5.66666666666667 }, RH = { 6.33333333333333, 6.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[7] = { 7, LH = { 6.66666666666667, 6.66666666666667 }, RH = { 7.33333333333333, 7.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[8] = { 8, LH = { 7.66666666666667, 7.66666666666667 }, RH = { 8.33333333333333, 8.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[9] = { 9, LH = { 8.66666666666667, 8.66666666666667 }, RH = { 9.33333333333333, 9.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[10] = { 10, LH = { 9.66666666666667, 9.66666666666667 }, RH = { 10.3333333333333, 10.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[11] = { 11, LH = { 10.6666666666667, 10.6666666666667 }, RH = { 11.3333333333333, 11.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[12] = { 12, LH = { 11.6666666666667, 11.6666666666667 }, RH = { 12.3333333333333, 12.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[13] = { 13, LH = { 12.6666666666667, 12.6666666666667 }, RH = { 13.3333333333333, 13.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[14] = { 14, LH = { 13.6666666666667, 13.6666666666667 }, RH = { 14.3333333333333, 14.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[15] = { 15, LH = { 14.6666666666667, 14.6666666666667 }, RH = { 15.3333333333333, 15.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[16] = { 16, LH = { 15.6666666666667, 15.6666666666667 }, RH = { 16.3333333333333, 16.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[17] = { 17, LH = { 16.6666666666667, 16.6666666666667 }, RH = { 17.3333333333333, 17.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[18] = { 18, LH = { 17.6666666666667, 17.6666666666667 }, RH = { 18.3333333333333, 18.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[19] = { 19, LH = { 18.6666666666667, 18.6666666666667 }, RH = { 19.3333333333333, 19.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[20] = { 20, LH = { 19.6666666666667, 19.6666666666667 }, RH = { 20.3333333333333, 20.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[21] = { 21, LH = { 20.6666666666667, 20.6666666666667 }, RH = { 21.3333333333333, 21.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[22] = { 22, LH = { 21.6666666666667, 21.6666666666667 }, RH = { 22.3333333333333, 22.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[23] = { 23, LH = { 22.6666666666667, 22.6666666666667 }, RH = { 23.3333333333333, 23.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[24] = { 24, LH = { 23.6666666666667, 23.6666666666667 }, RH = { 24.3333333333333, 24.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[25] = { 25, LH = { 24.6666666666667, 24.6666666666667 }, RH = { 25.3333333333333, 25.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[26] = { 26, LH = { 25.6666666666667, 25.6666666666667 }, RH = { 26.3333333333333, 26.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[27] = { 27, LH = { 26.6666666666667, 26.6666666666667 }, RH = { 27.3333333333333, 27.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[28] = { 28, LH = { 27.6666666666667, 27.6666666666667 }, RH = { 28.6666666666667, 28.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[30] = { 29, LH = { 29.3333333333333, 28.6666666666667 }, RH = { 30.3333333333333, 29.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[31] = { 30, LH = { 30.6666666666667, 29.6666666666667 }, RH = { 31.3333333333333, 30.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[32] = { 31, LH = { 31.6666666666667, 30.6666666666667 }, RH = { 32.3333333333333, 31.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[33] = { 32, LH = { 32.6666666666667, 31.6666666666667 }, RH = { 33.3333333333333, 32.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[34] = { 33, LH = { 33.6666666666667, 32.6666666666667 }, RH = { 34.3333333333333, 33.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[35] = { 34, LH = { 34.6666666666667, 33.6666666666667 }, RH = { 35.3333333333333, 34.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[36] = { 35, LH = { 35.6666666666667, 34.6666666666667 }, RH = { 36.3333333333333, 35.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[37] = { 36, LH = { 36.6666666666667, 35.6666666666667 }, RH = { 37.3333333333333, 36.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[38] = { 37, LH = { 37.6666666666667, 36.6666666666667 }, RH = { 38.3333333333333, 37.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[39] = { 38, LH = { 38.6666666666667, 37.6666666666667 }, RH = { 39.3333333333333, 38.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[40] = { 39, LH = { 39.6666666666667, 38.6666666666667 }, RH = { 40.3333333333333, 39.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[41] = { 40, LH = { 40.6666666666667, 39.6666666666667 }, RH = { 41.3333333333333, 40.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[42] = { 41, LH = { 41.6666666666667, 40.6666666666667 }, RH = { 42.3333333333333, 41.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[43] = { 42, LH = { 42.6666666666667, 41.6666666666667 }, RH = { 44.6666666666667, 42.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[48] = { 43, LH = { 46.3333333333333, 42.6666666666667 }, RH = { 48.3333333333333, 43.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[49] = { 44, LH = { 48.6666666666667, 43.6666666666667 }, RH = { 49.3333333333333, 44.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[50] = { 45, LH = { 49.6666666666667, 44.6666666666667 }, RH = { 50.3333333333333, 45.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[51] = { 46, LH = { 50.6666666666667, 45.6666666666667 }, RH = { 51.3333333333333, 46.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[52] = { 47, LH = { 51.6666666666667, 46.6666666666667 }, RH = { 52.3333333333333, 47.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[53] = { 48, LH = { 52.6666666666667, 47.6666666666667 }, RH = { 53.3333333333333, 48.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[54] = { 49, LH = { 53.6666666666667, 48.6666666666667 }, RH = { 54.3333333333333, 49.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[55] = { 50, LH = { 54.6666666666667, 49.6666666666667 }, RH = { 55.3333333333333, 50.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[56] = { 51, LH = { 55.6666666666667, 50.6666666666667 }, RH = { 56.3333333333333, 51.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[57] = { 52, LH = { 56.6666666666667, 51.6666666666667 }, RH = { 57.3333333333333, 52.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[58] = { 53, LH = { 57.6666666666667, 52.6666666666667 }, RH = { 58.3333333333333, 53.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[59] = { 54, LH = { 58.6666666666667, 53.6666666666667 }, RH = { 59.3333333333333, 54.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[60] = { 55, LH = { 59.6666666666667, 54.6666666666667 }, RH = { 63.3333333333333, 55.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[70] = { 56, LH = { 66.6666666666667, 55.6666666666667 }, RH = { 70.6666666666667, 56.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[72] = { 57, LH = { 71.3333333333333, 56.6666666666667 }, RH = { 73.6666666666667, 57.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[77] = { 58, LH = { 75.3333333333333, 57.6666666666667 }, RH = { 79.6666666666667, 58.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[85] = { 59, LH = { 82.3333333333333, 58.6666666666667 }, RH = { 86, 59.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[88] = { 60, LH = { 87, 59.6666666666667 }, RH = { 88.6666666666667, 60.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 1.00485436893204, Y = 0.891585760517799, RX = -0.554476806903991, RY = -0.576591154261057, PublishID = "Point0" },
+							{ Linear = true, X = -0.658576051779935, Y = -0.838187702265372, LX = 0.554476806903991, LY = 0.576591154261057, PublishID = "Point1" }
+						}
+					} },
+				[90] = { 61, LH = { 89.3333333333333, 60.6666666666667 }, RH = { 92, 61.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[96] = { 62, LH = { 94, 61.6666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = 0.5, Y = 0.5, RX = -0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = -0.5, Y = -0.5, LX = 0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} }
+			}
+		},
+		Background2_1TopLeftRed = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.66666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+				[11] = { 1, LH = { 7.33333333333333, 0.666666666666667 }, RH = { 11.3333333333333, 0.666666666666667 }, Flags = { Linear = true } },
+				[12] = { 0, LH = { 11.6666666666667, 0.333333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_1TopLeftGreen = BezierSpline {
+			SplineColor = { Red = 0, Green = 255, Blue = 0 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.66666666666667, 0.049673202614379 }, Flags = { Linear = true } },
+				[11] = { 0.149019607843137, LH = { 7.33333333333333, 0.099346405228758 }, RH = { 11.3333333333333, 0.099346405228758 }, Flags = { Linear = true } },
+				[12] = { 0, LH = { 11.6666666666667, 0.049673202614379 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_1TopLeftBlue = BezierSpline {
+			SplineColor = { Red = 0, Green = 0, Blue = 255 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.66666666666667, 0 }, Flags = { Linear = true } },
+				[11] = { 0, LH = { 7.33333333333333, 0 }, RH = { 11.3333333333333, 0 }, Flags = { Linear = true } },
+				[12] = { 0, LH = { 11.6666666666667, 0 }, Flags = { Linear = true } }
+			}
+		},
+		Background2_1TopLeftAlpha = BezierSpline {
+			SplineColor = { Red = 180, Green = 180, Blue = 180 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, RH = { 4.33333333333333, 1 }, Flags = { Linear = true } },
+				[11] = { 1, LH = { 7.66666666666667, 1 }, RH = { 12.3333333333333, 0.666666666666667 }, Flags = { Linear = true } },
+				[15] = { 0, LH = { 13.6666666666667, 0.333333333333333 }, Flags = { Linear = true } }
+			}
+		},
+		Polygon3_1Length = BezierSpline {
+			SplineColor = { Red = 141, Green = 167, Blue = 243 },
+			KeyFrames = {
+				[0] = { 0, RH = { 3.666663, 1 }, Flags = { Linear = true } },
+				[11] = { 1, LH = { 7.333337, 1 } }
+			}
+		},
+		Polygon3_1Polyline = BezierSpline {
+			SplineColor = { Red = 173, Green = 255, Blue = 47 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, RH = { 1.33333333333333, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[2] = { 2, LH = { 1.66666666666667, 1.66666666666667 }, RH = { 2.33333333333333, 2.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[3] = { 3, LH = { 2.66666666666667, 2.66666666666667 }, RH = { 3.33333333333333, 3.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[4] = { 4, LH = { 3.66666666666667, 3.66666666666667 }, RH = { 4.33333333333333, 4.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[5] = { 5, LH = { 4.66666666666667, 4.66666666666667 }, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[6] = { 6, LH = { 5.66666666666667, 5.66666666666667 }, RH = { 6.33333333333333, 6.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[7] = { 7, LH = { 6.66666666666667, 6.66666666666667 }, RH = { 7.33333333333333, 7.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[8] = { 8, LH = { 7.66666666666667, 7.66666666666667 }, RH = { 8.33333333333333, 8.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[9] = { 9, LH = { 8.66666666666667, 8.66666666666667 }, RH = { 9.33333333333333, 9.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[10] = { 10, LH = { 9.66666666666667, 9.66666666666667 }, RH = { 10.3333333333333, 10.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[11] = { 11, LH = { 10.6666666666667, 10.6666666666667 }, RH = { 11.3333333333333, 11.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[12] = { 12, LH = { 11.6666666666667, 11.6666666666667 }, RH = { 12.3333333333333, 12.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[13] = { 13, LH = { 12.6666666666667, 12.6666666666667 }, RH = { 13.3333333333333, 13.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[14] = { 14, LH = { 13.6666666666667, 13.6666666666667 }, RH = { 14.3333333333333, 14.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[15] = { 15, LH = { 14.6666666666667, 14.6666666666667 }, RH = { 15.3333333333333, 15.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[16] = { 16, LH = { 15.6666666666667, 15.6666666666667 }, RH = { 16.3333333333333, 16.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[17] = { 17, LH = { 16.6666666666667, 16.6666666666667 }, RH = { 17.3333333333333, 17.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[18] = { 18, LH = { 17.6666666666667, 17.6666666666667 }, RH = { 18.3333333333333, 18.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[19] = { 19, LH = { 18.6666666666667, 18.6666666666667 }, RH = { 19.3333333333333, 19.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[20] = { 20, LH = { 19.6666666666667, 19.6666666666667 }, RH = { 20.3333333333333, 20.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[21] = { 21, LH = { 20.6666666666667, 20.6666666666667 }, RH = { 21.3333333333333, 21.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[22] = { 22, LH = { 21.6666666666667, 21.6666666666667 }, RH = { 22.3333333333333, 22.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[23] = { 23, LH = { 22.6666666666667, 22.6666666666667 }, RH = { 23.3333333333333, 23.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[24] = { 24, LH = { 23.6666666666667, 23.6666666666667 }, RH = { 24.3333333333333, 24.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[25] = { 25, LH = { 24.6666666666667, 24.6666666666667 }, RH = { 25.3333333333333, 25.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[26] = { 26, LH = { 25.6666666666667, 25.6666666666667 }, RH = { 26.3333333333333, 26.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[27] = { 27, LH = { 26.6666666666667, 26.6666666666667 }, RH = { 27.3333333333333, 27.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[28] = { 28, LH = { 27.6666666666667, 27.6666666666667 }, RH = { 28.6666666666667, 28.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[30] = { 29, LH = { 29.3333333333333, 28.6666666666667 }, RH = { 30.3333333333333, 29.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[31] = { 30, LH = { 30.6666666666667, 29.6666666666667 }, RH = { 31.3333333333333, 30.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[32] = { 31, LH = { 31.6666666666667, 30.6666666666667 }, RH = { 32.3333333333333, 31.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[33] = { 32, LH = { 32.6666666666667, 31.6666666666667 }, RH = { 33.3333333333333, 32.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[34] = { 33, LH = { 33.6666666666667, 32.6666666666667 }, RH = { 34.3333333333333, 33.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[35] = { 34, LH = { 34.6666666666667, 33.6666666666667 }, RH = { 35.3333333333333, 34.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[36] = { 35, LH = { 35.6666666666667, 34.6666666666667 }, RH = { 36.3333333333333, 35.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[37] = { 36, LH = { 36.6666666666667, 35.6666666666667 }, RH = { 37.3333333333333, 36.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[38] = { 37, LH = { 37.6666666666667, 36.6666666666667 }, RH = { 38.3333333333333, 37.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[39] = { 38, LH = { 38.6666666666667, 37.6666666666667 }, RH = { 39.3333333333333, 38.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[40] = { 39, LH = { 39.6666666666667, 38.6666666666667 }, RH = { 40.3333333333333, 39.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[41] = { 40, LH = { 40.6666666666667, 39.6666666666667 }, RH = { 41.3333333333333, 40.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[42] = { 41, LH = { 41.6666666666667, 40.6666666666667 }, RH = { 42.3333333333333, 41.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[43] = { 42, LH = { 42.6666666666667, 41.6666666666667 }, RH = { 44.6666666666667, 42.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[48] = { 43, LH = { 46.3333333333333, 42.6666666666667 }, RH = { 48.3333333333333, 43.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[49] = { 44, LH = { 48.6666666666667, 43.6666666666667 }, RH = { 49.3333333333333, 44.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[50] = { 45, LH = { 49.6666666666667, 44.6666666666667 }, RH = { 50.3333333333333, 45.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[51] = { 46, LH = { 50.6666666666667, 45.6666666666667 }, RH = { 51.3333333333333, 46.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[52] = { 47, LH = { 51.6666666666667, 46.6666666666667 }, RH = { 52.3333333333333, 47.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[53] = { 48, LH = { 52.6666666666667, 47.6666666666667 }, RH = { 53.3333333333333, 48.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[54] = { 49, LH = { 53.6666666666667, 48.6666666666667 }, RH = { 54.3333333333333, 49.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[55] = { 50, LH = { 54.6666666666667, 49.6666666666667 }, RH = { 55.3333333333333, 50.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[56] = { 51, LH = { 55.6666666666667, 50.6666666666667 }, RH = { 56.3333333333333, 51.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[57] = { 52, LH = { 56.6666666666667, 51.6666666666667 }, RH = { 57.3333333333333, 52.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[58] = { 53, LH = { 57.6666666666667, 52.6666666666667 }, RH = { 58.3333333333333, 53.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[59] = { 54, LH = { 58.6666666666667, 53.6666666666667 }, RH = { 59.3333333333333, 54.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[60] = { 55, LH = { 59.6666666666667, 54.6666666666667 }, RH = { 63.3333333333333, 55.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[70] = { 56, LH = { 66.6666666666667, 55.6666666666667 }, RH = { 70.6666666666667, 56.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[72] = { 57, LH = { 71.3333333333333, 56.6666666666667 }, RH = { 73.6666666666667, 57.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[77] = { 58, LH = { 75.3333333333333, 57.6666666666667 }, RH = { 79.6666666666667, 58.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[85] = { 59, LH = { 82.3333333333333, 58.6666666666667 }, RH = { 86, 59.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[88] = { 60, LH = { 87, 59.6666666666667 }, RH = { 88.6666666666667, 60.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.658576051779935, Y = 0.891585760517799, RX = 0.554476806903991, RY = -0.576591154261057, PublishID = "Point0" },
+							{ Linear = true, X = 1.00485436893204, Y = -0.838187702265372, LX = -0.554476806903991, LY = 0.576591154261057, PublishID = "Point1" }
+						}
+					} },
+				[90] = { 61, LH = { 89.3333333333333, 60.6666666666667 }, RH = { 92, 61.3333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} },
+				[96] = { 62, LH = { 94, 61.6666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+						Points = {
+							{ Linear = true, X = -0.5, Y = 0.5, RX = 0.333333333333333, RY = -0.333333333333333, PublishID = "Point0" },
+							{ Linear = true, X = 0.5, Y = -0.5, LX = -0.333333333333333, LY = 0.333333333333333, PublishID = "Point1" }
+						}
+					} }
+			}
+		},
+		CustomTool2LUTIn1 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn2 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn3 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool2LUTIn4 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		},
+		CustomTool1_1Setup1 = BezierSpline {
+			SplineColor = { Red = 225, Green = 244, Blue = 193 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.66666666666667, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+					} },
+				[11] = { 1, LH = { 7.33333333333333, 0.666666666666667 }, RH = { 12.3333333333333, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+					} },
+				[15] = { 2, LH = { 13.6666666666667, 1.66666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+					} }
+			}
+		},
+		TimeStretcher1SourceTime = BezierSpline {
+			SplineColor = { Red = 233, Green = 217, Blue = 243 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 3.66666666666667, 3.66666666666667 }, Flags = { Linear = true } },
+				[11] = { 11, LH = { 7.33333333333333, 7.33333333333333 }, RH = { 12.3333333333333, 12.3333333333333 }, Flags = { Linear = true } },
+				[15] = { 15, LH = { 13.6666666666667, 13.6666666666667 }, Flags = { Linear = true } }
+			}
+		}
+	},
+	ActiveTool = "OverlayCross"
+}

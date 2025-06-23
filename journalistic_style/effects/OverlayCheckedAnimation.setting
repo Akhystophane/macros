@@ -1,0 +1,350 @@
+{
+	Tools = ordered() {
+		OverlayCheckedAnimation = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "CustomTool2_1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -2052.33, 526.104 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 687.86, 147.081, 343.93, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				CustomTool2_1 = Custom {
+					CtrlWShown = false,
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool2LUTIn1_1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool2LUTIn2_1",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool2LUTIn3_1",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool2LUTIn4_1",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool2_1Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 280, 48.1621 } },
+				},
+				CustomTool2LUTIn1_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool2LUTIn2_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool2LUTIn3_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool2LUTIn4_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool2_1Setup1 = BezierSpline {
+					SplineColor = { Red = 225, Green = 244, Blue = 193 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 5, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[15] = { 1, LH = { 10, 0.666666666666667 }, RH = { 18, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[24] = { 2, LH = { 21, 1.66666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} }
+					}
+				},
+				TimeStretcher3_1 = TimeStretcher {
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher3_1SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Glow2_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 170, 48.1621 } },
+				},
+				TimeStretcher3_1SourceTime = BezierSpline {
+					SplineColor = { Red = 233, Green = 217, Blue = 243 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 5, 5 }, Flags = { Linear = true } },
+						[15] = { 15, LH = { 10, 10 }, RH = { 18, 18 }, Flags = { Linear = true } },
+						[24] = { 24, LH = { 21, 21 }, Flags = { Linear = true } }
+					}
+				},
+				Glow2_1 = Glow {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0.2, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Red = Input { Value = 0, },
+						Blue = Input { Value = 0, },
+						XGlowSize = Input { Value = 36.2, },
+						Glow = Input { Value = 0.819, },
+						Input = Input {
+							SourceOp = "Transform4_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 60, 48.1621 } },
+				},
+				Transform4_1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.380976998485771, 0.390431164741973 }, },
+						Size = Input {
+							SourceOp = "Transform4_1Size",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge8_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -55.3101, 48.1621 } },
+				},
+				Transform4_1Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 225 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0.45, RH = { 2.6, 0.445 } },
+						[8] = { 0.58, LH = { 6.48, 0.456 }, RH = { 10.3333333333333, 0.516666666666667 } },
+						[15] = { 0.39, LH = { 9.2, 0.39 } }
+					}
+				},
+				Merge8_1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Polygon2_1",
+							Source = "Mask",
+						},
+						Blend = Input {
+							SourceOp = "Merge8_1Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Background3_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "MediaIn5_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -165.31, 48.1621 } },
+				},
+				Merge8_1Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.66666666666667, 0 } },
+						[8] = { 1, LH = { 5.33333333333333, 1 } }
+					}
+				},
+				Polygon2_1 = PolylineMask {
+					DrawMode = "InsertAndModify",
+					DrawMode2 = "InsertAndModify",
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input {
+							SourceOp = "Polygon2_1BorderWidth",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.79, 0.763 }, },
+						Size = Input { Value = 2.598, },
+						Polyline = Input {
+							SourceOp = "Polygon2_1Polyline",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -166.54, 7.66008 } },
+				},
+				Polygon2_1BorderWidth = BezierSpline {
+					SplineColor = { Red = 16, Green = 35, Blue = 248 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[19] = { 0, RH = { 19.3333333333333, -0.003 }, Flags = { Linear = true } },
+						[20] = { -0.009, LH = { 19.6666666666667, -0.006 }, Flags = { Linear = true } }
+					}
+				},
+				Polygon2_1Polyline = BezierSpline {
+					SplineColor = { Red = 173, Green = 255, Blue = 47 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[15] = { 0, RH = { 16.52, 1.28 }, Flags = { LockedY = true }, Value = Polyline {
+								Closed = true,
+								Points = {
+									{ Linear = true, X = -0.0588235294117647, Y = -0.0583542389917983, LX = 0.0137254901960784, LY = -0.00687888752658281, RX = -0.0258350681840341, RY = -0.0145590202969839 },
+									{ Linear = true, X = -0.136328733963867, Y = -0.10203129988275, LX = 0.0258350681840341, LY = 0.0145590202969839, RX = -0.00861188983455795, RY = 0.00490351866769124 },
+									{ Linear = true, X = -0.162164403467541, Y = -0.0873207438796763, LX = 0.00861188983455795, LY = -0.00490351866769124, RX = -0.011631473353957, RY = -0.00770036411620385 },
+									{ Linear = true, X = -0.197058823529412, Y = -0.110421836228288, LX = 0.011631473353957, LY = 0.00770036411620385, RX = 0.0207055872804049, RY = -0.0100298796104446 },
+									{ Linear = true, X = -0.134942061688197, Y = -0.140511475059622, LX = -0.0207055872804049, LY = 0.0100298796104446, RX = 0.0390983342882225, RY = 0.0205068578293583 },
+									{ Linear = true, X = -0.0176470588235295, Y = -0.0789909015715467, LX = -0.0390983342882225, LY = -0.0205068578293583, RX = -0.0137254901960784, RY = 0.00687888752658281 }
+								}
+							} },
+						[20] = { 1, LH = { 18.3335000276566, 0.666700005531311 }, RH = { 21.6664999723434, 1.33329999446869 }, Flags = { LockedY = true }, Value = Polyline {
+								Closed = true,
+								Points = {
+									{ Linear = true, X = -0.135380506942292, Y = -0.103180885384867, LX = 0.0137254901960783, LY = -0.00687888752658281, RX = -0.000316075673858487, RY = 0.000383195167372318 },
+									{ Linear = true, X = -0.136328733963867, Y = -0.10203129988275, LX = 0.000316075673858487, LY = -0.000383195167372318, RX = -0.00861188983455795, RY = 0.00490351866769124 },
+									{ Linear = true, X = -0.162164403467541, Y = -0.0873207438796763, LX = 0.00861188983455795, LY = -0.00490351866769124, RX = -0.011631473353957, RY = -0.00770036411620385 },
+									{ Linear = true, X = -0.197058823529412, Y = -0.110421836228288, LX = 0.011631473353957, LY = 0.00770036411620385, RX = 0.0207055872804049, RY = -0.0100298796104446 },
+									{ Linear = true, X = -0.134942061688197, Y = -0.140511475059622, LX = -0.0207055872804049, LY = 0.0100298796104446, RX = 0.0135793417780468, RY = 0.00556464236500208 },
+									{ Linear = true, X = -0.0942040363540566, Y = -0.123817547964615, LX = -0.0135793417780468, LY = -0.00556464236500208, RX = -0.0137254901960783, RY = 0.00687888752658281 }
+								}
+							} },
+						[25] = { 2, LH = { 21.24, 2 }, Flags = { LockedY = true }, Value = Polyline {
+								Closed = true,
+								Points = {
+									{ X = -0.135380506942292, Y = -0.103180885384867, LX = -0.00895805870185562, LY = 0.00487565530537742, RX = -0.000316075673858487, RY = 0.000383195167372318 },
+									{ Linear = true, X = -0.136328733963867, Y = -0.10203129988275, LX = 0.000316075673858487, LY = -0.000383195167372318, RX = -0.00861188983455795, RY = 0.00490351866769124 },
+									{ Linear = true, X = -0.162164403467541, Y = -0.0873207438796763, LX = 0.00861188983455795, LY = -0.00490351866769124, RX = -0.011631473353957, RY = -0.00770036411620385 },
+									{ Linear = true, X = -0.197058823529412, Y = -0.110421836228288, LX = 0.011631473353957, LY = 0.00770036411620385, RX = -0.000205809359877934, RY = 0.000330056444842399 },
+									{ Linear = true, X = -0.197676251609046, Y = -0.109431666893761, LX = 0.000205809359877934, LY = -0.000330056444842399, RX = 0.0118071895203957, RY = 0.00695924914167532 },
+									{ Linear = true, X = -0.162254683047858, Y = -0.0885539194687347, LX = -0.0118071895203957, LY = -0.00695924914167532, RX = 0.000988595445463194, RY = 0.00135657644202372 }
+								}
+							} }
+					}
+				},
+				MediaIn5_1 = MediaIn {
+					ExtentSet = true,
+					CtrlWShown = false,
+					CustomData = {
+						MEDIA_ID = "a104d476-6b50-4481-9e7a-2a08daee67cc",
+						MediaProps = {
+							MEDIA_NUM_LAYERS = 0,
+							MEDIA_FORMAT_TYPE = "PNG",
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/2714_color.png",
+							MEDIA_LAYER_DESC = {
+							},
+							MEDIA_NAME = "2714_color.png",
+							MEDIA_HEIGHT = 618,
+							MEDIA_START_FRAME = 0,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_WIDTH = 618,
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_MARK_IN = 0,
+							MEDIA_PAR = 1
+						}
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "a104d476-6b50-4481-9e7a-2a08daee67cc", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input {
+							Value = Text {
+							},
+						},
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LeftAudio = Input {
+							SourceOp = "Left_1",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right_1",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -166.55, 89.8551 } },
+					Version = 1
+				},
+				Left_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Background3_1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -281.86, 48.1621 } },
+				}
+			},
+		}
+	}
+}

@@ -1,6 +1,7 @@
 {
 	Tools = ordered() {
 		TripleEmojiAnimation1 = GroupOperator {
+			CtrlWZoom = false,
 			EnabledRegion = TimeRegion { { Start = 0, End = 499.9999 } },
 			Outputs = {
 				Output3 = InstanceOutput {
@@ -21,7 +22,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -127.119, 186.722 },
+				Pos = { 511.643, 133.922 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -35,6 +36,7 @@
 			},
 			Tools = ordered() {
 				Ellipse2_1 = EllipseMask {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						BorderWidth = Input { Value = 0.013, },
@@ -48,6 +50,7 @@
 					ViewInfo = OperatorInfo { Pos = { 711.381, 321.519 } },
 				},
 				circleTransform_3 = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Size = Input { Value = 0.5, },
@@ -59,6 +62,7 @@
 					ViewInfo = OperatorInfo { Pos = { 1034.45, 115.036 } },
 				},
 				Glow4_1 = Glow {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -70,6 +74,7 @@
 					ViewInfo = OperatorInfo { Pos = { 1036.27, 245.062 } },
 				},
 				Transform12_1 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.576, 0.825 }, },
 						Size = Input {
@@ -93,6 +98,7 @@
 					}
 				},
 				Background22_1 = Background {
+					CtrlWShown = false,
 					Inputs = {
 						EffectMask = Input {
 							SourceOp = "Ellipse2_1",
@@ -110,6 +116,7 @@
 					ViewInfo = OperatorInfo { Pos = { 805.032, 322.057 } },
 				},
 				_Icon2 = GroupOperator {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { ID = "", lastModified = "Wed Apr  2 15:14:50 2025", GroupID = "Icon2", Filled = false } },
 					Inputs = ordered() {
@@ -667,6 +674,7 @@
 						} }
 				},
 				chevronupsvgrepocom_1 = GroupOperator {
+					CtrlWShown = false,
 					Inputs = ordered() {
 						Red = InstanceInput {
 							SourceOp = "Background21_1",
@@ -821,6 +829,7 @@
 						} }
 				},
 				Merge2 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Merge18",
@@ -835,6 +844,7 @@
 					ViewInfo = OperatorInfo { Pos = { -51.3238, 432.815 } },
 				},
 				Duplicate2_1 = Fuse.Duplicate {
+					CtrlWShown = false,
 					Inputs = {
 						Copies = Input {
 							SourceOp = "Duplicate2_1Copies",
@@ -861,6 +871,7 @@
 					}
 				},
 				Merge23_1 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input {
 							SourceOp = "Merge23_1Blend",
@@ -887,6 +898,7 @@
 					}
 				},
 				Merge22_2 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform10_2",
@@ -903,8 +915,9 @@
 					ViewInfo = OperatorInfo { Pos = { -388.863, 578.809 } },
 				},
 				Transform12_2 = Transform {
+					CtrlWShown = false,
 					Inputs = {
-						Center = Input { Value = { 0.696, 0.668 }, },
+						Center = Input { Value = { 0.574, 0.827 }, },
 						Size = Input {
 							SourceOp = "Transform12_2Size",
 							Source = "Value",
@@ -920,11 +933,12 @@
 					SplineColor = { Red = 225, Green = 0, Blue = 225 },
 					CtrlWZoom = false,
 					KeyFrames = {
-						[60] = { 0, RH = { 60.63, 0.36 } },
-						[65] = { 0.6, LH = { 63.3333333333333, 0.6 } }
+						[61] = { 0, RH = { 61.504, 0.288 } },
+						[65] = { 0.6, LH = { 62.44, 0.592 } }
 					}
 				},
 				Ellipse2_2 = EllipseMask {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						BorderWidth = Input { Value = 0.013, },
@@ -933,12 +947,12 @@
 						MaskHeight = Input { Value = 1920, },
 						PixelAspect = Input { Value = { 1, 1 }, },
 						UseFrameFormatSettings = Input { Value = 1, },
-						ClippingMode = Input { Value = FuID { "None" }, },
-						Center = Input { Value = { 0.289563, 0.768168001017847 }, }
+						ClippingMode = Input { Value = FuID { "None" }, }
 					},
 					ViewInfo = OperatorInfo { Pos = { -592.169, 542.82 } },
 				},
 				_Icon3 = GroupOperator {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { ID = "", lastModified = "Wed Apr  2 15:13:55 2025", GroupID = "Icon3", Filled = false } },
 					Inputs = ordered() {
@@ -1541,6 +1555,7 @@
 						} }
 				},
 				chevronupsvgrepocom_2 = GroupOperator {
+					CtrlWShown = false,
 					Inputs = ordered() {
 						Red = InstanceInput {
 							SourceOp = "Background21_2",
@@ -1695,6 +1710,7 @@
 						} }
 				},
 				icon1Glow = Glow {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
@@ -1707,6 +1723,7 @@
 					ViewInfo = OperatorInfo { Pos = { -606.908, 290.508 } },
 				},
 				icon1DecorCircleBackground = Background {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						EffectMask = Input {
@@ -1725,6 +1742,7 @@
 					ViewInfo = OperatorInfo { Pos = { -822.359, 247.152 } },
 				},
 				_Icon1 = GroupOperator {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Wed Apr  2 22:04:16 2025", Description = "", ID = "", GroupID = "Icon1", Filled = false } },
 					Inputs = ordered() {
@@ -2019,6 +2037,7 @@
 						} }
 				},
 				icon1Transform = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Center = Input {
@@ -2071,6 +2090,7 @@
 					}
 				},
 				icon1DecorCircle = EllipseMask {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2085,6 +2105,7 @@
 					ViewInfo = OperatorInfo { Pos = { -934.55, 249.358 } },
 				},
 				icon1DecorChevronTransform = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Center = Input { Value = { 0.506, 0.5 }, },
@@ -2097,6 +2118,7 @@
 					ViewInfo = OperatorInfo { Pos = { -934.772, 334.236 } },
 				},
 				icon1DecorChevronDuplicate = Fuse.Duplicate {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Copies = Input {
@@ -2124,6 +2146,7 @@
 					}
 				},
 				icon1DecorChevron = GroupOperator {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = ordered() {
 						Red = InstanceInput {
@@ -2279,6 +2302,7 @@
 						} }
 				},
 				Glow2_1 = Glow {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2291,6 +2315,7 @@
 					ViewInfo = OperatorInfo { Pos = { -604.357, 431.11 } },
 				},
 				Merge18 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input {
 							SourceOp = "Merge18Blend",
@@ -2318,6 +2343,7 @@
 					}
 				},
 				Background22_2 = Background {
+					CtrlWShown = false,
 					Inputs = {
 						EffectMask = Input {
 							SourceOp = "Ellipse2_2",
@@ -2335,6 +2361,7 @@
 					ViewInfo = OperatorInfo { Pos = { -498.518, 543.359 } },
 				},
 				Transform11_1 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.504, 0.5 }, },
 						Size = Input { Value = 0.03, },
@@ -2346,6 +2373,7 @@
 					ViewInfo = OperatorInfo { Pos = { 935.462, 419.388 } },
 				},
 				Merge22_1 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform10_1",
@@ -2362,6 +2390,7 @@
 					ViewInfo = OperatorInfo { Pos = { 1034.68, 373.441 } },
 				},
 				circleBackground = Background {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						EffectMask = Input {
@@ -2399,10 +2428,10 @@
 							SourceOp = "CustomTool2Setup1",
 							Source = "Value",
 						},
-						Intermediate1 = Input { Value = "This pattern is designed to showcase three icons (Icon1, Icon2, Icon3), each representing a related concept, idea, or fragment of a broader theme. The icons appear sequentially through smooth motion graphics, allowing a clear visual progression. This pattern highlights thematic layering, unity, or structured storytelling, making it ideal for expressing triads, multi-step ideas, or interconnected elements.", },
+						Intermediate1 = Input { Value = "This pattern is designed to showcase three icons (Icon1, Icon2, Icon3), each representing a related concept, idea, or fragment of a broader theme. The icons appear sequentially through smooth motion graphics, allowing a clear visual progression. This pattern highlights thematic layering, unity, or structured storytelling, making it ideal for expressing triads, multi-step ideas, or interconnected elements.\nUSE THIS PATTERN ONLY WHEN : (end timestamp of last token) – (start timestamp of first token) ≥ 2.0 s", },
 						Intermediate2 = Input { Value = "A glowing sphere sits at the center of the screen. Icon1 emerges from the sphere and moves toward the upper right, followed by a trail of small chevrons that trace its path. Shortly after, Icon2 appears directly at the center, also accompanied by a flowing arrow trail. Finally, Icon3 emerges and travels toward the upper left, with the same chevron effect marking its trajectory. All three icons remain visible, positioned in a triangular formation around the sphere.", },
 						Image1 = Input {
-							SourceOp = "Merge3",
+							SourceOp = "TimeStretcher1",
 							Source = "Output",
 						}
 					},
@@ -2465,6 +2494,7 @@
 					}
 				},
 				Merge3 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Merge2",
@@ -2479,6 +2509,7 @@
 					ViewInfo = OperatorInfo { Pos = { 187.802, 259.169 } },
 				},
 				icon1DecorCircleTransform = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Center = Input { Value = { 0.576, 0.825 }, },
@@ -2503,6 +2534,7 @@
 					}
 				},
 				icon1DecorChevronMerge = Merge {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Background = Input {
@@ -2520,6 +2552,7 @@
 					ViewInfo = OperatorInfo { Pos = { -821.515, 291.412 } },
 				},
 				icon1DecorCircleMerge = Merge {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Blend = Input {
@@ -2547,6 +2580,7 @@
 					}
 				},
 				Merge20 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "circleGlow2",
@@ -2574,6 +2608,7 @@
 					}
 				},
 				circleGlow2 = Glow {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
@@ -2588,6 +2623,7 @@
 					ViewInfo = OperatorInfo { Pos = { -354.458, 291.097 } },
 				},
 				circleTransform = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Size = Input { Value = 0.5, },
@@ -2599,6 +2635,7 @@
 					ViewInfo = OperatorInfo { Pos = { -354.458, 225.097 } },
 				},
 				circleGlow1 = Glow {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
@@ -2611,6 +2648,7 @@
 					ViewInfo = OperatorInfo { Pos = { -354.458, 258.097 } },
 				},
 				circle = EllipseMask {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2625,6 +2663,7 @@
 					ViewInfo = OperatorInfo { Pos = { -352.617, 157.798 } },
 				},
 				Glow1_1 = Glow {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2636,6 +2675,7 @@
 					ViewInfo = OperatorInfo { Pos = { -714.357, 431.11 } },
 				},
 				Background1_2_1 = Background {
+					CtrlWShown = false,
 					Inputs = {
 						EffectMask = Input {
 							SourceOp = "Ellipse1",
@@ -2653,6 +2693,7 @@
 					ViewInfo = OperatorInfo { Pos = { -934.357, 429.881 } },
 				},
 				Ellipse1 = EllipseMask {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						BorderWidth = Input { Value = 0.013, },
@@ -2665,6 +2706,7 @@
 					ViewInfo = OperatorInfo { Pos = { -1038.03, 430.298 } },
 				},
 				Transform1_1 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Size = Input { Value = 0.4, },
 						Input = Input {
@@ -2675,6 +2717,7 @@
 					ViewInfo = OperatorInfo { Pos = { -823.006, 432.338 } },
 				},
 				Transform10_1 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input {
 							SourceOp = "Path8_1",
@@ -2726,6 +2769,7 @@
 					}
 				},
 				Glow4_2 = Glow {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input { Value = 0.2, },
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2737,6 +2781,7 @@
 					ViewInfo = OperatorInfo { Pos = { -174.253, 577.905 } },
 				},
 				Transform10_2 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input {
 							SourceOp = "Path8_2",
@@ -2755,6 +2800,7 @@
 				},
 				Path8_2 = PolyPath {
 					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
 					Inputs = {
 						Displacement = Input {
 							SourceOp = "Path8_2Displacement",
@@ -2772,6 +2818,7 @@
 				},
 				Path8_2Displacement = BezierSpline {
 					SplineColor = { Red = 255, Green = 0, Blue = 178 },
+					CtrlWZoom = false,
 					KeyFrames = {
 						[56] = { 0, RH = { 57.0971428571429, 0.342857142857143 }, Flags = { LockedY = true } },
 						[62] = { 1, LH = { 59.9999999999999, 1 }, Flags = { LockedY = true } }
@@ -2786,6 +2833,7 @@
 					}
 				},
 				Merge25 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "circleTransform_1",
@@ -2813,6 +2861,7 @@
 					}
 				},
 				Merge23_2 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Blend = Input {
 							SourceOp = "Merge23_2Blend",
@@ -2839,6 +2888,7 @@
 					}
 				},
 				Merge24 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "circleTransform_3",
@@ -2866,6 +2916,7 @@
 					}
 				},
 				circleTransform_1 = Transform {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Size = Input { Value = 0.5, },
@@ -2877,6 +2928,7 @@
 					ViewInfo = OperatorInfo { Pos = { -50.7008, 618.385 } },
 				},
 				Duplicate2_2 = Fuse.Duplicate {
+					CtrlWShown = false,
 					Inputs = {
 						Copies = Input {
 							SourceOp = "Duplicate2_2Copies",
@@ -2903,6 +2955,7 @@
 					}
 				},
 				Transform11_2 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 0.501 }, },
 						Size = Input { Value = 0.03, },
@@ -2914,6 +2967,7 @@
 					ViewInfo = OperatorInfo { Pos = { -489.529, 619.431 } },
 				},
 				circleBackground_1 = Background {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						GlobalOut = Input { Value = 499, },
@@ -2926,6 +2980,7 @@
 					ViewInfo = OperatorInfo { Pos = { -170.363, 620.905 } },
 				},
 				circleBackground_3 = Background {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						EffectMask = Input {
@@ -2942,6 +2997,7 @@
 					ViewInfo = OperatorInfo { Pos = { 1033.83, 8.73613 } },
 				},
 				circle_3 = EllipseMask {
+					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -2954,8 +3010,31 @@
 						ClippingMode = Input { Value = FuID { "None" }, }
 					},
 					ViewInfo = OperatorInfo { Pos = { 925.356, 8.61014 } },
+				},
+				TimeStretcher1 = TimeStretcher {
+					CtrlWShown = false,
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher1SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 186.654, 164.595 } },
 				}
 			},
+		},
+		TimeStretcher1SourceTime = BezierSpline {
+			SplineColor = { Red = 233, Green = 217, Blue = 243 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 26, 26 }, Flags = { Linear = true } },
+				[78] = { 78, LH = { 52, 52 }, Flags = { Linear = true } }
+			}
 		}
-	}
+	},
+	ActiveTool = "TripleEmojiAnimation1"
 }

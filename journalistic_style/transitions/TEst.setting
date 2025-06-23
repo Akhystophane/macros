@@ -1,0 +1,130 @@
+{
+	Tools = ordered() {
+		TEst = GroupOperator {
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "Transform1_4",
+					Source = "Input",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Merge14",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Path1_2",
+					Source = "Heading",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Merge14 = Merge {
+					CtrlWZoom = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_6",
+							Source = "Mask",
+						},
+						Blend = Input {
+							SourceOp = "Merge14Blend",
+							Source = "Value",
+						},
+						Background = Input {
+							SourceOp = "Background3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1_4",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -48.4225, 351.323 } },
+				},
+				Merge14Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[10] = { 1, Flags = { Linear = true } }
+					}
+				},
+				Rectangle1_6 = RectangleMask {
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input { Value = 1, },
+						Height = Input {
+							SourceOp = "Rectangle1_6Height",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 61.5775, 351.214 } },
+				},
+				Rectangle1_6Height = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 255 },
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					KeyFrames = {
+						[5] = { 0.047, RH = { 6.666665, 1 }, Flags = { Linear = true } },
+						[10] = { 1, LH = { 8.333335, 1 } }
+					}
+				},
+				Transform1_4 = Transform {
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					Inputs = {
+						Center = Input {
+							SourceOp = "Path1_2",
+							Source = "Position",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -49.1405, 383.562 } },
+				},
+				Path1_2 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1_2Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = -1.013, Y = 0, RX = 0.337666666666667, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = -0.337666666666667, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path1_2Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/transitions/" } } },
+					KeyFrames = {
+						[0] = { 0, RH = { 0.66, 0.777999999999998 }, Flags = { LockedY = true } },
+						[5] = { 1, LH = { 1.085, 0.919999999999999 }, Flags = { LockedY = true } }
+					}
+				},
+				Background3 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -150.06, 351.975 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "TEst"
+}

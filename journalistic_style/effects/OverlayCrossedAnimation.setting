@@ -1,0 +1,286 @@
+{
+	Tools = ordered() {
+		OverlayCrossedAnimation = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "CustomTool1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				CustomTool1 = Custom {
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool1Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2174.62, 162.035 } },
+				},
+				CustomTool1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1Setup1 = BezierSpline {
+					SplineColor = { Red = 225, Green = 244, Blue = 193 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.33333333333333, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[7] = { 1, LH = { 4.66666666666667, 0.666666666666667 }, RH = { 8.66666666666667, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[12] = { 2, LH = { 10.3333333333333, 1.66666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} }
+					}
+				},
+				TimeStretcher2 = TimeStretcher {
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher2SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Glow3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2318.76, 162.035 } },
+				},
+				TimeStretcher2SourceTime = BezierSpline {
+					SplineColor = { Red = 233, Green = 217, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 4 }, Flags = { Linear = true } },
+						[12] = { 12, LH = { 8, 8 }, Flags = { Linear = true } }
+					}
+				},
+				Glow3 = Glow {
+					CtrlWZoom = false,
+					Inputs = {
+						Blend = Input { Value = 0.2, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						XGlowSize = Input { Value = 33.9, },
+						Input = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2428.76, 162.035 } },
+				},
+				Merge6 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background1_1_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Duplicate2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -2538.76, 162.035 } },
+				},
+				Background1_1_1 = Background {
+					Inputs = {
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -2555.8, 109.621 } },
+				},
+				Duplicate2 = Fuse.Duplicate {
+					Inputs = {
+						Angle = Input { Value = 90, },
+						Polyline = Input {
+							Value = Polyline {
+							},
+						},
+						Background = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2658.14, 158.461 } },
+				},
+				Background2 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Polygon1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							SourceOp = "Background2TopLeftRed",
+							Source = "Value",
+						},
+						TopLeftGreen = Input {
+							SourceOp = "Background2TopLeftGreen",
+							Source = "Value",
+						},
+						TopLeftBlue = Input {
+							SourceOp = "Background2TopLeftBlue",
+							Source = "Value",
+						},
+						TopLeftAlpha = Input {
+							SourceOp = "Background2TopLeftAlpha",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2768.14, 158.461 } },
+				},
+				Background2TopLeftRed = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.66666666666667, 0.333333333333333 }, Flags = { Linear = true } },
+						[11] = { 1, LH = { 7.33333333333333, 0.666666666666667 }, RH = { 11.3333333333333, 0.666666666666667 }, Flags = { Linear = true } },
+						[12] = { 0, LH = { 11.6666666666667, 0.333333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftGreen = BezierSpline {
+					SplineColor = { Red = 0, Green = 255, Blue = 0 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.66666666666667, 0.0496732026143791 }, Flags = { Linear = true } },
+						[11] = { 0.149019607843137, LH = { 7.33333333333333, 0.0993464052287582 }, RH = { 11.3333333333333, 0.0993464052287582 }, Flags = { Linear = true } },
+						[12] = { 0, LH = { 11.6666666666667, 0.0496732026143791 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftBlue = BezierSpline {
+					SplineColor = { Red = 0, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.66666666666667, 0 }, Flags = { Linear = true } },
+						[11] = { 0, LH = { 7.33333333333333, 0 }, RH = { 11.3333333333333, 0 }, Flags = { Linear = true } },
+						[12] = { 0, LH = { 11.6666666666667, 0 }, Flags = { Linear = true } }
+					}
+				},
+				Background2TopLeftAlpha = BezierSpline {
+					SplineColor = { Red = 180, Green = 180, Blue = 180 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 0.333333333333333, 1 }, Flags = { Linear = true } },
+						[1] = { 1, LH = { 0.666666666666667, 1 }, RH = { 4.33333333333333, 1 }, Flags = { Linear = true } },
+						[11] = { 1, LH = { 7.66666666666667, 1 }, RH = { 11.3333333333333, 0.666666666666667 }, Flags = { Linear = true } },
+						[12] = { 0, LH = { 11.6666666666667, 0.333333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				Polygon1 = PolylineMask {
+					DrawMode = "InsertAndModify",
+					DrawMode2 = "InsertAndModify",
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.02, },
+						Solid = Input { Value = 0, },
+						WriteLength = Input {
+							SourceOp = "Polygon1Length",
+							Source = "Value",
+						},
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Center = Input { Value = { 0.644, 0.5 }, },
+						Polyline = Input {
+							SourceOp = "Polygon1Polyline",
+							Source = "Value",
+						},
+						Polyline2 = Input {
+							Value = Polyline {
+							},
+							Disabled = true,
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2770.77, 106.402 } },
+				},
+				Polygon1Length = BezierSpline {
+					SplineColor = { Red = 141, Green = 167, Blue = 243 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 1.23363374531268, 0.916968705177305 } },
+						[6.797] = { 0.999842712906348, LH = { 4.47388438113801, 0.996064777701688 }, RH = { 6.86549883282048, 0.99995408255262 } },
+						[7] = { 1, LH = { 6.97682573836961, 1.017546226663 }, RH = { 7.7, 0.47 } },
+						[12] = { 0, LH = { 10.3333333333333, 0 } }
+					}
+				},
+				Polygon1Polyline = BezierSpline {
+					SplineColor = { Red = 173, Green = 255, Blue = 47 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[31] = { 0, Flags = { LockedY = true }, Value = Polyline {
+								Points = {
+									{ Linear = true, X = -0.327782030073332, Y = 0.105013806919703, RX = 0.125761503831181, RY = -0.0700387028462496 },
+									{ Linear = true, X = 0.0495024814202118, Y = -0.105102301619045, LX = -0.125761503831181, LY = 0.0700387028462496 }
+								}
+							} }
+					}
+				}
+			},
+		}
+	},
+	ActiveTool = "OverlayCrossedAnimation"
+}

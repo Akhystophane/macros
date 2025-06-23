@@ -1,0 +1,234 @@
+{
+	Tools = ordered() {
+		TextAnimation1 = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "CustomTool1_1",
+					Source = "Output",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Path1_4",
+					Source = "Heading",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 563.124, 106.13 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 440.651, 379.857, 192.281, 157.316 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				CustomTool1_1 = Custom {
+					CustomData = {
+						metadata = {
+							lastModified = "Wed May 21 13:57:30 2025",
+							Filled = false,
+							duration_formula = "= (N - 1) * D + T",
+							ID = "",
+							GroupID = "CustomTool1",
+							Description = ""
+						},
+					},
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1_1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2_1",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3_1",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4_1",
+							Source = "Value",
+						},
+						Intermediate1 = Input { Value = "This pattern showcases a single text element (Text1) through clear, stylized animation. It’s ideal for highlighting a very short phrase or key message with focus and impact.USE ONLY FOR to highlight short punchline < 6 words. USE THIS PATTERN ONLY WHEN : (end timestamp of last token) – (start timestamp of first token) ≥ 2.0 s.\nIn segment_text, each token is word(start, end).\nNEVER USE for segments shorter than 2 s.", },
+						Intermediate2 = Input { Value = "Text1 fades in with a cascading character-by-character motion, where each letter drops in sequentially. The only variable of this pattern is Text1", },
+						Image1 = Input {
+							SourceOp = "TimeStretcher2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 23.2569, -3.62874 } },
+				},
+				CustomTool1LUTIn1_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+				},
+				CustomTool1LUTIn2_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+				},
+				CustomTool1LUTIn3_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+				},
+				CustomTool1LUTIn4_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				Glow1_1 = Glow {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0.2, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						Glow = Input { Value = 0.685, },
+						Input = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3.88622e-05, 89.068 } },
+				},
+				Text1 = TextPlus {
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Wed May 21 13:22:44 2025",
+							Description = "",
+							ID = "",
+							GroupID = "Text1",
+							Filled = false
+						}
+					},
+					Inputs = {
+						Quality = Input { Value = 10, },
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input {
+							SourceOp = "Follower1",
+							Source = "StyledText",
+						},
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 133.261 } },
+				},
+				Follower1 = StyledTextFollower {
+					CtrlWZoom = false,
+					Inputs = {
+						Delay = Input { Value = 0.6, },
+						Text = Input {
+							Value = StyledText {
+								Value = "Faux "
+							},
+						},
+						TransformRotation = Input { Value = 1, },
+						Opacity1 = Input {
+							SourceOp = "Follower1Opacity1",
+							Source = "Value",
+						},
+						Softness1 = Input { Value = 1, },
+						Offset1 = Input {
+							SourceOp = "Path1_4",
+							Source = "Position",
+						},
+						Softness2 = Input { Value = 1, },
+						Softness3 = Input { Value = 1, },
+						Softness4 = Input { Value = 1, },
+						Softness5 = Input { Value = 1, },
+						Softness6 = Input { Value = 1, },
+						Softness7 = Input { Value = 1, },
+						Softness8 = Input { Value = 1, }
+					},
+				},
+				Follower1Opacity1 = BezierSpline {
+					SplineColor = { Red = 179, Green = 28, Blue = 244 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4.999995, 1 }, Flags = { Linear = true } },
+						[15] = { 1, LH = { 10.000005, 1 } }
+					}
+				},
+				Path1_4 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1_4Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = -0.5, Y = -0.1, RX = 0, RY = -0.133333333333333 },
+									{ Linear = true, LockY = true, X = -0.5, Y = -0.5, LX = 0, LY = 0.133333333333333 }
+								}
+							},
+						}
+					},
+				},
+				Path1_4Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4.999995, 1 }, Flags = { Linear = true, LockedY = true } },
+						[15] = { 1, LH = { 10.000005, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				TimeStretcher2 = TimeStretcher {
+					CtrlWShown = false,
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher2SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Glow1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 3.88622e-05, 56.068 } },
+				}
+			},
+		},
+		TimeStretcher2SourceTime = BezierSpline {
+			SplineColor = { Red = 233, Green = 217, Blue = 243 },
+			CtrlWZoom = false,
+			KeyFrames = {
+				[0] = { 0, RH = { 16.6666666666667, 16.6666666666667 }, Flags = { Linear = true } },
+				[50] = { 50, LH = { 33.3333333333333, 33.3333333333333 }, Flags = { Linear = true } }
+			}
+		}
+	}
+}

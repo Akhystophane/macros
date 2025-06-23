@@ -1,0 +1,683 @@
+{
+	Tools = ordered() {
+		OverlayTrioShowcaseIcon2 = GroupOperator {
+			CtrlWZoom = false,
+			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/journalistic_style/effects/" } }, },
+			Outputs = {
+				Output10 = InstanceOutput {
+					SourceOp = "Transform3_1Size",
+					Source = "Value",
+				},
+				Output16 = InstanceOutput {
+					SourceOp = "Transform3_2Size",
+					Source = "Value",
+				},
+				Output4 = InstanceOutput {
+					SourceOp = "Transform3Size",
+					Source = "Value",
+				},
+				Output17 = InstanceOutput {
+					SourceOp = "Left_1_1",
+					Source = "Data",
+				},
+				Output11 = InstanceOutput {
+					SourceOp = "Left_2",
+					Source = "Data",
+				},
+				Output8 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				},
+				Output7 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Position",
+				},
+				Output9 = InstanceOutput {
+					SourceOp = "Path1Displacement2",
+					Source = "Value",
+				},
+				Output3 = InstanceOutput {
+					SourceOp = "Path4Displacement",
+					Source = "Value",
+				},
+				Output12 = InstanceOutput {
+					SourceOp = "Right_2",
+					Source = "Data",
+				},
+				Output5 = InstanceOutput {
+					SourceOp = "Left_1",
+					Source = "Data",
+				},
+				Output14 = InstanceOutput {
+					SourceOp = "Path3",
+					Source = "Heading",
+				},
+				Output15 = InstanceOutput {
+					SourceOp = "Path3Displacement",
+					Source = "Value",
+				},
+				MainOutput1 = InstanceOutput {
+					SourceOp = "CustomTool3",
+					Source = "Output",
+				},
+				Output13 = InstanceOutput {
+					SourceOp = "Path3",
+					Source = "Position",
+				},
+				Output18 = InstanceOutput {
+					SourceOp = "Right_1_1",
+					Source = "Data",
+				},
+				Output6 = InstanceOutput {
+					SourceOp = "Right_1",
+					Source = "Data",
+				},
+				Output2 = InstanceOutput {
+					SourceOp = "Path4",
+					Source = "Heading",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Path4",
+					Source = "Position",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 43.2924, 179.288 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 692.073, 645.48, 403.67, 44.3532 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				Group1 = GroupOperator {
+					CtrlWShown = false,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Transform1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { -110.617, 156.837 },
+						Flags = {
+							AllowPan = false,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 236, 133.058, 118, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						Transform3_2 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input {
+									SourceOp = "Path3",
+									Source = "Position",
+								},
+								Size = Input {
+									SourceOp = "Transform3_2Size",
+									Source = "Value",
+								},
+								Input = Input {
+									SourceOp = "Resize1_2",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -56.1646, 8.41058 } },
+						},
+						MediaIn4 = MediaIn {
+							CtrlWShown = false,
+							CustomData = { MEDIA_ID = "0da38ac8-a311-4f11-954c-81dca57055e9", MediaProps = { MEDIA_NUM_LAYERS = 0, MEDIA_FORMAT_TYPE = "PNG", MEDIA_PATH = "/Users/emmanuellandau/Downloads/1F1F2-1F1FD_color.png", MEDIA_LAYER_DESC = {
+									}, MEDIA_NAME = "1F1F2-1F1FD_color.png", MEDIA_HEIGHT = 618, MEDIA_START_FRAME = 0, MEDIA_IS_SOURCE_RES = true, MEDIA_SRC_FRAME_RATE = 24, MEDIA_MARK_OUT = 0, MEDIA_WIDTH = 618, MEDIA_NUM_FRAMES = 1, MEDIA_MARK_IN = 0, MEDIA_PAR = 1 } },
+							Inputs = {
+								GlobalOut = Input { Value = 652, },
+								MediaSource = Input { Value = FuID { "MediaPool" }, },
+								MediaID = Input { Value = "0da38ac8-a311-4f11-954c-81dca57055e9", },
+								AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+								Layer = Input {
+									Value = Text {
+									},
+								},
+								ClipTimeEnd = Input { Value = 0, },
+								Loop = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LeftAudio = Input {
+									SourceOp = "Left_1_1",
+									Source = "Data",
+								},
+								RightAudio = Input {
+									SourceOp = "Right_1_1",
+									Source = "Data",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 23.8493, 88.8645 } },
+							Version = 1
+						},
+						Resize1_2 = BetterResize {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								KeepAspect = Input { Value = 1, },
+								HiQOnly = Input { Value = 0, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Input = Input {
+									SourceOp = "MediaIn4",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -54.6913, 41.4106 } },
+						},
+						Transform1_1 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input { Value = { 0.48, 0.5 }, },
+								Angle = Input { Value = 44, },
+								Input = Input {
+									SourceOp = "Transform3_2",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 8.41058 } },
+						}
+					},
+				},
+				Group2 = GroupOperator {
+					CtrlWShown = false,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Transform3_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { -1.96429, 228.073 },
+						Flags = {
+							AllowPan = false,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 142.944, 167.974, 63.9039, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						Transform3_1 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input {
+									SourceOp = "Path1",
+									Source = "Position",
+								},
+								Size = Input {
+									SourceOp = "Transform3_1Size",
+									Source = "Value",
+								},
+								Input = Input {
+									SourceOp = "Resize1_1",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -0.308403, 9.77105 } },
+						},
+						Resize1_1 = BetterResize {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								KeepAspect = Input { Value = 1, },
+								HiQOnly = Input { Value = 0, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Input = Input {
+									SourceOp = "MediaIn1_1",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 0, 41.7126 } },
+						},
+						MediaIn1_1 = MediaIn {
+							CtrlWShown = false,
+							CustomData = { MEDIA_ID = "c69bc8ca-5693-4144-92fb-be68e463bd4e", MediaProps = { MEDIA_NUM_LAYERS = 0, MEDIA_FORMAT_TYPE = "PNG", MEDIA_PATH = "/Users/emmanuellandau/Downloads/1F1E8-1F1E6_color.png", MEDIA_LAYER_DESC = {
+									}, MEDIA_NAME = "1F1E8-1F1E6_color.png", MEDIA_HEIGHT = 618, MEDIA_START_FRAME = 0, MEDIA_IS_SOURCE_RES = true, MEDIA_SRC_FRAME_RATE = 24, MEDIA_MARK_OUT = 0, MEDIA_WIDTH = 618, MEDIA_NUM_FRAMES = 1, MEDIA_MARK_IN = 0, MEDIA_PAR = 1 } },
+							Inputs = {
+								GlobalOut = Input { Value = 652, },
+								MediaSource = Input { Value = FuID { "MediaPool" }, },
+								MediaID = Input { Value = "c69bc8ca-5693-4144-92fb-be68e463bd4e", },
+								AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+								Layer = Input {
+									Value = Text {
+									},
+								},
+								ClipTimeEnd = Input { Value = 0, },
+								Loop = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LeftAudio = Input {
+									SourceOp = "Left_2",
+									Source = "Data",
+								},
+								RightAudio = Input {
+									SourceOp = "Right_2",
+									Source = "Data",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 12.1639, 100.925 } },
+							Version = 1
+						}
+					},
+				},
+				Group3 = GroupOperator {
+					CtrlWShown = false,
+					Outputs = {
+						Output1 = InstanceOutput {
+							SourceOp = "Transform2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = GroupInfo {
+						Pos = { 110.821, 189.455 },
+						Flags = {
+							AllowPan = false,
+							AutoSnap = true,
+							RemoveRouters = true
+						},
+						Size = { 237.168, 141.531, 118.584, 24.2424 },
+						Direction = "Horizontal",
+						PipeStyle = "Direct",
+						Scale = 1,
+						Offset = { 0, 0 }
+					},
+					Tools = ordered() {
+						Transform3 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input {
+									SourceOp = "Path4",
+									Source = "Position",
+								},
+								Size = Input {
+									SourceOp = "Transform3Size",
+									Source = "Value",
+								},
+								Input = Input {
+									SourceOp = "Resize1",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 53.832, 8.17407 } },
+						},
+						Resize1 = BetterResize {
+							CtrlWShown = false,
+							Inputs = {
+								Width = Input { Value = 4096, },
+								Height = Input { Value = 4096, },
+								KeepAspect = Input { Value = 1, },
+								HiQOnly = Input { Value = 0, },
+								PixelAspect = Input { Value = { 1, 1 }, },
+								Input = Input {
+									SourceOp = "MediaIn2",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 51.715, 37.9987 } },
+						},
+						MediaIn2 = MediaIn {
+							CtrlWShown = false,
+							CustomData = { MEDIA_ID = "4911cf0e-8cf0-4c96-a546-247927ada71e", MediaProps = { MEDIA_NUM_LAYERS = 0, MEDIA_FORMAT_TYPE = "PNG", MEDIA_PATH = "/Users/emmanuellandau/Downloads/1F1E8-1F1F3_color.png", MEDIA_LAYER_DESC = {
+									}, MEDIA_NAME = "1F1E8-1F1F3_color.png", MEDIA_HEIGHT = 618, MEDIA_START_FRAME = 0, MEDIA_IS_SOURCE_RES = true, MEDIA_SRC_FRAME_RATE = 24, MEDIA_MARK_OUT = 0, MEDIA_WIDTH = 618, MEDIA_NUM_FRAMES = 1, MEDIA_MARK_IN = 0, MEDIA_PAR = 1 } },
+							Inputs = {
+								GlobalOut = Input { Value = 652, },
+								MediaSource = Input { Value = FuID { "MediaPool" }, },
+								MediaID = Input { Value = "4911cf0e-8cf0-4c96-a546-247927ada71e", },
+								AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+								Layer = Input {
+									Value = Text {
+									},
+								},
+								ClipTimeEnd = Input { Value = 0, },
+								Loop = Input { Value = 1, },
+								["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+								LeftAudio = Input {
+									SourceOp = "Left_1",
+									Source = "Data",
+								},
+								RightAudio = Input {
+									SourceOp = "Right_1",
+									Source = "Data",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { 55, 83.3411 } },
+							Version = 1
+						},
+						Transform2 = Transform {
+							CtrlWShown = false,
+							Inputs = {
+								Center = Input { Value = { 0.52, 0.5 }, },
+								Angle = Input { Value = -44, },
+								Input = Input {
+									SourceOp = "Transform3",
+									Source = "Output",
+								}
+							},
+							ViewInfo = OperatorInfo { Pos = { -56.168, 8.17407 } },
+						}
+					},
+				},
+				CustomTool3 = Custom {
+					CtrlWShown = false,
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool3LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool3LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool3LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool3LUTIn4",
+							Source = "Value",
+						},
+						Setup1 = Input {
+							SourceOp = "CustomTool3Setup1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "TimeStretcher1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -3.55379, 12.0085 } },
+				},
+				CustomTool3LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool3LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool3LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool3LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool3Setup1 = BezierSpline {
+					SplineColor = { Red = 225, Green = 244, Blue = 193 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.66666666666667, 0.333333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[8] = { 1, LH = { 5.33333333333333, 0.666666666666667 }, RH = { 10.6666666666667, 1.33333333333333 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} },
+						[16] = { 2, LH = { 13.3333333333333, 1.66666666666667 }, Flags = { Linear = true, LockedY = true }, Value = Text {
+							} }
+					}
+				},
+				Glow1_1 = Glow {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Value = 0.2, },
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						XGlowSize = Input { Value = 100, },
+						Glow = Input { Value = 0.819, },
+						Input = Input {
+							SourceOp = "Transform6",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -1.8176, 79.1722 } },
+				},
+				Path4 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path4Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.09125256147541, LX = 0, LY = -0.0304175204918033, RX = 0, RY = -0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0.0304175204918033 }
+								}
+							},
+						}
+					},
+				},
+				Path4Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.5 }, Flags = { LockedY = true } },
+						[8] = { 0.5, LH = { 5.333336, 0.5 }, RH = { 10.666664, 1 }, Flags = { LockedY = true } },
+						[16] = { 1, LH = { 13.333336, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform3Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 157 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.06 }, Flags = { Linear = true } },
+						[8] = { 0.06, LH = { 5.333336, 0.06 }, RH = { 10.666664, 0 } },
+						[16] = { 0, LH = { 13.333336, 0 } }
+					}
+				},
+				Left_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Merge3 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Transform3_1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -2.04761, 189.307 } },
+				},
+				Merge5 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -2.04761, 156.307 } },
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement2",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.09125256147541, LX = 0, LY = -0.0304175204918033, RX = 0, RY = -0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0.0304175204918033 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement2 = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.5 }, Flags = { LockedY = true } },
+						[8] = { 0.5, LH = { 5.333336, 0.5 }, RH = { 10.666664, 1 }, Flags = { LockedY = true } },
+						[16] = { 1, LH = { 13.333336, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform3_1Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 157 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.06 }, Flags = { Linear = true } },
+						[8] = { 0.06, LH = { 5.333336, 0.06 }, RH = { 10.666664, 0 } },
+						[16] = { 0, LH = { 13.333336, 0 } }
+					}
+				},
+				Left_2 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right_2 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Path3 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path3Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0, Y = 0, RX = 0, RY = 0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0.09125256147541, LX = 0, LY = -0.0304175204918033, RX = 0, RY = -0.0304175204918033 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0.0304175204918033 }
+								}
+							},
+						}
+					},
+				},
+				Path3Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.5 }, Flags = { Linear = true, LockedY = true } },
+						[8] = { 0.5, LH = { 5.333336, 0.5 }, RH = { 10.666664, 1 }, Flags = { LockedY = true } },
+						[16] = { 1, LH = { 13.333336, 1 }, Flags = { LockedY = true } }
+					}
+				},
+				Transform3_2Size = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 157 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.666664, 0.06 }, Flags = { Linear = true } },
+						[8] = { 0.06, LH = { 5.333336, 0.06 }, RH = { 10.666664, 0 } },
+						[16] = { 0, LH = { 13.333336, 0 } }
+					}
+				},
+				Left_1_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right_1_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				TimeStretcher1 = TimeStretcher {
+					Inputs = {
+						SourceTime = Input {
+							SourceOp = "TimeStretcher1SourceTime",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Glow1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2.98191, 46.1722 } },
+				},
+				Transform6 = Transform {
+					Inputs = {
+						Center = Input {
+							Value = { 0.489309765625, 0.46494140625 },
+							Expression = "Point(AutoDomain1.Output.DataWindow[1] / Merge5.Output.OriginalWidth + 0.4793, AutoDomain1.Output.DataWindow[4] / Merge5.Output.OriginalHeight +0.4)",
+						},
+						Size = Input {
+							Value = 0.439453125,
+							Expression = "8* (AutoDomain1.Output.DataWindow[3]-AutoDomain1.Output.DataWindow[1]) / Merge5.Output.OriginalHeight",
+						},
+						Input = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -2.04761, 115.71 } },
+				}
+			},
+		},
+		TimeStretcher1SourceTime = BezierSpline {
+			SplineColor = { Red = 233, Green = 217, Blue = 243 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/journalistic_style/effects/"
+					}
+				}
+			},
+			KeyFrames = {
+				[0] = { 0, RH = { 2.66666666666667, 2.66666666666667 } },
+				[8] = { 8, LH = { 5.33333333333333, 5.33333333333333 }, RH = { 10.6666666666667, 10.6666666666667 }, Flags = { Linear = true } },
+				[16] = { 16, LH = { 13.3333333333333, 13.3333333333333 }, Flags = { Linear = true } }
+			}
+		}
+	},
+	ActiveTool = "OverlayTrioShowcaseIcon2"
+}
