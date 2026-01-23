@@ -1,0 +1,11 @@
+macro_info:
+  description: Use only as a companion to ShowcaseLogo (not subject to overlapping)
+    to provide contextual or identifying information. Must not be used without a logo.
+  type_description: Use only as a companion to ShowcaseLogo (not subject to overlapping)
+    to provide contextual or identifying information. Must not be used without a logo.
+  pos_possibility: &id001
+  - main
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Text1

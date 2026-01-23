@@ -1,0 +1,15 @@
+macro_info:
+  description: Use for secondary text that supports the main idea, but MUST be self-contained
+    and readable on its own.
+  type_description: Use for secondary text that supports the main idea, but MUST be
+    self-contained and readable on its own.
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+pos_possibility: *id001
+variables:
+- name: Text1

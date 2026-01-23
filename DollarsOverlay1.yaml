@@ -1,0 +1,22 @@
+macro_info:
+  description: Animated dollar icons appearing across four zones at once.
+  type_description: Animated dollar icons appearing across four zones at once.
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - top_left
+    - top_main
+    - bottom_main
+    - bottom_right
+  style_family: minimalist
+pos_possibility: *id001
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 16
+        value: 16.0
+      slow_motion: true

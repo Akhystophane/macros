@@ -1,0 +1,21 @@
+macro_info:
+  description: Use when a passage explicitly refers to a company or brand and its
+    logo alone is semantically sufficient to illustrate the point.
+  type_description: Use when a passage explicitly refers to a company or brand and
+    its logo alone is semantically sufficient to illustrate the point.
+  pos_possibility: &id001
+  - main
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Footage1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Footage1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 18
+        value: 18.0

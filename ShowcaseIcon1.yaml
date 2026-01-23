@@ -1,0 +1,34 @@
+macro_info:
+  description: Use when one clear idea in the passage can be strongly illustrated
+    by a single icon. The icon carries the meaning; the frame is decorative.
+  type_description: Use when one clear idea in the passage can be strongly illustrated
+    by a single icon. The icon carries the meaning; the frame is decorative.
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - main
+    - bottom_main
+    - bottom_right
+  style_family: minimalist
+  colors:
+  - Accent
+pos_possibility: *id001
+variables:
+- name: Icon1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 20
+        value: 20.0
+      anchor_variable: Icon1
+    NumberIn2:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 20
+        value: 20.0
+      slow_motion: true

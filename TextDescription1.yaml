@@ -1,0 +1,29 @@
+macro_info:
+  description: 'when SHOWCASE ASSET PICKED: Use to fill bottom_main with a single
+    long visual-filler paragraph (40 -50 words chars, prefer upper bound). The legnth
+    is critical, if not respected I might die. This text MUST NOT be synchronized;
+    Its purpose is to occupy space while adding real conceptual context, not a vague
+    visual label or generic description'
+  type_description: 'when SHOWCASE ASSET PICKED: Use to fill bottom_main with a single
+    long visual-filler paragraph (40 -50 words chars, prefer upper bound). The legnth
+    is critical, if not respected I might die. This text MUST NOT be synchronized;
+    Its purpose is to occupy space while adding real conceptual context, not a vague
+    visual label or generic description'
+  pos_possibility: &id001
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+pos_possibility: *id001
+variables:
+- name: Text1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Text1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 13
+        value: 13.0

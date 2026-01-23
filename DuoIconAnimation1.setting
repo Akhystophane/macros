@@ -1,0 +1,1438 @@
+{
+	Tools = ordered() {
+		DuoIconAnimation1 = GroupOperator {
+			CustomData = {
+				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/DuoIconAnimation1.setting",
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Transform6",
+					Source = "Output",
+				},
+				Output2 = InstanceOutput {
+					SourceOp = "Path1Displacement",
+					Source = "Value",
+				},
+				Output1 = InstanceOutput {
+					SourceOp = "Path1",
+					Source = "Heading",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 214.67, 209.678 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 1304.64, 309.682, 652.318, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				CustomTool1 = Custom {
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Fri Jan  9 17:05:43 2026",
+							Description = "",
+							duration_formula = "",
+							ID = "",
+							GroupID = "CustomTool1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						NumberIn1 = Input {
+							SourceOp = "CustomTool1NumberIn1",
+							Source = "Value",
+						},
+						NumberIn2 = Input {
+							SourceOp = "CustomTool1NumberIn2",
+							Source = "Value",
+						},
+						NumberIn3 = Input {
+							SourceOp = "CustomTool1NumberIn3",
+							Source = "Value",
+						},
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1_1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2_1",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3_1",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4_1",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Merge5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 298.171, 47.843 } },
+				},
+				CustomTool1NumberIn1 = BezierSpline {
+					SplineColor = { Red = 233, Green = 19, Blue = 5 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 4 }, Flags = { Linear = true } },
+						[12] = { 12, LH = { 8, 8 }, Flags = { Linear = true } }
+					}
+				},
+				CustomTool1NumberIn2 = BezierSpline {
+					SplineColor = { Red = 233, Green = 151, Blue = 5 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 4 }, Flags = { Linear = true } },
+						[12] = { 12, LH = { 8, 8 }, Flags = { Linear = true } }
+					}
+				},
+				CustomTool1NumberIn3 = BezierSpline {
+					SplineColor = { Red = 233, Green = 88, Blue = 5 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 13.6666666666667, 13.6666666666667 }, Flags = { Linear = true } },
+						[41] = { 41, LH = { 27.3333333333333, 27.3333333333333 }, Flags = { Linear = true } }
+					}
+				},
+				CustomTool1LUTIn1_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 255, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn2_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn3_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 180, Blue = 255 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn4_1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 180, Green = 255, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				Transform6 = Transform {
+					CtrlWZoom = false,
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Fri Jan  9 17:05:56 2026",
+							Description = "",
+							ID = "",
+							GroupID = "Macro_Transform1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						Input = Input {
+							SourceOp = "CustomTool1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 188.171, 47.843 } },
+				},
+				Merge5 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input { Expression = "self:GetValue(\"BlendControl\", CustomTool1.NumberIn2)", },
+						Background = Input {
+							SourceOp = "Merge6",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform3_1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						BlendControl = Input {
+							SourceOp = "Merge5BlendControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 315.551, 94.1718 } },
+					UserControls = ordered() {
+						BlendControl = {
+							INP_Integer = false,
+							ICS_ControlPage = "Controls",
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "BlendControl",
+						}
+					}
+				},
+				Merge5BlendControl = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 0.333333333333333 }, Flags = { Linear = true } },
+						[12] = { 1, LH = { 8, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				ColorMonitor1 = Custom {
+					CtrlWShown = false,
+					NameSet = true,
+					CustomData = {
+						metadata = {
+							lastModified = "Mon Dec 29 21:50:09 2025",
+							Description = "",
+							duration_formula = "",
+							ID = "",
+							GroupID = "ColorMonitor1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "ColorMonitor1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "ColorMonitor1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "ColorMonitor1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "ColorMonitor1LUTIn4",
+							Source = "Value",
+						},
+						InkRed = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						InkBlue = Input {
+							SourceOp = "Publish3",
+							Source = "Value",
+						},
+						InkGreen = Input {
+							SourceOp = "Publish2",
+							Source = "Value",
+						},
+						InkAlpha = Input {
+							SourceOp = "Publish4",
+							Source = "Value",
+						},
+						AccentRed = Input {
+							SourceOp = "Publish5",
+							Source = "Value",
+						},
+						AccentGreen = Input {
+							SourceOp = "Publish6",
+							Source = "Value",
+						},
+						AccentBlue = Input {
+							SourceOp = "Publish7",
+							Source = "Value",
+						},
+						AccentAlpha = Input {
+							SourceOp = "Publish8",
+							Source = "Value",
+						},
+						Ink2Red = Input {
+							SourceOp = "Publish9",
+							Source = "Value",
+						},
+						Ink2Green = Input {
+							SourceOp = "Publish10",
+							Source = "Value",
+						},
+						Ink2Blue = Input {
+							SourceOp = "Publish11",
+							Source = "Value",
+						},
+						Ink2Alpha = Input {
+							SourceOp = "Publish12",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 77.9813, 8.09837 } },
+					UserControls = ordered() {
+						InkRed = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 2,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 0,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "InkRed",
+						},
+						InkBlue = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 2,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 2,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "InkBlue",
+						},
+						InkGreen = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 2,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 1,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "InkGreen",
+						},
+						InkAlpha = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 2,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 3,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "InkAlpha",
+						},
+						AccentRed = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 3,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 0,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "AccentRed",
+						},
+						AccentGreen = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 3,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 1,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "AccentGreen",
+						},
+						AccentBlue = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 3,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 2,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "AccentBlue",
+						},
+						AccentAlpha = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 3,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 3,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "AccentAlpha",
+						},
+						Ink2Red = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 4,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 0,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Ink2Red",
+						},
+						Ink2Green = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 4,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 1,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Ink2Green",
+						},
+						Ink2Blue = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 4,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 2,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Ink2Blue",
+						},
+						Ink2Alpha = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 4,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 3,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Ink2Alpha",
+						},
+						Accent2Red = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 5,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 0,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Accent2Red",
+						},
+						Accent2Blue = {
+							INP_MaxAllowed = 1000000,
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_MaxScale = 1,
+							IC_ControlGroup = 5,
+							ICS_ControlPage = "Controls",
+							INP_MinScale = 0,
+							INP_MinAllowed = -1000000,
+							LINKID_DataType = "Number",
+							IC_ControlID = 2,
+							INP_SplineType = "Default",
+							CLRC_ShowWheel = false,
+							LINKS_Name = "Accent2Blue"
+						},
+						Accent2Green = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 5,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 1,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Accent2Green",
+						},
+						Accent2Alpha = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 5,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 3,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "Accent2Alpha",
+						},
+						Surface = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 6,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 0,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "SurfaceRed",
+						},
+						SurfaceGreen = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 6,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 1,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "SurfaceGreen",
+						},
+						SurfaceBlue = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 6,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 2,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "SurfaceBlue",
+						},
+						SurfaceAlpha = {
+							INP_Integer = false,
+							CLRC_NoSliders = false,
+							INPID_InputControl = "ColorControl",
+							CLRC_ColorSpace = "HSV",
+							INP_SplineType = "Default",
+							IC_ControlGroup = 6,
+							CLRC_ShowWheel = false,
+							LINKID_DataType = "Number",
+							IC_ControlID = 3,
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "SurfaceAlpha",
+						}
+					}
+				},
+				ColorMonitor1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				ColorMonitor1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				ColorMonitor1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				ColorMonitor1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish1 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish3 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish2 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish4 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+					Inputs = {
+						Value = Input { Value = 1, }
+					},
+				},
+				Publish5 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+					Inputs = {
+						Value = Input { Value = 0.807843137254902, }
+					},
+				},
+				Publish6 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+					Inputs = {
+						Value = Input { Value = 0.690196078431373, }
+					},
+				},
+				Publish7 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+					Inputs = {
+						Value = Input { Value = 0.305882352941176, }
+					},
+				},
+				Publish8 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+					Inputs = {
+						Value = Input { Value = 1, }
+					},
+				},
+				Publish9 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish10 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish11 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Publish12 = PublishNumber {
+					CtrlWZoom = false,
+					CustomData = {
+						Path = {
+							Map = {
+								["Setting:"] = "Macros:/minimalist/"
+							}
+						},
+					},
+				},
+				Transform3_1_1 = Transform {
+					Inputs = {
+						Center = Input { Value = { 2.1240318125418, 0.5 }, },
+						Size = Input { Value = 1.44, },
+						Angle = Input {
+							Value = 0.270362556277867,
+							Expression = "self:GetValue(\"AngleControl\", CustomTool1.NumberIn3)",
+						},
+						Input = Input {
+							SourceOp = "Resize1_1_1",
+							Source = "Output",
+						},
+						AngleControl = Input {
+							SourceOp = "Transform3_1_1AngleControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 587.741, 109.935 } },
+					UserControls = ordered() {
+						AngleControl = {
+							INP_Integer = false,
+							INPID_InputControl = "SliderControl",
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "AngleControl",
+						}
+					}
+				},
+				Transform3_1_1AngleControl = BezierSpline {
+					SplineColor = { Red = 14, Green = 221, Blue = 144 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 39.1, RH = { 13.666653, 0 }, Flags = { Linear = true } },
+						[41] = { 0, LH = { 17.45, -0.4 } }
+					}
+				},
+				Merge6 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Blend = Input {
+							SourceOp = "Merge6Blend",
+							Source = "Value",
+							Expression = "self:GetValue(\"BlendControl\", CustomTool1.NumberIn1)",
+						},
+						Background = Input {
+							SourceOp = "Duplicate1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform3_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, },
+						BlendControl = Input {
+							SourceOp = "Merge6BlendControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 416.091, 145.357 } },
+					UserControls = ordered() {
+						BlendControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "BlendControl",
+						}
+					}
+				},
+				Merge6Blend = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 0.333333333333333 }, Flags = { Linear = true } },
+						[12] = { 1, LH = { 8, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Merge6BlendControl = BezierSpline {
+					SplineColor = { Red = 205, Green = 205, Blue = 205 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 4, 0.333333333333333 }, Flags = { Linear = true } },
+						[12] = { 1, LH = { 8, 0.666666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Transform3_1 = Transform {
+					Inputs = {
+						Center = Input { Value = { -1.08745281462941, 0.5 }, },
+						Size = Input { Value = 1.44, },
+						Angle = Input { Expression = "self:GetValue(\"AngleControl\", CustomTool1.NumberIn3)", },
+						Input = Input {
+							SourceOp = "Resize1_1",
+							Source = "Output",
+						},
+						AngleControl = Input {
+							SourceOp = "Transform3_1AngleControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 189.511, 146.573 } },
+					UserControls = ordered() {
+						AngleControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "AngleControl",
+						}
+					}
+				},
+				Transform3_1AngleControl = BezierSpline {
+					SplineColor = { Red = 14, Green = 221, Blue = 144 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 39.1, RH = { 13.666653, 0 }, Flags = { Linear = true } },
+						[41] = { 0, LH = { 17.45, -0.4 } }
+					}
+				},
+				Resize1_1 = BetterResize {
+					Inputs = {
+						Width = Input { Value = 162, },
+						Height = Input { Value = 162, },
+						KeepAspect = Input { Value = 1, },
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "MediaIn1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 79.5114, 146.582 } },
+				},
+				Transform2 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Size = Input { Value = 0.8, },
+						Input = Input {
+							SourceOp = "Text1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -89.4387, 140.487 } },
+				},
+				MediaIn1_1 = MediaIn {
+					CustomData = {
+						MediaProps = {
+							MEDIA_NUM_LAYERS = 0,
+							MEDIA_FORMAT_TYPE = "PNG",
+							MEDIA_HEIGHT = 512,
+							MEDIA_LAYER_DESC = {
+							},
+							MEDIA_PAR = 1,
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/poison_3655867.png",
+							MEDIA_START_FRAME = 0,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_WIDTH = 512,
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_MARK_IN = 0,
+							MEDIA_NAME = "poison_3655867.png"
+						},
+						MEDIA_ID = "3fc0255e-b0b2-4d82-bc77-71316cd9cc41",
+						metadata = {
+							lastModified = "Fri Jan  9 17:12:28 2026",
+							Description = "",
+							ID = "",
+							GroupID = "Icon1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "3fc0255e-b0b2-4d82-bc77-71316cd9cc41", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input { Value = "", },
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						DeepOutputMode = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						LeftAudio = Input {
+							SourceOp = "Left_1",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right_1",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -199.713, 79.386 } },
+					Version = 1
+				},
+				Left_1 = AudioDisplay {
+				},
+				Right_1 = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Text1 = TextPlus {
+					CtrlWShown = false,
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 2, },
+						Wrap = Input { Value = 1, },
+						LayoutRotation = Input { Value = 1, },
+						TransformRotation = Input { Value = 1, },
+						Red1 = Input {
+							Value = 0.807843137254902,
+							Expression = "ColorMonitor1.AccentRed",
+						},
+						Green1 = Input {
+							Value = 0.690196078431373,
+							Expression = "ColorMonitor1.AccentGreen",
+						},
+						Blue1 = Input {
+							Value = 0.305882352941176,
+							Expression = "ColorMonitor1.AccentBlue",
+						},
+						Alpha1 = Input { Expression = "ColorMonitor1.AccentAlpha", },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input { Value = "----------------------", },
+						Font = Input { Value = "Open Sans", },
+						Style = Input { Value = "Bold", },
+						Size = Input { Value = 0.2953, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						Start = Input { Expression = "self:GetValue(\"StartControl\", CustomTool1.NumberIn3)", },
+						End = Input {
+							Value = 0.186963103889463,
+							Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn3)",
+						},
+						EndControl = Input {
+							SourceOp = "Text1EndControl",
+							Source = "Value",
+						},
+						StartControl = Input {
+							SourceOp = "Text1StartControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -203.419, 140.473 } },
+					UserControls = ordered() {
+						EndControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "EndControl",
+						},
+						StartControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "StartControl",
+						}
+					}
+				},
+				Text1EndControl = BezierSpline {
+					SplineColor = { Red = 218, Green = 249, Blue = 145 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 9.99999, 1 }, Flags = { Linear = true } },
+						[30] = { 1, LH = { 20.00001, 1 } }
+					}
+				},
+				Text1StartControl = BezierSpline {
+					SplineColor = { Red = 249, Green = 211, Blue = 150 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 10, 0 }, Flags = { Linear = true } },
+						[30] = { 0, LH = { 20, 0 }, Flags = { Linear = true } }
+					}
+				},
+				Transform5 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Size = Input { Value = 1.25, },
+						Input = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 7.19128, 184.372 } },
+				},
+				Merge3 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Merge4",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -102.809, 184.372 } },
+				},
+				Duplicate1 = Fuse.Duplicate {
+					CtrlWShown = false,
+					Inputs = {
+						Copies = Input {
+							Value = 1.16666666666667,
+							Expression = "self:GetValue(\"CopiesControl\", CustomTool1.NumberIn2)",
+						},
+						Center = Input {
+							Value = { 0.983, 0.310763951967596 },
+							Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn2)",
+						},
+						Polyline = Input {
+							Value = Polyline {
+							},
+						},
+						Background = Input {
+							SourceOp = "Transform3",
+							Source = "Output",
+						},
+						CenterControl = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						},
+						CopiesControl = Input {
+							SourceOp = "Duplicate1CopiesControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 316.971, 184.358 } },
+					UserControls = ordered() {
+						CenterControl = {
+							LINKS_Name = "CenterControl",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "OffsetControl",
+							LINKID_DataType = "Point",
+						},
+						CopiesControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "CopiesControl",
+						}
+					}
+				},
+				Path1 = PolyPath {
+					DrawMode = "InsertAndModify",
+					CtrlWZoom = false,
+					Inputs = {
+						Displacement = Input {
+							SourceOp = "Path1Displacement",
+							Source = "Value",
+						},
+						PolyLine = Input {
+							Value = Polyline {
+								Points = {
+									{ Linear = true, LockY = true, X = 0.483, Y = -0.327, RX = 0, RY = 0.109 },
+									{ Linear = true, LockY = true, X = 0.483, Y = 0, LX = 0, LY = -0.109, RX = -0.161, RY = 0 },
+									{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0.161, LY = 0 }
+								}
+							},
+						}
+					},
+				},
+				Path1Displacement = BezierSpline {
+					SplineColor = { Red = 255, Green = 0, Blue = 255 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[0] = { 0, RH = { 3.999996, 0.403703703703704 }, Flags = { LockedY = true } },
+						[12] = { 0.403703703703704, LH = { 8.000004, 0.403703703703704 }, RH = { 29.3333333333333, 0.602469135802469 }, Flags = { LockedY = true } },
+						[64] = { 1, LH = { 46.6666666666667, 0.801234567901235 }, Flags = { Linear = true, LockedY = true } }
+					}
+				},
+				Duplicate1CopiesControl = BezierSpline {
+					SplineColor = { Red = 38, Green = 236, Blue = 71 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 1, RH = { 4, 1.33333333333333 }, Flags = { Linear = true } },
+						[12] = { 2, LH = { 8, 1.66666666666667 }, Flags = { Linear = true } }
+					}
+				},
+				Merge4 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform4",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -251.649, 177.145 } },
+				},
+				Transform1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Size = Input { Expression = "self:GetValue(\"SizeControl\", CustomTool1.NumberIn1)", },
+						Input = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						SizeControl = Input {
+							SourceOp = "Transform1SizeControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -366.999, 173.407 } },
+					UserControls = ordered() {
+						SizeControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "SizeControl",
+						}
+					}
+				},
+				Transform1SizeControl = BezierSpline {
+					SplineColor = { Red = 225, Green = 0, Blue = 225 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 0, RH = { 2.66666666666667, 0.233333333333333 }, Flags = { Linear = true } },
+						[8] = { 0.7, LH = { 5.33333333333333, 0.466666666666667 }, RH = { 9.33333333333333, 0.68 }, Flags = { Linear = true } },
+						[12] = { 0.64, LH = { 10.6666666666667, 0.66 }, Flags = { Linear = true } }
+					}
+				},
+				Transform4 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Size = Input { Value = 0.56, },
+						Input = Input {
+							SourceOp = "Background2_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -254.369, 216.066 } },
+				},
+				Background2_1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1_1",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 0.9372549019608, },
+						TopLeftBlue = Input { Value = 0.8549019607843, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -364.369, 216.066 } },
+				},
+				Background2 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input {
+							Value = 0.807843137254902,
+							Expression = "ColorMonitor1.AccentRed",
+						},
+						TopLeftGreen = Input {
+							Value = 0.690196078431373,
+							Expression = "ColorMonitor1.AccentGreen",
+						},
+						TopLeftBlue = Input {
+							Value = 0.305882352941176,
+							Expression = "ColorMonitor1.AccentBlue",
+						},
+						TopLeftAlpha = Input { Expression = "ColorMonitor1.AccentAlpha", }
+					},
+					ViewInfo = OperatorInfo { Pos = { -481.029, 172.268 } },
+				},
+				Ellipse1_1 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Level = Input {
+							Value = 0,
+							Expression = "self:GetValue(\"LevelControl\", CustomTool1.NumberIn1)",
+						},
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.013, },
+						Solid = Input { Value = 0, },
+						WriteLength = Input {
+							Value = 0,
+							Expression = "self:GetValue(\"WriteLengthControl\", CustomTool1.NumberIn1)",
+						},
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						LevelControl = Input {
+							SourceOp = "Ellipse1_1LevelControl",
+							Source = "Value",
+						},
+						WriteLengthControl = Input {
+							SourceOp = "Ellipse1_1WriteLengthControl",
+							Source = "Value",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -477.049, 217.272 } },
+					UserControls = ordered() {
+						LevelControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "LevelControl",
+						},
+						WriteLengthControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "WriteLengthControl",
+						}
+					}
+				},
+				Ellipse1_1LevelControl = BezierSpline {
+					SplineColor = { Red = 130, Green = 246, Blue = 132 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[7] = { 0, RH = { 9.333331, 1 }, Flags = { Linear = true } },
+						[14] = { 1, LH = { 11.666669, 1 } }
+					}
+				},
+				Ellipse1_1WriteLengthControl = BezierSpline {
+					SplineColor = { Red = 141, Green = 167, Blue = 243 },
+					CtrlWZoom = false,
+					NameSet = true,
+					KeyFrames = {
+						[7] = { 0, RH = { 9.333331, 1 }, Flags = { Linear = true } },
+						[14] = { 1, LH = { 11.666669, 1 } }
+					}
+				},
+				Transform3 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Center = Input { Value = { 0.261467889908257, 0.5 }, },
+						Size = Input { Value = 0.91, },
+						Angle = Input {
+							SourceOp = "Transform3Angle",
+							Source = "Value",
+						},
+						Input = Input {
+							SourceOp = "Transform5",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 319.531, 228.169 } },
+				},
+				Transform3Angle = BezierSpline {
+					SplineColor = { Red = 14, Green = 221, Blue = 144 },
+					CtrlWZoom = false,
+					KeyFrames = {
+						[0] = { 39.1, RH = { 13.666653, 0 }, Flags = { Linear = true } },
+						[41] = { 0, LH = { 17.45, -0.4 } }
+					}
+				},
+				Ellipse1 = EllipseMask {
+					CtrlWShown = false,
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						MaskWidth = Input { Value = 1080, },
+						MaskHeight = Input { Value = 1920, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -593.667, 173.487 } },
+				},
+				MediaIn1 = MediaIn {
+					CustomData = {
+						MediaProps = {
+							MEDIA_NUM_LAYERS = 0,
+							MEDIA_FORMAT_TYPE = "PNG",
+							MEDIA_PAR = 1,
+							MEDIA_LAYER_DESC = {
+							},
+							MEDIA_NAME = "poison_3655867.png",
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/poison_3655867.png",
+							MEDIA_START_FRAME = 0,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_WIDTH = 512,
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_MARK_IN = 0,
+							MEDIA_HEIGHT = 512
+						},
+						MEDIA_ID = "3fc0255e-b0b2-4d82-bc77-71316cd9cc41",
+						metadata = {
+							ID = "",
+							lastModified = "Sun Jan 11 09:53:34 2026",
+							GroupID = "Icon2",
+							Description = "",
+							Filled = false
+						},
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "3fc0255e-b0b2-4d82-bc77-71316cd9cc41", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input { Value = "", },
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						DeepOutputMode = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 507.879, 251.417 } },
+					Version = 1
+				},
+				Left = AudioDisplay {
+				},
+				Right = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Resize1_1_1 = BetterResize {
+					Inputs = {
+						Width = Input { Value = 162, },
+						Height = Input { Value = 162, },
+						KeepAspect = Input { Value = 1, },
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 575.083, 168.284 } },
+				}
+			},
+		}
+	}
+}

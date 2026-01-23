@@ -1,0 +1,26 @@
+macro_info:
+  description: Two-line text animation with Text1 being highlighted
+  type_description: Two-line text animation with Text1 being highlighted
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+  - Ink2
+  - Accent
+pos_possibility: *id001
+variables:
+- name: Text1
+- name: Text2
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Text1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 16
+        value: 16.0

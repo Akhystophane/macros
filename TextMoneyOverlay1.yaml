@@ -1,0 +1,25 @@
+macro_info:
+  description: Use to visually emphasize large monetary values or financial magnitudes
+    mentioned in the passage. The number is the message.
+  type_description: Use to visually emphasize large monetary values or financial magnitudes
+    mentioned in the passage. The number is the message.
+  pos_possibility: &id001
+  - top_left
+  - top_main
+  - main
+  - bottom_main
+  - bottom_right
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Text1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Text1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 10
+        value: 10.0

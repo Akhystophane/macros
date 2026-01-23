@@ -1,0 +1,11 @@
+macro_info:
+  description: Use when a footage directly illustrates or evidences the passage. The
+    footage is the main information carrier.
+  type_description: Use when a footage directly illustrates or evidences the passage.
+    The footage is the main information carrier.
+  pos_possibility: &id001
+  - main
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Footage1

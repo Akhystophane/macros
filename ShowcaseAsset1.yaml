@@ -1,0 +1,22 @@
+macro_info:
+  description: Use when one asset strongly encapsulates the emotion, or idea of a
+    passage.
+  type_description: Use when one asset strongly encapsulates the emotion, or idea
+    of a passage.
+  pos_possibility: &id001
+  - main
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Footage1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Footage1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 24
+        value: 24.0
+      slow_motion: true

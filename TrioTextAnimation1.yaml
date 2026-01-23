@@ -1,0 +1,33 @@
+macro_info:
+  description: A single sentence or coherent phrase split into three consecutive parts,
+    where Text1 carries the main emphasis and Text2 and Text3 provide supporting or
+    surrounding context. All three parts are semantically connected and should read
+    as one unified idea.
+  type_description: A single sentence or coherent phrase split into three consecutive
+    parts, where Text1 carries the main emphasis and Text2 and Text3 provide supporting
+    or surrounding context. All three parts are semantically connected and should
+    read as one unified idea.
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+  - Ink2
+  - Accent
+pos_possibility: *id001
+variables:
+- name: Text1
+- name: Text2
+- name: Text3
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Text1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 17
+        value: 16.0

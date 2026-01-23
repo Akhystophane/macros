@@ -1,0 +1,325 @@
+{
+	Tools = ordered() {
+		ShowcaseFootage1 = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Transform1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				DropShadow1 = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_1",
+							Source = "Mask",
+						},
+						Source = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 43, },
+						ShadowDistance = Input { Value = 0, },
+						shadowBlur = Input { Value = 0.378, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1306.79, 151.63 } },
+				},
+				Background2 = Background {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1",
+							Source = "Mask",
+						},
+						Width = Input { Value = 1920, },
+						Height = Input { Value = 1080, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1196.79, 151.63 } },
+				},
+				Rectangle1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.01, },
+						Solid = Input { Value = 0, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input {
+							Value = 0.622222222222222,
+							Expression = "(AutoDomain1.Output.DataWindow[3] - AutoDomain1.Output.DataWindow[1]) / 1080",
+						},
+						Height = Input {
+							Value = 0.255729166666667,
+							Expression = "(AutoDomain1.Output.DataWindow[4] - AutoDomain1.Output.DataWindow[2] + 1) / 1920",
+						},
+						CornerRadius = Input { Value = 0.024, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1080.13, 150.324 } },
+				},
+				Rectangle1_1 = RectangleMask {
+					Inputs = {
+						Filter = Input { Value = FuID { "Fast Gaussian" }, },
+						BorderWidth = Input { Value = 0.01, },
+						Invert = Input { Value = 1, },
+						MaskWidth = Input { Value = 1920, },
+						MaskHeight = Input { Value = 1080, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						ClippingMode = Input { Value = FuID { "None" }, },
+						Width = Input {
+							Value = 0.622222222222222,
+							Expression = "(AutoDomain1.Output.DataWindow[3] - AutoDomain1.Output.DataWindow[1]) / 1080",
+						},
+						Height = Input {
+							Value = 0.255729166666667,
+							Expression = "(AutoDomain1.Output.DataWindow[4] - AutoDomain1.Output.DataWindow[2] + 1) / 1920",
+						},
+						CornerRadius = Input { Value = 0.024, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1364.4, 99.1262 } },
+				},
+				DropShadow1_1 = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Rectangle1_1",
+							Source = "Mask",
+						},
+						Source = Input {
+							SourceOp = "DropShadow1",
+							Source = "Output",
+						},
+						shadowStrength = Input { Value = 1, },
+						shadowAngle = Input { Value = 40, },
+						ShadowDistance = Input { Value = 0.0126, },
+						shadowBlur = Input { Value = 0.354, },
+						shadowColorRed = Input { Value = 0, },
+						shadowColorGreen = Input { Value = 0, },
+						shadowColorBlue = Input { Value = 0, },
+						isLegacyComp = Input { Value = 0, },
+						blendGroup = Input { Value = 0, },
+						blendIn = Input { Value = 1, },
+						blend = Input { Value = 0, },
+						ignoreContentShape = Input { Value = 0, },
+						legacyIsProcessRGBOnly = Input { Value = 0, },
+						IsNoTemporalFramesReqd = Input { Value = 0, },
+						refreshTrigger = Input { Value = 1, },
+						srcProcessingAlphaMode = Input { Value = 2, },
+						dstProcessingAlphaMode = Input { Value = 2, },
+						resolvefxVersion = Input { Value = "2.0", }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1423.49, 150.411 } },
+				},
+				AutoDomain1 = AutoDomain {
+					Inputs = {
+						Input = Input {
+							SourceOp = "Resize1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1592.4, 228.08 } },
+				},
+				Merge3 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "AutoDomain1",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "DropShadow1_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 1601.79, 146.754 } },
+				},
+				CustomTool1 = Custom {
+					CustomData = {
+						metadata = {
+							lastModified = "Fri Jan  9 16:23:06 2026",
+							GroupID = "CustomTool1",
+							duration_formula = "",
+							Description = "",
+							Filled = false,
+							ID = ""
+						},
+					},
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Merge3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1601.79, 113.754 } },
+				},
+				CustomTool1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				Transform1 = Transform {
+					CtrlWZoom = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Fri Jan  9 16:23:18 2026",
+							GroupID = "Macro_Transform1",
+							ID = "",
+							Description = "",
+							Filled = false
+						},
+					},
+					Inputs = {
+						Input = Input {
+							SourceOp = "CustomTool1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1601.79, 80.7543 } },
+				},
+				MediaIn1 = MediaIn {
+					ExtentSet = true,
+					CustomData = {
+						MediaProps = {
+							MEDIA_FORMAT_TYPE = "PNG",
+							MEDIA_HEIGHT = 1086,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_LAYER_DESC = {
+							},
+							MEDIA_MARK_IN = 0,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_NAME = "Capture d’écran 2026-01-08 à 19.50.39.png",
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_NUM_LAYERS = 0,
+							MEDIA_PAR = 1,
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/Capture d’écran 2026-01-08 à 19.50.39.png",
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_START_FRAME = 0,
+							MEDIA_WIDTH = 1488
+						},
+						MEDIA_ID = "3d9c41b2-fb02-44bf-a5f2-07686d208e8e",
+						metadata = {
+							ID = "",
+							GroupID = "Footage1",
+							Description = "",
+							Filled = false,
+							lastModified = "Fri Jan  9 16:25:38 2026"
+						}
+					},
+					Inputs = {
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "3d9c41b2-fb02-44bf-a5f2-07686d208e8e", },
+						AudioTrack = Input { Value = FuID { "Timeline Audio" }, },
+						Layer = Input { Value = "", },
+						ClipTimeEnd = Input { Value = 0, },
+						Loop = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						DeepOutputMode = Input {
+							Value = 0,
+							Disabled = true,
+						},
+						LeftAudio = Input {
+							SourceOp = "Left",
+							Source = "Data",
+						},
+						RightAudio = Input {
+							SourceOp = "Right",
+							Source = "Data",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1375.13, 257.597 } },
+					Version = 1
+				},
+				Left = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Right = AudioDisplay {
+					CtrlWZoom = false,
+				},
+				Resize1 = BetterResize {
+					Inputs = {
+						Width = Input { Value = 672, },
+						Height = Input { Value = 490, },
+						KeepAspect = Input { Value = 1, },
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 1592.4, 261.08 } },
+				}
+			},
+		}
+	},
+	ActiveTool = "ShowcaseFootage1"
+}

@@ -1,0 +1,21 @@
+macro_info:
+  description: Neutral decorative background line used when no other line or curve
+    overlay is present.
+  type_description: Neutral decorative background line used when no other line or
+    curve overlay is present.
+  pos_possibility: &id001
+  - main
+  style_family: minimalist
+  colors:
+  - Accent
+pos_possibility: *id001
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 44
+        value: 44.0
+      slow_motion: true

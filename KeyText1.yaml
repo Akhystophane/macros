@@ -1,0 +1,25 @@
+macro_info:
+  description: Use to highlight a key point (bullet-style). Best for short takeaways
+    from a longer passage.
+  type_description: Use to highlight a key point (bullet-style). Best for short takeaways
+    from a longer passage.
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+pos_possibility: *id001
+variables:
+- name: Text1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Text1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 24
+        value: 24.0

@@ -1,0 +1,23 @@
+macro_info:
+  description: Upward animated curve (growth trend).
+  type_description: Upward animated curve (growth trend).
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - top_left
+    - top_main
+    - main
+    - bottom_main
+    - bottom_right
+  style_family: minimalist
+pos_possibility: *id001
+custom_tools:
+- name: CustomTool1_2
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 11
+        value: 11.0
+      slow_motion: true

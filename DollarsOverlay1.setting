@@ -1,0 +1,298 @@
+{
+	Tools = ordered() {
+		DollarsOverlay1 = GroupOperator {
+			NameSet = true,
+			Outputs = {
+				Output1 = InstanceOutput {
+					SourceOp = "CustomTool1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { -124.725, 219.74 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 642.92, 182.955, 321.46, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 124.725, -219.74 }
+			},
+			Tools = ordered() {
+				Loader1 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Assets/bill2_.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -383.185, 268.521 } },
+				},
+				Loader1_1 = Loader {
+					Clips = {
+						Clip {
+							ID = "Clip1",
+							Filename = "Assets/bill1_.png",
+							FormatID = "PNGFormat",
+							StartFrame = -1,
+							LengthSetManually = true,
+							TrimIn = 0,
+							TrimOut = 0,
+							ExtendFirst = 0,
+							ExtendLast = 0,
+							Loop = 0,
+							AspectMode = 0,
+							Depth = 0,
+							TimeCode = 0,
+							GlobalStart = 0,
+							GlobalEnd = 0
+						}
+					},
+					Inputs = {
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -151.733, 344.968 } },
+				},
+				Transform1 = Transform {
+					Inputs = {
+						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
+						Size = Input { Value = 2.6, },
+						Input = Input {
+							SourceOp = "Loader1",
+							Source = "Output",
+						},
+						CenterControl = Input {
+							SourceOp = "Path1",
+							Source = "Position",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -264.215, 269.123 } },
+					UserControls = ordered() {
+						CenterControl = {
+							LINKS_Name = "CenterControl",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "OffsetControl",
+							LINKID_DataType = "Point",
+						}
+					}
+				},
+				Transform2 = Transform {
+					Inputs = {
+						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
+						Size = Input { Value = 2.8, },
+						Input = Input {
+							SourceOp = "Loader1_1",
+							Source = "Output",
+						},
+						CenterControl = Input {
+							SourceOp = "Path3",
+							Source = "Position",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -152.971, 307.289 } },
+					UserControls = ordered() {
+						CenterControl = {
+							INPID_InputControl = "OffsetControl",
+							LINKID_DataType = "Point",
+							LINKS_Name = "CenterControl",
+							ICS_ControlPage = "Controls",
+						}
+					}
+				},
+				Merge2_1 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -152.866, 268.892 } },
+				},
+				Background2 = Background {
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftAlpha = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -28.8277, 228.376 } },
+				},
+				Merge2 = Merge {
+					Inputs = {
+						Background = Input {
+							SourceOp = "Background2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Merge2_1",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -25.2684, 270.347 } },
+				},
+				CustomTool1 = Custom {
+					CustomData = {
+						metadata = {
+							ID = "",
+							GroupID = "CustomTool1",
+							lastModified = "Wed Jan 14 20:07:53 2026",
+							Description = "",
+							Filled = false,
+							duration_formula = ""
+						},
+					},
+					Inputs = {
+						NumberIn1 = Input {
+							SourceOp = "CustomTool1NumberIn1",
+							Source = "Value",
+						},
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Merge2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 133.735, 272.499 } },
+				}
+			},
+		},
+		Path1 = PolyPath {
+			DrawMode = "InsertAndModify",
+			CtrlWZoom = false,
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path1Displacement",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = 1.120671, Y = -1.4908346758392, RX = -0.12, RY = 0 },
+							{ Linear = true, LockY = true, X = 0.760671, Y = -1.4908346758392, LX = 0.12, LY = 0 }
+						}
+					},
+				}
+			},
+		},
+		Path1Displacement = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			KeyFrames = {
+				[0] = { 0, RH = { 5.333328, 1 }, Flags = { LockedY = true } },
+				[16] = { 1, LH = { 10.666672, 1 }, Flags = { LockedY = true } }
+			}
+		},
+		Path3 = PolyPath {
+			DrawMode = "InsertAndModify",
+			CtrlWZoom = false,
+			Inputs = {
+				Displacement = Input {
+					SourceOp = "Path3Displacement",
+					Source = "Value",
+				},
+				PolyLine = Input {
+					Value = Polyline {
+						Points = {
+							{ Linear = true, LockY = true, X = -1.073749, Y = 2.099455, RX = 0.171333261233033, RY = 0 },
+							{ Linear = true, LockY = true, X = -0.5597492163009, Y = 2.099455, LX = -0.171333261233033, LY = 0 }
+						}
+					},
+				}
+			},
+		},
+		Path3Displacement = BezierSpline {
+			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			KeyFrames = {
+				[0] = { 0, RH = { 5.333328, 1 }, Flags = { LockedY = true } },
+				[16] = { 1, LH = { 10.666672, 1 }, Flags = { LockedY = true } }
+			}
+		},
+		CustomTool1NumberIn1 = BezierSpline {
+			SplineColor = { Red = 233, Green = 19, Blue = 5 },
+			KeyFrames = {
+				[0] = { 0, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true } },
+				[16] = { 16, LH = { 10.6666666666667, 10.6666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		CustomTool1LUTIn1 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		CustomTool1LUTIn2 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		CustomTool1LUTIn3 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		},
+		CustomTool1LUTIn4 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+		}
+	}
+}

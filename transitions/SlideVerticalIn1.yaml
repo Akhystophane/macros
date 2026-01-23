@@ -1,0 +1,14 @@
+macro_info:
+  description: ''
+  type_description: ''
+  style_family: minimalist
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 20
+        value: 20.0
+      anchor_variable: Transform1

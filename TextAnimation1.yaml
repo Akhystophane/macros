@@ -1,0 +1,23 @@
+macro_info:
+  description: text animation with Text1 being default subtitle. (no max length)
+  type_description: text animation with Text1 being default subtitle. (no max length)
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Ink
+pos_possibility: *id001
+variables:
+- name: Text1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 13
+        value: 13.0
+      anchor_variable: Text1

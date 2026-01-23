@@ -1,0 +1,26 @@
+macro_info:
+  description: Showcase the picture of a person.
+  type_description: Showcase the picture of a person.
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - main
+    - bottom_main
+    - bottom_right
+  style_family: minimalist
+  colors:
+  - Accent
+pos_possibility: *id001
+variables:
+- name: Footage1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Footage1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 16
+        value: 16.0
+      slow_motion: true

@@ -1,0 +1,223 @@
+{
+	Tools = ordered() {
+		TextWrap1 = GroupOperator {
+			CustomData = { SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/TextWrap1.setting", Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
+			Inputs = ordered() {
+				MainInput1 = InstanceInput {
+					SourceOp = "AutoDomain1_3",
+					Source = "Input",
+				}
+			},
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Transform1_2",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo {
+				Pos = { 25.1478, 250.471 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 466.368, 262.477, 158.644, 34.1437 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
+			Tools = ordered() {
+				CustomTool1_1 = Custom {
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Sat Nov 15 16:51:00 2025",
+							Description = "",
+							duration_formula = "",
+							ID = "",
+							GroupID = "CustomTool1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1_1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1_1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1_1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1_1LUTIn4",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Merge2_1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 64.4722, 28.6548 } },
+				},
+				CustomTool1_1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1_1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1_1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1_1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				Merge2_1_1 = Merge {
+					CtrlWShown = false,
+					Inputs = {
+						Background = Input {
+							SourceOp = "Text1_3",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "AutoDomain1_3",
+							Source = "Output",
+						},
+						PerformDepthMerge = Input { Value = 0, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 86.8017, 69.2189 } },
+				},
+				AutoDomain1_3 = AutoDomain {
+					NameSet = true,
+					ViewInfo = OperatorInfo { Pos = { 74.3925, 202.27 } },
+				},
+				Text1_3 = TextPlus {
+					NameSet = true,
+					CustomData = { metadata = { lastModified = "Fri Oct 31 20:12:23 2025", Description = "", ID = "", GroupID = "Text1", Filled = false }, },
+					Inputs = {
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 4096, },
+						Height = Input { Value = 4096, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 1, },
+						Wrap = Input { Value = 1, },
+						Clip = Input { Value = 1, },
+						Center = Input {
+							Value = { 0.5037841796875, 0.433005859375 },
+							Expression = "Point(\n    ((AutoDomain1_3.Output.DataWindow[1] + AutoDomain1_3.Output.DataWindow[3]) / 2) / AutoDomain1_3.Output.Width,\n    (AutoDomain1_3.Output.DataWindow[2] / AutoDomain1_3.Output.Height) - (self.LayoutHeight / 2)\n)",
+						},
+						LayoutWidth = Input {
+							Value = 0.166748046875,
+							Expression = "(AutoDomain1_3.Output.DataWindow[3] - AutoDomain1_3.Output.DataWindow[1]) / AutoDomain1_3.Output.Width",
+						},
+						LayoutHeight = Input { Value = 0.071, },
+						LayoutRotation = Input { Value = 1, },
+						Path = Input {
+							SourceOp = "Text1_3Path",
+							Source = "Value",
+						},
+						CharacterSpacing = Input { Value = 0.959, },
+						TransformRotation = Input { Value = 1, },
+						Red1 = Input { Value = 0, },
+						Green1 = Input { Value = 0, },
+						Blue1 = Input { Value = 0, },
+						ShadingGradient1 = Input {
+							Value = Gradient {
+								Colors = {
+									[0.0811808118081181] = { 0, 0, 0, 1 },
+									[0.335793357933579] = { 1, 1, 1, 1 },
+									[0.642066420664207] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						ShadingMappingSize1 = Input { Value = 1.08, },
+						ShadingMappingAspect1 = Input { Value = 1.024, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input {
+							SourceOp = "Publish1",
+							Source = "Value",
+						},
+						Font = Input { Value = "Inter", },
+						Style = Input { Value = "Medium", },
+						Size = Input { Value = 0.0118, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = -1, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						TabSpacing = Input { Value = 1, },
+						AdvancedFontControls = Input { Value = 1, },
+						Range = Input { Value = 194, },
+						HeightControl = Input { Value = 256, },
+						WidthControl = Input { Value = 399.1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { 229.051, 68.8761 } },
+					UserControls = ordered() { Range = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", ICS_ControlPage = "Text", INP_SplineType = "Default", LINKS_Name = "Range" }, HeightControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "HeightControl", }, WidthControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "WidthControl", } }
+				},
+				Publish1 = PublishText {
+					CtrlWZoom = false,
+					Inputs = {
+						Value = Input { Value = "META. Meta Platforms, Inc. NASDAQ - USD.\n29 Octobre 2023.\n", }
+					},
+				},
+				Text1_3Path = BezierSpline {
+					SplineColor = { Red = 186, Green = 244, Blue = 89 },
+					KeyFrames = {
+						[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
+							} }
+					}
+				},
+				Transform1_2 = Transform {
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Wed Nov 19 15:43:45 2025",
+							Description = "",
+							ID = "",
+							GroupID = "Macro_Transform1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						Input = Input {
+							SourceOp = "CustomTool1_1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 64.4722, -4.34517 } },
+				}
+			},
+		}
+	}
+}
