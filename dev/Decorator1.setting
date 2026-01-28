@@ -1,13 +1,33 @@
 {
 	Tools = ordered() {
 		Decorator1 = GroupOperator {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/dev/"
+					}
+				},
+				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/dev/Decorator1.setting",
+			},
 			Outputs = {
 				MainOutput1 = InstanceOutput {
 					SourceOp = "Merge17",
 					Source = "Output",
 				}
 			},
-			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			ViewInfo = GroupInfo {
+				Pos = { 341.766, 128.213 },
+				Flags = {
+					AllowPan = false,
+					AutoSnap = true,
+					RemoveRouters = true
+				},
+				Size = { 528.528, 113.478, 264.264, 24.2424 },
+				Direction = "Horizontal",
+				PipeStyle = "Direct",
+				Scale = 1,
+				Offset = { 0, 0 }
+			},
 			Tools = ordered() {
 				Loader1 = Loader {
 					Clips = {
@@ -33,10 +53,11 @@
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -269.667, 492.539 } },
+					ViewInfo = OperatorInfo { Pos = { -210.861, 30.1882 } },
 				},
 				Merge17 = Merge {
 					CtrlWZoom = false,
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform7",
@@ -48,27 +69,27 @@
 						},
 						PerformDepthMerge = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 132.861, 489.57 } },
+					ViewInfo = OperatorInfo { Pos = { 201, 30.8556 } },
 				},
 				Transform6 = Transform {
 					Inputs = {
-						Center = Input { Value = { 1.02001953125, 1.4375 }, },
+						Center = Input { Value = { 1.05908203125, 1.12760416666667 }, },
 						Input = Input {
 							SourceOp = "Transform8",
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -17.4446, 466.915 } },
+					ViewInfo = OperatorInfo { Pos = { 50.6944, 8.20059 } },
 				},
 				Transform7 = Transform {
 					Inputs = {
-						Center = Input { Value = { -0.03466796875, -0.43017578125 }, },
+						Center = Input { Value = { -0.03076171875, -0.14892578125 }, },
 						Input = Input {
 							SourceOp = "Transform8",
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -17.0636, 514.029 } },
+					ViewInfo = OperatorInfo { Pos = { 51.0754, 57.7388 } },
 				},
 				Transform8 = Transform {
 					Inputs = {
@@ -82,7 +103,7 @@
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -165.001, 490.723 } },
+					ViewInfo = OperatorInfo { Pos = { -96.862, 32.0086 } },
 				},
 				Transform8Angle = BezierSpline {
 					SplineColor = { Red = 14, Green = 221, Blue = 144 },
@@ -94,6 +115,5 @@
 				}
 			},
 		}
-	},
-	ActiveTool = "Decorator1"
+	}
 }

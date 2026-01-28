@@ -2,6 +2,14 @@
 	Tools = ordered() {
 		DollarsOverlay1 = GroupOperator {
 			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/DollarsOverlay1.setting",
+			},
 			Outputs = {
 				Output1 = InstanceOutput {
 					SourceOp = "CustomTool1",
@@ -9,13 +17,13 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -124.725, 219.74 },
+				Pos = { 335.792, 180.449 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
 					RemoveRouters = true
 				},
-				Size = { 642.92, 182.955, 321.46, 24.2424 },
+				Size = { 839.644, 427.433, 419.822, 69.9037 },
 				Direction = "Horizontal",
 				PipeStyle = "Direct",
 				Scale = 1,
@@ -46,7 +54,7 @@
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -383.185, 268.521 } },
+					ViewInfo = OperatorInfo { Pos = { -547.471, 267.094 } },
 				},
 				Loader1_1 = Loader {
 					Clips = {
@@ -72,12 +80,13 @@
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -151.733, 344.968 } },
+					ViewInfo = OperatorInfo { Pos = { -150.687, 421.07 } },
 				},
 				Transform1 = Transform {
 					Inputs = {
 						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
-						Size = Input { Value = 2.6, },
+						Size = Input { Value = 0.63, },
+						Angle = Input { Value = 20.9, },
 						Input = Input {
 							SourceOp = "Loader1",
 							Source = "Output",
@@ -87,20 +96,20 @@
 							Source = "Position",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -264.215, 269.123 } },
+					ViewInfo = OperatorInfo { Pos = { -437.918, 268.172 } },
 					UserControls = ordered() {
 						CenterControl = {
-							LINKS_Name = "CenterControl",
-							ICS_ControlPage = "Controls",
-							INPID_InputControl = "OffsetControl",
 							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
+							ICS_ControlPage = "Controls",
+							LINKS_Name = "CenterControl",
 						}
 					}
 				},
 				Transform2 = Transform {
 					Inputs = {
 						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
-						Size = Input { Value = 2.8, },
+						Size = Input { Value = 0.98, },
 						Input = Input {
 							SourceOp = "Loader1_1",
 							Source = "Output",
@@ -110,24 +119,24 @@
 							Source = "Position",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -152.971, 307.289 } },
+					ViewInfo = OperatorInfo { Pos = { -145.646, 385.294 } },
 					UserControls = ordered() {
 						CenterControl = {
-							INPID_InputControl = "OffsetControl",
-							LINKID_DataType = "Point",
-							LINKS_Name = "CenterControl",
 							ICS_ControlPage = "Controls",
+							LINKS_Name = "CenterControl",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
 						}
 					}
 				},
 				Merge2_1 = Merge {
 					Inputs = {
 						Background = Input {
-							SourceOp = "Transform2",
+							SourceOp = "Transform4",
 							Source = "Output",
 						},
 						Foreground = Input {
-							SourceOp = "Transform1",
+							SourceOp = "Transform3",
 							Source = "Output",
 						},
 						PerformDepthMerge = Input { Value = 0, }
@@ -135,8 +144,9 @@
 					ViewInfo = OperatorInfo { Pos = { -152.866, 268.892 } },
 				},
 				Background2 = Background {
+					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -146,6 +156,7 @@
 					ViewInfo = OperatorInfo { Pos = { -28.8277, 228.376 } },
 				},
 				Merge2 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Background2",
@@ -160,14 +171,15 @@
 					ViewInfo = OperatorInfo { Pos = { -25.2684, 270.347 } },
 				},
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
-							ID = "",
-							GroupID = "CustomTool1",
 							lastModified = "Wed Jan 14 20:07:53 2026",
 							Description = "",
-							Filled = false,
-							duration_formula = ""
+							duration_formula = "",
+							ID = "",
+							GroupID = "CustomTool1",
+							Filled = false
 						},
 					},
 					Inputs = {
@@ -197,12 +209,39 @@
 						}
 					},
 					ViewInfo = OperatorInfo { Pos = { 133.735, 272.499 } },
+				},
+				Transform3 = Transform {
+					Inputs = {
+						Center = Input { Value = { -0.0114727, 1.41041915929204 }, },
+						Input = Input {
+							SourceOp = "Transform1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -331.057, 271.026 } },
+				},
+				Transform4 = Transform {
+					Inputs = {
+						Center = Input { Value = { 0.660395, -0.844026548672566 }, },
+						Input = Input {
+							SourceOp = "Transform2",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -144.6, 352.294 } },
 				}
 			},
 		},
 		Path1 = PolyPath {
 			DrawMode = "InsertAndModify",
 			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 			Inputs = {
 				Displacement = Input {
 					SourceOp = "Path1Displacement",
@@ -220,6 +259,13 @@
 		},
 		Path1Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 5.333328, 1 }, Flags = { LockedY = true } },
 				[16] = { 1, LH = { 10.666672, 1 }, Flags = { LockedY = true } }
@@ -228,6 +274,13 @@
 		Path3 = PolyPath {
 			DrawMode = "InsertAndModify",
 			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 			Inputs = {
 				Displacement = Input {
 					SourceOp = "Path3Displacement",
@@ -245,6 +298,13 @@
 		},
 		Path3Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 5.333328, 1 }, Flags = { LockedY = true } },
 				[16] = { 1, LH = { 10.666672, 1 }, Flags = { LockedY = true } }
@@ -252,6 +312,14 @@
 		},
 		CustomTool1NumberIn1 = BezierSpline {
 			SplineColor = { Red = 233, Green = 19, Blue = 5 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true } },
 				[16] = { 16, LH = { 10.6666666666667, 10.6666666666667 }, Flags = { Linear = true } }
@@ -265,6 +333,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn2 = LUTBezier {
 			KeyColorSplines = {
@@ -274,6 +350,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn3 = LUTBezier {
 			KeyColorSplines = {
@@ -283,6 +367,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn4 = LUTBezier {
 			KeyColorSplines = {
@@ -293,6 +385,13 @@
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
 			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
 		}
 	}
 }

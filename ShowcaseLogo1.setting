@@ -1,11 +1,12 @@
 {
 	Tools = ordered() {
 		ShowcaseLogo1 = GroupOperator {
+			CtrlWZoom = false,
 			CustomData = {
-				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/ShowcaseLogo1.setting",
+				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/ShowcaseLogo1.setting",
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -16,7 +17,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -109.792, 141.014 },
+				Pos = { -502.723, -818.424 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -57,6 +58,7 @@
 					ViewInfo = OperatorInfo { Pos = { -273.174, 101.069 } },
 				},
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
 							lastModified = "Mon Nov 17 15:16:07 2025",
@@ -97,6 +99,7 @@
 				},
 				CustomTool1NumberIn1 = BezierSpline {
 					SplineColor = { Red = 233, Green = 19, Blue = 5 },
+					CtrlWZoom = false,
 					KeyFrames = {
 						[0] = { 0, RH = { 6, 6 }, Flags = { Linear = true } },
 						[18] = { 18, LH = { 12, 12 }, Flags = { Linear = true } }
@@ -110,6 +113,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn2 = LUTBezier {
 					KeyColorSplines = {
@@ -119,6 +123,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn3 = LUTBezier {
 					KeyColorSplines = {
@@ -128,6 +133,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn4 = LUTBezier {
 					KeyColorSplines = {
@@ -260,7 +266,7 @@
 				Background4_1 = Background {
 					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 4096, },
 						Height = Input { Value = 4096, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
@@ -302,7 +308,7 @@
 				Background4_1_1_1 = Background {
 					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 4096, },
 						Height = Input { Value = 4096, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
@@ -346,8 +352,8 @@
 				Transform9 = Transform {
 					CtrlWShown = false,
 					Inputs = {
-						Center = Input { Value = { 0.210714285714286, 0.64086079198337 }, },
-						Size = Input { Value = 0.08, },
+						Center = Input { Value = { -0.101732128571428, 0.725593 }, },
+						Size = Input { Value = 0.38, },
 						Angle = Input { Value = 44.3, },
 						Input = Input {
 							SourceOp = "Loader1",
@@ -359,8 +365,8 @@
 				Transform9_1 = Transform {
 					CtrlWShown = false,
 					Inputs = {
-						Center = Input { Value = { 0.819547933447721, 0.372621031746032 }, },
-						Size = Input { Value = 0.08, },
+						Center = Input { Value = { 1.122548, 0.279621 }, },
+						Size = Input { Value = 0.38, },
 						Angle = Input { Value = 224.3, },
 						Input = Input {
 							SourceOp = "Loader1",
@@ -373,7 +379,7 @@
 					CtrlWShown = false,
 					Inputs = {
 						Width = Input { Value = 614, },
-						Height = Input { Value = 614, },
+						Height = Input { Value = 1092, },
 						KeepAspect = Input { Value = 1, },
 						HiQOnly = Input { Value = 0, },
 						PixelAspect = Input { Value = { 1, 1 }, },
@@ -382,9 +388,10 @@
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { 225.766, 333.566 } },
+					ViewInfo = OperatorInfo { Pos = { 235.98, 336.661 } },
 				},
 				MediaIn2 = MediaIn {
+					ExtentSet = true,
 					CtrlWShown = false,
 					CustomData = {
 						metadata = {
@@ -398,11 +405,11 @@
 						MediaProps = {
 							MEDIA_NUM_LAYERS = 0,
 							MEDIA_FORMAT_TYPE = "PNG",
-							MEDIA_PAR = 1,
+							MEDIA_NAME = "meta-brand-color-618.png",
 							MEDIA_LAYER_DESC = {
 							},
-							MEDIA_NAME = "meta-brand-color-618.png",
-							MEDIA_PATH = "/Users/emmanuellandau/Downloads/meta-brand-color-618.png",
+							MEDIA_PAR = 1,
+							MEDIA_HEIGHT = 618,
 							MEDIA_START_FRAME = 0,
 							MEDIA_IS_SOURCE_RES = true,
 							MEDIA_SRC_FRAME_RATE = 24,
@@ -410,7 +417,7 @@
 							MEDIA_WIDTH = 618,
 							MEDIA_NUM_FRAMES = 1,
 							MEDIA_MARK_IN = 0,
-							MEDIA_HEIGHT = 618
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/meta-brand-color-618.png"
 						},
 					},
 					Inputs = {
@@ -439,6 +446,7 @@
 					Version = 1
 				},
 				Transform1_1 = Transform {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
 							lastModified = "Wed Nov 19 15:43:45 2025",
@@ -463,7 +471,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -473,7 +481,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
