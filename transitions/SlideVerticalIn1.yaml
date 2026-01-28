@@ -11,4 +11,4 @@ custom_tools:
         value: 0.0
       - frame: 20
         value: 20.0
-      anchor_variable: Transform1
+      slow_motion: true
