@@ -4,11 +4,7 @@ macro_info:
   type_description: Use when one asset strongly encapsulates the emotion, or idea
     of a passage.
   pos_possibility: &id001
-    mode: multi_zone
-    zones:
-    - main
-    - top_main
-    - bottom_main
+  - main
   style_family: minimalist
 pos_possibility: *id001
 variables:

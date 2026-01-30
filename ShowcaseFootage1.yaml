@@ -4,7 +4,10 @@ macro_info:
   type_description: Use when a footage directly illustrates or evidences the passage.
     The footage is the main information carrier.
   pos_possibility: &id001
-  - main
+    mode: multi_zone
+    zones:
+    - main
+    - bottom_main
   style_family: minimalist
 pos_possibility: *id001
 variables:
