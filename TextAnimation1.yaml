@@ -1,6 +1,8 @@
 macro_info:
-  description: text animation with Text1 being default subtitle. (no max length)
-  type_description: text animation with Text1 being default subtitle. (no max length)
+  description: Text animation for displaying long passages or sentence transcripts. Useful
+    as captions, especially when the text is too long for other text animations.
+  type_description: Text animation for displaying long passages or sentence transcripts.
+    Useful as captions, especially when the text is too long for other text animations.
   pos_possibility: &id001
   - top_main
   - main

@@ -7,6 +7,7 @@ macro_info:
     mode: multi_zone
     zones:
     - main
+    - top_main
     - bottom_main
   style_family: minimalist
 pos_possibility: *id001
