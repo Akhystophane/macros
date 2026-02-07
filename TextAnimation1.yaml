@@ -1,8 +1,8 @@
 macro_info:
   description: Text animation for displaying long passages or sentence transcripts. Useful
-    as captions, especially when the text is too long for other text animations.
+    as captions, especially when the text is too long for other text animations. Can only be used if the text variable contains more than 6 words.
   type_description: Text animation for displaying long passages or sentence transcripts.
-    Useful as captions, especially when the text is too long for other text animations.
+    Useful as captions, especially when the text is too long for other text animations. Can only be used if the text variable contains more than 6 words.
   pos_possibility: &id001
   - top_main
   - main
