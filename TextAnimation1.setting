@@ -1,7 +1,6 @@
 {
 	Tools = ordered() {
 		TextAnimation1 = GroupOperator {
-			CtrlWZoom = false,
 			NameSet = true,
 			CustomData = {
 				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/TextAnimation1.setting",
@@ -18,7 +17,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 69.2674, 76.1181 },
+				Pos = { 323.799, 55.6234 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -31,183 +30,6 @@
 				Offset = { 0, 0 }
 			},
 			Tools = ordered() {
-				Text1 = TextPlus {
-					NameSet = true,
-					CustomData = {
-						metadata = {
-							lastModified = "Sun Nov 16 10:22:11 2025",
-							Filled = false,
-							ID = "",
-							GroupID = "Text1",
-							Description = ""
-						},
-					},
-					Inputs = {
-						GlobalOut = Input { Value = 119, },
-						Width = Input { Value = 1080, },
-						Height = Input { Value = 1920, },
-						UseFrameFormatSettings = Input { Value = 1, },
-						["Gamut.ColorSpaceNest"] = Input { Value = 1, },
-						["Gamut.GammaSpaceNest"] = Input { Value = 1, },
-						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-						LayoutType = Input { Value = 1, },
-						Wrap = Input { Value = 1, },
-						LayoutWidth = Input { Value = 0.913, },
-						LayoutHeight = Input { Value = 0.134, },
-						LayoutRotation = Input { Value = 1, },
-						Path = Input {
-							SourceOp = "Text1Path",
-							Source = "Value",
-						},
-						SelectTransform = Input { Value = 1, },
-						LineSpacing = Input {
-							SourceOp = "Text1LineSpacing",
-							Source = "Value",
-						},
-						CharacterSpacing = Input { Value = 0.93, },
-						TransformRotation = Input { Value = 1, },
-						TransformPivot = Input { Value = 1, },
-						TransformShear = Input { Value = 1, },
-						TransformSize = Input { Value = 1, },
-						Opacity1 = Input {
-							Value = 0.625,
-							Expression = "self:GetValue(\"Opacity1Control\", CustomTool1.NumberIn1)",
-						},
-						Red1 = Input {
-							Value = 0,
-							Expression = "ColorMonitor1.InkRed",
-						},
-						Green1 = Input {
-							Value = 0,
-							Expression = "ColorMonitor1.InkGreen",
-						},
-						Blue1 = Input {
-							Value = 0,
-							Expression = "ColorMonitor1.InkBlue",
-						},
-						Alpha1 = Input { Expression = "ColorMonitor1.InkAlpha", },
-						ShadingGradient1 = Input {
-							Value = Gradient {
-								Colors = {
-									[0.0811808118081181] = { 0, 0, 0, 1 },
-									[0.335793357933579] = { 1, 1, 1, 1 },
-									[0.642066420664207] = { 1, 1, 1, 1 }
-								}
-							},
-						},
-						ShadingMappingSize1 = Input { Value = 1.08, },
-						ShadingMappingAspect1 = Input { Value = 1.024, },
-						Softness1 = Input { Value = 1, },
-						StyledText = Input {
-							SourceOp = "Follower1",
-							Source = "StyledText",
-						},
-						Font = Input { Value = "Inter", },
-						Style = Input { Value = "Medium", },
-						Size = Input { Value = 0.1063, },
-						VerticalTopCenterBottom = Input { Value = -1, },
-						VerticalJustificationNew = Input { Value = 3, },
-						HorizontalLeftCenterRight = Input { Value = -1, },
-						HorizontalJustificationNew = Input { Value = 3, },
-						HorizontallyJustified = Input { Value = 1, },
-						Start = Input { Expression = "self:GetValue(\"StartControl\", CustomTool1.NumberIn1)", },
-						End = Input { Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn1)", },
-						TabSpacing = Input { Value = 1, },
-						EndControl = Input {
-							SourceOp = "Text1EndControl",
-							Source = "Value",
-						},
-						StartControl = Input {
-							SourceOp = "Text1StartControl",
-							Source = "Value",
-						},
-						LineSpacingControl = Input {
-							SourceOp = "Text1LineSpacingControl",
-							Source = "Value",
-						},
-						Opacity1Control = Input {
-							SourceOp = "Text1Opacity1Control",
-							Source = "Value",
-						},
-						OffsetControl = Input { Value = 40, }
-					},
-					ViewInfo = OperatorInfo { Pos = { -1.33701, 53.8068 } },
-					UserControls = ordered() {
-						EndControl = {
-							INP_Integer = false,
-							LINKID_DataType = "Number",
-							INPID_InputControl = "SliderControl",
-							ICS_ControlPage = "Controls",
-							INP_SplineType = "Default",
-							LINKS_Name = "EndControl",
-						},
-						StartControl = {
-							INP_Integer = false,
-							LINKID_DataType = "Number",
-							INPID_InputControl = "SliderControl",
-							ICS_ControlPage = "Controls",
-							INP_SplineType = "Default",
-							LINKS_Name = "StartControl",
-						},
-						LineSpacingControl = {
-							INP_Integer = false,
-							LINKID_DataType = "Number",
-							INPID_InputControl = "SliderControl",
-							ICS_ControlPage = "Controls",
-							INP_SplineType = "Default",
-							LINKS_Name = "LineSpacingControl",
-						},
-						Opacity1Control = {
-							INP_Integer = false,
-							LINKID_DataType = "Number",
-							INPID_InputControl = "SliderControl",
-							ICS_ControlPage = "Controls",
-							INP_SplineType = "Default",
-							LINKS_Name = "Opacity1Control",
-						},
-						OffsetControl = {
-							INP_Integer = false,
-							LINKID_DataType = "Number",
-							ICS_ControlPage = "Controls",
-							INPID_InputControl = "SliderControl",
-							INP_SplineType = "Default",
-							LINKS_Name = "OffsetControl",
-						}
-					}
-				},
-				Text1Opacity1Control = BezierSpline {
-					SplineColor = { Red = 179, Green = 28, Blue = 244 },
-					CtrlWZoom = false,
-					KeyFrames = {
-						[0] = { 0, RH = { 2.66666666666667, 0.333333333333333 }, Flags = { Linear = true } },
-						[8] = { 1, LH = { 5.33333333333333, 0.666666666666667 }, Flags = { Linear = true } }
-					}
-				},
-				Text1LineSpacingControl = BezierSpline {
-					SplineColor = { Red = 229, Green = 93, Blue = 2 },
-					KeyFrames = {
-						[0] = { 0, RH = { 3.81348345504736, 0.88003552350799 }, Flags = { Linear = true } },
-						[13] = { 0.85, LH = { 8.666671, 0.85 } }
-					}
-				},
-				Text1StartControl = BezierSpline {
-					SplineColor = { Red = 249, Green = 211, Blue = 150 },
-					KeyFrames = {
-						[13] = { 0 }
-					}
-				},
-				Text1EndControl = BezierSpline {
-					SplineColor = { Red = 218, Green = 249, Blue = 145 },
-					KeyFrames = {
-						[13] = { 1 }
-					}
-				},
-				Text1LineSpacing = BezierSpline {
-					SplineColor = { Red = 229, Green = 93, Blue = 2 },
-					KeyFrames = {
-						[13] = { 0.85 }
-					}
-				},
 				ColorMonitor1 = Custom {
 					CtrlWShown = false,
 					NameSet = true,
@@ -439,8 +261,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							CLRC_ShowWheel = false,
 							INP_SplineType = "Default",
+							CLRC_ShowWheel = false,
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -522,25 +344,6 @@
 							LINKS_Name = "SurfaceAlpha",
 						}
 					}
-				},
-				Transform1 = Transform {
-					CtrlWShown = false,
-					CustomData = {
-						metadata = {
-							lastModified = "Wed Nov 19 15:43:45 2025",
-							Description = "",
-							ID = "",
-							GroupID = "Macro_Transform1",
-							Filled = false
-						},
-					},
-					Inputs = {
-						Input = Input {
-							SourceOp = "CustomTool1",
-							Source = "Output",
-						}
-					},
-					ViewInfo = OperatorInfo { Pos = { 116.581, 6.15263 } },
 				},
 				CustomTool1 = Custom {
 					CtrlWShown = false,
@@ -629,12 +432,306 @@
 						[0] = { 0, RH = { 4.33333333333333, 4.33333333333333 }, Flags = { Linear = true } },
 						[13] = { 13, LH = { 8.66666666666667, 8.66666666666667 }, Flags = { Linear = true } }
 					}
+				},
+				Text1 = TextPlus {
+					NameSet = true,
+					CustomData = {
+						metadata = {
+							lastModified = "Sun Nov 16 10:22:11 2025",
+							Filled = false,
+							ID = "",
+							GroupID = "Text1",
+							Description = ""
+						},
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 119, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.ColorSpaceNest"] = Input { Value = 1, },
+						["Gamut.GammaSpaceNest"] = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						LayoutType = Input { Value = 1, },
+						Wrap = Input { Value = 1, },
+						LayoutWidth = Input { Value = 0.913, },
+						LayoutHeight = Input { Value = 0.134, },
+						LayoutRotation = Input { Value = 1, },
+						Path = Input {
+							SourceOp = "Text1Path",
+							Source = "Value",
+						},
+						SelectTransform = Input { Value = 1, },
+						LineSpacing = Input {
+							SourceOp = "Text1LineSpacing",
+							Source = "Value",
+						},
+						CharacterSpacing = Input { Value = 0.93, },
+						TransformRotation = Input { Value = 1, },
+						TransformPivot = Input { Value = 1, },
+						TransformShear = Input { Value = 1, },
+						TransformSize = Input { Value = 1, },
+						Opacity1 = Input {
+							Value = 0.952,
+							Expression = "self:GetValue(\"Opacity1Control\", CustomTool1.NumberIn1)",
+						},
+						Red1 = Input {
+							Value = 0,
+							Expression = "ColorMonitor1.InkRed",
+						},
+						Green1 = Input {
+							Value = 0,
+							Expression = "ColorMonitor1.InkGreen",
+						},
+						Blue1 = Input {
+							Value = 0,
+							Expression = "ColorMonitor1.InkBlue",
+						},
+						Alpha1 = Input {
+							Value = 0,
+							Expression = "ColorMonitor1.InkAlpha",
+						},
+						ShadingGradient1 = Input {
+							Value = Gradient {
+								Colors = {
+									[0.0811808118081181] = { 0, 0, 0, 1 },
+									[0.335793357933579] = { 1, 1, 1, 1 },
+									[0.642066420664207] = { 1, 1, 1, 1 }
+								}
+							},
+						},
+						ShadingMappingSize1 = Input { Value = 1.08, },
+						ShadingMappingAspect1 = Input { Value = 1.024, },
+						Softness1 = Input { Value = 1, },
+						StyledText = Input {
+							SourceOp = "Follower1",
+							Source = "StyledText",
+						},
+						Font = Input { Value = "Inter", },
+						Style = Input { Value = "Medium", },
+						Size = Input { Value = 0.1063, },
+						VerticalTopCenterBottom = Input { Value = -1, },
+						VerticalJustificationNew = Input { Value = 3, },
+						HorizontalLeftCenterRight = Input { Value = -1, },
+						HorizontalJustificationNew = Input { Value = 3, },
+						HorizontallyJustified = Input { Value = 1, },
+						Start = Input { Expression = "self:GetValue(\"StartControl\", CustomTool1.NumberIn1)", },
+						End = Input { Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn1)", },
+						TabSpacing = Input { Value = 1, },
+						EndControl = Input {
+							SourceOp = "Text1EndControl",
+							Source = "Value",
+						},
+						StartControl = Input {
+							SourceOp = "Text1StartControl",
+							Source = "Value",
+						},
+						LineSpacingControl = Input {
+							SourceOp = "Text1LineSpacingControl",
+							Source = "Value",
+						},
+						Opacity1Control = Input {
+							SourceOp = "Text1Opacity1Control",
+							Source = "Value",
+						},
+						OffsetControl = Input { Value = 40, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -1.33701, 53.8068 } },
+					UserControls = ordered() {
+						EndControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "EndControl",
+						},
+						StartControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "StartControl",
+						},
+						LineSpacingControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "LineSpacingControl",
+						},
+						Opacity1Control = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							INPID_InputControl = "SliderControl",
+							ICS_ControlPage = "Controls",
+							INP_SplineType = "Default",
+							LINKS_Name = "Opacity1Control",
+						},
+						OffsetControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "OffsetControl",
+						}
+					}
+				},
+				Text1LineSpacingControl = BezierSpline {
+					SplineColor = { Red = 229, Green = 93, Blue = 2 },
+					KeyFrames = {
+						[0] = { 0, RH = { 3.81348345504736, 0.88003552350799 }, Flags = { Linear = true } },
+						[13] = { 0.85, LH = { 8.666671, 0.85 } }
+					}
+				},
+				Text1StartControl = BezierSpline {
+					SplineColor = { Red = 249, Green = 211, Blue = 150 },
+					KeyFrames = {
+						[13] = { 0 }
+					}
+				},
+				Text1EndControl = BezierSpline {
+					SplineColor = { Red = 218, Green = 249, Blue = 145 },
+					KeyFrames = {
+						[13] = { 1 }
+					}
+				},
+				Text1LineSpacing = BezierSpline {
+					SplineColor = { Red = 229, Green = 93, Blue = 2 },
+					KeyFrames = {
+						[13] = { 0.85 }
+					}
+				},
+				Transform1 = Transform {
+					CtrlWShown = false,
+					CustomData = {
+						metadata = {
+							lastModified = "Wed Nov 19 15:43:45 2025",
+							Description = "",
+							ID = "",
+							GroupID = "Macro_Transform1",
+							Filled = false
+						},
+					},
+					Inputs = {
+						Input = Input {
+							SourceOp = "CustomTool1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 116.581, 6.15263 } },
 				}
+			},
+		},
+		ColorMonitor1LUTIn1 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		ColorMonitor1LUTIn2 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		ColorMonitor1LUTIn3 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		ColorMonitor1LUTIn4 = LUTBezier {
+			KeyColorSplines = {
+				[0] = {
+					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+				}
+			},
+			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		Publish1 = PublishNumber {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		Publish3 = PublishNumber {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		Publish2 = PublishNumber {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
+			},
+		},
+		Publish4 = PublishNumber {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist-style/"
+					}
+				},
 			},
 		},
 		Text1Path = BezierSpline {
 			SplineColor = { Red = 104, Green = 244, Blue = 89 },
-			NameSet = true,
 			CustomData = {
 				Path = {
 					Map = {
@@ -711,7 +808,6 @@
 		},
 		Path1Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
-			NameSet = true,
 			CustomData = {
 				Path = {
 					Map = {
@@ -738,117 +834,14 @@
 				[6] = { 1, LH = { 4, 0.666666666666667 }, Flags = { Linear = true } }
 			}
 		},
-		ColorMonitor1LUTIn1 = LUTBezier {
-			KeyColorSplines = {
-				[0] = {
-					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
-				}
-			},
-			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+		Text1Opacity1Control = BezierSpline {
+			SplineColor = { Red = 151, Green = 23, Blue = 252 },
 			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		ColorMonitor1LUTIn2 = LUTBezier {
-			KeyColorSplines = {
-				[0] = {
-					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
-				}
-			},
-			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		ColorMonitor1LUTIn3 = LUTBezier {
-			KeyColorSplines = {
-				[0] = {
-					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
-				}
-			},
-			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		ColorMonitor1LUTIn4 = LUTBezier {
-			KeyColorSplines = {
-				[0] = {
-					[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
-				}
-			},
-			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		Publish1 = PublishNumber {
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		Publish3 = PublishNumber {
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		Publish2 = PublishNumber {
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-		},
-		Publish4 = PublishNumber {
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist-style/"
-					}
-				},
-			},
-			Inputs = {
-				Value = Input { Value = 1, }
-			},
+			NameSet = true,
+			KeyFrames = {
+				[0] = { 0, RH = { 2.66666666666667, 0.317333333333333 }, Flags = { Linear = true } },
+				[8] = { 0.952, LH = { 5.33333333333333, 0.634666666666667 }, Flags = { Linear = true } }
+			}
 		}
-	},
-	ActiveTool = "TextAnimation1"
+	}
 }
