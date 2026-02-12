@@ -12,7 +12,7 @@ macro_info:
   style_family: minimalist
 pos_possibility: *id001
 custom_tools:
-- name: CustomTool1_2
+- name: CustomTool1
   attrs:
     NumberIn1:
       keyframes:

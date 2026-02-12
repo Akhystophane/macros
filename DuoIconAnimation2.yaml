@@ -1,0 +1,38 @@
+macro_info:
+  description: Use Icon1 + Icon2 to represent two items/concepts mentioned.
+  type_description: Use Icon1 + Icon2 to represent two items/concepts mentioned.
+  pos_possibility: &id001
+  - top_main
+  - main
+  - bottom_main
+  style_family: minimalist
+  colors:
+  - Accent
+pos_possibility: *id001
+variables:
+- name: Icon1
+- name: Icon2
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 15
+        value: 15.0
+      anchor_variable: Icon1
+    NumberIn2:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 15
+        value: 15.0
+      anchor_variable: Icon2
+    NumberIn3:
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 15
+        value: 15
+      slow_motion: true
