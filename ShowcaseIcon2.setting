@@ -4,10 +4,10 @@
 			CtrlWZoom = false,
 			NameSet = true,
 			CustomData = {
-				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/ShowcaseIcon2.setting",
+				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/ShowcaseIcon2.setting",
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -18,7 +18,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -486.03, 223.384 },
+				Pos = { 375.432, 136.941 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -51,15 +51,13 @@
 							GlobalEnd = 0
 						}
 					},
-					CtrlWShown = false,
 					Inputs = {
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -734.478, 490.64 } },
+					ViewInfo = OperatorInfo { Pos = { -703.207, 481.384 } },
 				},
 				Resize1 = BetterResize {
-					CtrlWShown = false,
 					Inputs = {
 						Width = Input { Value = 388, },
 						Height = Input { Value = 388, },
@@ -86,7 +84,6 @@
 					ViewInfo = OperatorInfo { Pos = { -863.484, 397.999 } },
 				},
 				Transform2 = Transform {
-					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 2.66265750286369 }, },
 						Angle = Input { Expression = "self:GetValue(\"AngleControl\", CustomTool1.NumberIn1)", },
@@ -114,7 +111,7 @@
 				Text1 = TextPlus {
 					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -145,10 +142,7 @@
 						VerticalJustificationNew = Input { Value = 3, },
 						HorizontalJustificationNew = Input { Value = 3, },
 						Start = Input { Expression = "self:GetValue(\"StartControl\", CustomTool1.NumberIn1)", },
-						End = Input {
-							Value = 0.841073513580689,
-							Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn1)",
-						},
+						End = Input { Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn1)", },
 						EndControl = Input {
 							SourceOp = "Text1EndControl",
 							Source = "Value",
@@ -179,7 +173,6 @@
 					}
 				},
 				Merge4 = Merge {
-					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform2",
@@ -210,7 +203,6 @@
 					ViewInfo = OperatorInfo { Pos = { -696.506, 434.683 } },
 				},
 				Transform1 = Transform {
-					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
 						Input = Input {
@@ -225,10 +217,10 @@
 					ViewInfo = OperatorInfo { Pos = { -739.31, 378.207 } },
 					UserControls = ordered() {
 						CenterControl = {
-							LINKS_Name = "CenterControl",
-							LINKID_DataType = "Point",
-							ICS_ControlPage = "Controls",
 							INPID_InputControl = "OffsetControl",
+							ICS_ControlPage = "Controls",
+							LINKID_DataType = "Point",
+							LINKS_Name = "CenterControl",
 						}
 					}
 				},
@@ -451,8 +443,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							INP_SplineType = "Default",
 							CLRC_ShowWheel = false,
+							INP_SplineType = "Default",
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -536,12 +528,13 @@
 					}
 				},
 				Transform4 = Transform {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
 							lastModified = "Thu Feb 12 20:49:36 2026",
-							GroupID = "Macro_Transform1",
-							ID = "",
 							Description = "",
+							ID = "",
+							GroupID = "Macro_Transform1",
 							Filled = false
 						},
 					},
@@ -556,12 +549,12 @@
 				CustomTool1 = Custom {
 					CustomData = {
 						metadata = {
+							lastModified = "Thu Feb 12 20:49:44 2026",
 							Description = "",
-							Filled = false,
 							duration_formula = "",
 							ID = "",
 							GroupID = "CustomTool1",
-							lastModified = "Thu Feb 12 20:49:44 2026"
+							Filled = false
 						},
 					},
 					Inputs = {
@@ -593,16 +586,25 @@
 					ViewInfo = OperatorInfo { Pos = { -616.529, 379.672 } },
 				},
 				MediaIn2 = MediaIn {
+					ExtentSet = true,
 					CtrlWShown = false,
 					CustomData = {
+						metadata = {
+							lastModified = "Thu Feb 12 20:33:52 2026",
+							Description = "",
+							ID = "",
+							GroupID = "Icon1",
+							Filled = false
+						},
+						MEDIA_ID = "808510ed-5b1f-4511-aecb-61b1c8e65622",
 						MediaProps = {
 							MEDIA_NUM_LAYERS = 0,
 							MEDIA_FORMAT_TYPE = "PNG",
-							MEDIA_HEIGHT = 512,
+							MEDIA_NAME = "pepsi.png",
 							MEDIA_LAYER_DESC = {
 							},
 							MEDIA_PAR = 1,
-							MEDIA_PATH = "/Users/emmanuellandau/Downloads/pepsi.png",
+							MEDIA_HEIGHT = 512,
 							MEDIA_START_FRAME = 0,
 							MEDIA_IS_SOURCE_RES = true,
 							MEDIA_SRC_FRAME_RATE = 24,
@@ -610,15 +612,7 @@
 							MEDIA_WIDTH = 512,
 							MEDIA_NUM_FRAMES = 1,
 							MEDIA_MARK_IN = 0,
-							MEDIA_NAME = "pepsi.png"
-						},
-						MEDIA_ID = "808510ed-5b1f-4511-aecb-61b1c8e65622",
-						metadata = {
-							lastModified = "Thu Feb 12 20:33:52 2026",
-							Description = "",
-							ID = "",
-							GroupID = "Icon1",
-							Filled = false
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/pepsi.png"
 						},
 					},
 					Inputs = {
@@ -654,7 +648,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -669,7 +663,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -684,7 +678,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -699,41 +693,38 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
 			Inputs = {
 				Displacement = Input {
-					SourceOp = "Path1Displacement2",
+					SourceOp = "Path1Displacement",
 					Source = "Value",
 				},
 				PolyLine = Input {
 					Value = Polyline {
 						Points = {
-							{ Linear = true, LockY = true, X = 0, Y = -0.819444444444445, RX = 0, RY = 0.273148148148148 },
-							{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = -0.273148148148148, RX = 0, RY = -0.185185185185185 },
-							{ Linear = true, LockY = true, X = 0, Y = -0.555555555555556, LX = 0, LY = 0.185185185185185 }
+							{ Linear = true, LockY = true, X = 0, Y = -0.819444444444445, RX = 0, RY = 0.087962962962963 },
+							{ Linear = true, LockY = true, X = 0, Y = -0.555555555555556, LX = 0, LY = -0.087962962962963 }
 						}
 					},
 				}
 			},
 		},
-		Path1Displacement2 = BezierSpline {
+		Path1Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
-			CtrlWZoom = false,
 			NameSet = true,
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
 			KeyFrames = {
-				[0] = { 0, RH = { 4.33332883449099, 0.357203661929345 }, Flags = { Linear = true, LockedY = true } },
-				[13] = { 0.595959595959596, LH = { 8.6666647106481, 0.520922014370355 }, RH = { 16.6666686273148, 1 }, Flags = { LockedY = true } },
-				[24] = { 1, LH = { 20.333336834491, 1 }, Flags = { LockedY = true } }
+				[0] = { 0, RH = { 7.999992, 1 }, Flags = { Linear = true, LockedY = true } },
+				[24] = { 1, LH = { 16.000008, 1 }, Flags = { LockedY = true } }
 			}
 		},
 		ColorMonitor1LUTIn1 = LUTBezier {
@@ -748,7 +739,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -765,7 +756,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -782,7 +773,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -799,7 +790,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -809,7 +800,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -829,7 +820,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -845,7 +836,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -861,7 +852,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -878,7 +869,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -888,7 +879,7 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -898,10 +889,11 @@
 			CustomData = {
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
 		}
-	}
+	},
+	ActiveTool = "ShowcaseIcon2"
 }
