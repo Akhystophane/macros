@@ -1,0 +1,27 @@
+macro_info:
+  description: 'Use as a visual accent: Icon1 in top and bottom main reinforce the
+    central main annimation (usually text/animation in the middle).'
+  type_description: 'Use as a visual accent: Icon1 in top and bottom main reinforce
+    the central main annimation (usually text/animation in the middle).'
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - top_main
+    - bottom_main
+  style_family: minimalist
+  colors:
+    - Accent
+pos_possibility: *id001
+variables:
+- name: Icon1
+custom_tools:
+- name: CustomTool1
+  attrs:
+    NumberIn1:
+      anchor_variable: Icon1
+      keyframes:
+      - frame: 0
+        value: 0.0
+      - frame: 24
+        value: 24.0
+      slow_motion: true
