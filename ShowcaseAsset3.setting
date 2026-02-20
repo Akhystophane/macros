@@ -1,10 +1,12 @@
 {
 	Tools = ordered() {
 		ShowcaseAsset3 = GroupOperator {
+			CtrlWZoom = false,
 			CustomData = {
+				SxSFilename = "/home/injector/.local/share/DaVinciResolve/Fusion/Macros/minimalist-style/ShowcaseAsset3.setting",
 				Path = {
 					Map = {
-						["Setting:"] = "Macros:/minimalist/"
+						["Setting:"] = "Macros:/minimalist-style/"
 					}
 				},
 			},
@@ -15,7 +17,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 328.717, 134.061 },
+				Pos = { 1183.28, -3.57603 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -49,6 +51,7 @@
 					ViewInfo = OperatorInfo { Pos = { 282, 8.11337 } },
 				},
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = {
 						metadata = {
@@ -90,6 +93,7 @@
 				},
 				CustomTool1NumberIn1 = BezierSpline {
 					SplineColor = { Red = 233, Green = 19, Blue = 5 },
+					CtrlWZoom = false,
 					CustomData = {
 						Path = {
 							Map = {
@@ -110,6 +114,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 					CustomData = {
 						Path = {
 							Map = {
@@ -126,6 +131,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 					CustomData = {
 						Path = {
 							Map = {
@@ -142,6 +148,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
 					CustomData = {
 						Path = {
 							Map = {
@@ -205,7 +212,7 @@
 				Transform3_1 = Transform {
 					CtrlWShown = false,
 					Inputs = {
-						Size = Input { Value = 2.33, },
+						Size = Input { Value = 2.12, },
 						Angle = Input { Expression = "self:GetValue(\"AngleControl\", CustomTool1.NumberIn1)", },
 						Input = Input {
 							SourceOp = "ColorCorrector1",
@@ -237,11 +244,9 @@
 					}
 				},
 				Resize1_1 = BetterResize {
-					CtrlWShown = false,
 					Inputs = {
 						Width = Input { Value = 323, },
 						Height = Input { Value = 323, },
-						KeepAspect = Input { Value = 1, },
 						HiQOnly = Input { Value = 0, },
 						PixelAspect = Input { Value = { 1, 1 }, },
 						Input = Input {
@@ -260,15 +265,15 @@
 						PixelAspect = Input { Value = { 1, 1 }, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
-						Width = Input { Value = 0.819, },
-						Height = Input { Value = 0.803, }
+						Width = Input { Value = 0.898, },
+						Height = Input { Value = 1.016, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -160.25, 194.147 } },
+					ViewInfo = OperatorInfo { Pos = { -159.523, 194.147 } },
 				},
 				Background1_2 = Background {
 					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -292,11 +297,11 @@
 						MediaProps = {
 							MEDIA_NUM_LAYERS = 0,
 							MEDIA_FORMAT_TYPE = "PNG",
-							MEDIA_PAR = 1,
+							MEDIA_NAME = "image2 avec arrière-plan supprimé.png",
 							MEDIA_LAYER_DESC = {
 							},
-							MEDIA_NAME = "image2 avec arrière-plan supprimé.png",
-							MEDIA_PATH = "/Users/emmanuellandau/Downloads/image2 avec arrière-plan supprimé.png",
+							MEDIA_PAR = 1,
+							MEDIA_HEIGHT = 1024,
 							MEDIA_START_FRAME = 0,
 							MEDIA_IS_SOURCE_RES = true,
 							MEDIA_SRC_FRAME_RATE = 24,
@@ -304,7 +309,7 @@
 							MEDIA_WIDTH = 1024,
 							MEDIA_NUM_FRAMES = 1,
 							MEDIA_MARK_IN = 0,
-							MEDIA_HEIGHT = 1024
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/image2 avec arrière-plan supprimé.png"
 						},
 					},
 					Inputs = {
@@ -365,13 +370,13 @@
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { 103.76, 268.595 } },
+					ViewInfo = OperatorInfo { Pos = { 103.76, 252.067 } },
 				},
 				Merge2_1_1 = Merge {
 					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
-							SourceOp = "Text4",
+							SourceOp = "Transform1",
 							Source = "Output",
 						},
 						Foreground = Input {
@@ -380,7 +385,7 @@
 						},
 						PerformDepthMerge = Input { Value = 0, }
 					},
-					ViewInfo = OperatorInfo { Pos = { -34.3301, 269.277 } },
+					ViewInfo = OperatorInfo { Pos = { -34.3301, 250.496 } },
 				},
 				Text4 = TextPlus {
 					CtrlWShown = false,
@@ -389,7 +394,7 @@
 							SourceOp = "Rectangle1_1",
 							Source = "Mask",
 						},
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 119, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -418,7 +423,7 @@
 							Source = "Value",
 						},
 						End = Input {
-							Value = 0.890605729384532,
+							Value = 0.962962938271608,
 							Expression = "self:GetValue(\"EndControl\", CustomTool1.NumberIn1)",
 						},
 						EndControl = Input {
@@ -479,11 +484,24 @@
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
 						Width = Input { Value = 0.8822843822844, },
-						Height = Input { Value = 0.3689384010485, }
+						Height = Input { Value = 0.305, }
 					},
 					ViewInfo = OperatorInfo { Pos = { -137.41, 317.402 } },
+				},
+				Transform1 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						Size = Input { Value = 1.09, },
+						Aspect = Input { Value = 1.09, },
+						Input = Input {
+							SourceOp = "Text4",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { -34.14, 283.496 } },
 				}
 			},
 		}
-	}
+	},
+	ActiveTool = "ShowcaseAsset3"
 }
