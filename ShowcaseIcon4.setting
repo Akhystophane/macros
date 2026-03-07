@@ -3,6 +3,14 @@
 		ShowcaseIcon4 = GroupOperator {
 			CtrlWZoom = false,
 			NameSet = true,
+			CustomData = {
+				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/ShowcaseIcon4.setting",
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Outputs = {
 				Output1 = InstanceOutput {
 					SourceOp = "Transform6",
@@ -10,7 +18,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -398.23, 169.165 },
+				Pos = { 514.718, 169.092 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -43,6 +51,7 @@
 							GlobalEnd = 0
 						}
 					},
+					CtrlWShown = false,
 					Inputs = {
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						["Clip1.PNGFormat.PostMultiply"] = Input { Value = 1, }
@@ -50,32 +59,33 @@
 					ViewInfo = OperatorInfo { Pos = { -509.85, 440.457 } },
 				},
 				MediaIn2 = MediaIn {
+					CtrlWShown = false,
 					CustomData = {
 						MediaProps = {
+							MEDIA_NUM_LAYERS = 0,
 							MEDIA_FORMAT_TYPE = "PNG",
-							MEDIA_HEIGHT = 512,
-							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_PAR = 1,
 							MEDIA_LAYER_DESC = {
 							},
-							MEDIA_MARK_IN = 0,
-							MEDIA_MARK_OUT = 0,
 							MEDIA_NAME = "pepsi.png",
-							MEDIA_NUM_FRAMES = 1,
-							MEDIA_NUM_LAYERS = 0,
-							MEDIA_PAR = 1,
 							MEDIA_PATH = "/Users/emmanuellandau/Downloads/pepsi.png",
-							MEDIA_SRC_FRAME_RATE = 24,
 							MEDIA_START_FRAME = 0,
-							MEDIA_WIDTH = 512
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_SRC_FRAME_RATE = 24,
+							MEDIA_MARK_OUT = 0,
+							MEDIA_WIDTH = 512,
+							MEDIA_NUM_FRAMES = 1,
+							MEDIA_MARK_IN = 0,
+							MEDIA_HEIGHT = 512
 						},
 						MEDIA_ID = "808510ed-5b1f-4511-aecb-61b1c8e65622",
 						metadata = {
-							ID = "",
 							lastModified = "Sat Feb 14 19:33:07 2026",
-							GroupID = "Icon1",
 							Description = "",
+							ID = "",
+							GroupID = "Icon1",
 							Filled = false
-						}
+						},
 					},
 					Inputs = {
 						GlobalOut = Input { Value = 499, },
@@ -103,6 +113,7 @@
 					Version = 1
 				},
 				Resize1 = BetterResize {
+					CtrlWShown = false,
 					Inputs = {
 						Width = Input { Value = 291, },
 						Height = Input { Value = 291, },
@@ -117,6 +128,7 @@
 					ViewInfo = OperatorInfo { Pos = { -856.634, 214.485 } },
 				},
 				Transform5 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 0.0580915847518582 }, },
 						Size = Input { Value = 0.88, },
@@ -143,6 +155,7 @@
 					}
 				},
 				Transform1 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1.NumberIn1)", },
 						Size = Input { Value = 0.47, },
@@ -168,6 +181,7 @@
 					}
 				},
 				Transform2 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 0.488515643105446 }, },
 						FlipHoriz = Input { Value = 1, },
@@ -180,6 +194,7 @@
 					ViewInfo = OperatorInfo { Pos = { -627.676, 396.436 } },
 				},
 				Merge2 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform1",
@@ -194,6 +209,7 @@
 					ViewInfo = OperatorInfo { Pos = { -629.047, 348.763 } },
 				},
 				Merge4 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Transform3",
@@ -209,6 +225,7 @@
 					ViewInfo = OperatorInfo { Pos = { -629.049, 258.505 } },
 				},
 				Transform3 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 0.416041022917471 }, },
 						Input = Input {
@@ -219,6 +236,7 @@
 					ViewInfo = OperatorInfo { Pos = { -628.805, 303.275 } },
 				},
 				Merge7 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Merge4",
@@ -233,13 +251,14 @@
 					ViewInfo = OperatorInfo { Pos = { -628.806, 214.485 } },
 				},
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
+							lastModified = "Sat Feb 14 19:33:11 2026",
 							Filled = false,
 							duration_formula = "",
-							lastModified = "Sat Feb 14 19:33:11 2026",
-							GroupID = "CustomTool1",
 							ID = "",
+							GroupID = "CustomTool1",
 							Description = ""
 						},
 					},
@@ -272,6 +291,7 @@
 					ViewInfo = OperatorInfo { Pos = { -608.308, 168.997 } },
 				},
 				Grain1 = Grain {
+					CtrlWShown = false,
 					Inputs = {
 						Power = Input { Value = 12.44, },
 						GrainSoftness = Input { Value = 0, },
@@ -293,9 +313,10 @@
 							Source = "Output",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { -147.165, 352.416 } },
+					ViewInfo = OperatorInfo { Pos = { -156.85, 352.416 } },
 				},
 				Ellipse1 = EllipseMask {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						MaskWidth = Input { Value = 1080, },
@@ -308,6 +329,7 @@
 					ViewInfo = OperatorInfo { Pos = { 74.9342, 352.416 } },
 				},
 				DropShadow1 = ofx.com.blackmagicdesign.resolvefx.DropShadow {
+					CtrlWShown = false,
 					Inputs = {
 						Source = Input {
 							SourceOp = "Transform4",
@@ -335,39 +357,38 @@
 					ViewInfo = OperatorInfo { Pos = { -512.19, 258.505 } },
 				},
 				Background2 = Background {
+					CtrlWShown = false,
 					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1",
+							Source = "Mask",
+						},
 						GlobalOut = Input { Value = 499, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						TopLeftRed = Input {
-							Value = 0.996078431372549,
+							Value = 0.016,
 							Expression = "ColorMonitor1.AccentRed",
 						},
-						TopLeftGreen = Input {
-							Value = 0.737254901960784,
-							Expression = "ColorMonitor1.AccentGreen",
-						},
+						TopLeftGreen = Input { Expression = "ColorMonitor1.AccentGreen", },
 						TopLeftBlue = Input {
-							Value = 0.996078431372549,
-							Expression = "ColorMonitor1.AccentRed",
-						},
-						EffectMask = Input {
-							SourceOp = "Ellipse1",
-							Source = "Mask",
+							Value = 1,
+							Expression = "ColorMonitor1.AccentBlue",
 						}
 					},
 					ViewInfo = OperatorInfo { Pos = { -37.1645, 352.416 } },
 				},
 				Transform6 = Transform {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
 							lastModified = "Sat Feb 14 19:27:30 2026",
-							GroupID = "Macro_Transform1",
 							Description = "",
-							Filled = false,
-							ID = ""
+							ID = "",
+							GroupID = "Macro_Transform1",
+							Filled = false
 						},
 					},
 					Inputs = {
@@ -379,6 +400,7 @@
 					ViewInfo = OperatorInfo { Pos = { -490.237, 168.997 } },
 				},
 				Duplicate1 = Fuse.Duplicate {
+					CtrlWShown = false,
 					Inputs = {
 						Copies = Input { Value = 4, },
 						Angle = Input { Value = 45, },
@@ -394,6 +416,7 @@
 					ViewInfo = OperatorInfo { Pos = { -274.677, 350.948 } },
 				},
 				Ellipse1_1 = EllipseMask {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						BorderWidth = Input { Value = 0.006, },
@@ -422,24 +445,8 @@
 						}
 					}
 				},
-				Background2_1 = Background {
-					Inputs = {
-						EffectMask = Input {
-							SourceOp = "Ellipse1_1",
-							Source = "Mask",
-						},
-						GlobalOut = Input { Value = 499, },
-						Width = Input { Value = 1080, },
-						Height = Input { Value = 1920, },
-						UseFrameFormatSettings = Input { Value = 1, },
-						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
-						TopLeftRed = Input { Value = 1, },
-						TopLeftGreen = Input { Value = 1, },
-						TopLeftBlue = Input { Value = 1, }
-					},
-					ViewInfo = OperatorInfo { Pos = { -34.1774, 306.928 } },
-				},
 				Transform4 = Transform {
+					CtrlWShown = false,
 					Inputs = {
 						Center = Input { Value = { 0.5, 0.43279258400927 }, },
 						Size = Input { Value = 0.88, },
@@ -466,6 +473,7 @@
 					}
 				},
 				Duplicate1_1 = Fuse.Duplicate {
+					CtrlWShown = false,
 					Inputs = {
 						Copies = Input { Value = 4, },
 						Angle = Input { Value = 45, },
@@ -481,6 +489,7 @@
 					ViewInfo = OperatorInfo { Pos = { -158.704, 303.993 } },
 				},
 				Merge6 = Merge {
+					CtrlWShown = false,
 					Inputs = {
 						Background = Input {
 							SourceOp = "Duplicate1",
@@ -495,6 +504,7 @@
 					ViewInfo = OperatorInfo { Pos = { -274.192, 305.46 } },
 				},
 				Blur1 = Blur {
+					CtrlWShown = false,
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
 						XBlurSize = Input { Value = 3.1, },
@@ -506,6 +516,7 @@
 					ViewInfo = OperatorInfo { Pos = { -274.192, 258.505 } },
 				},
 				ColorMonitor1 = Custom {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = {
 						metadata = {
@@ -534,9 +545,8 @@
 							SourceOp = "ColorMonitor1LUTIn4",
 							Source = "Value",
 						},
-						AccentRed = Input { Value = 0.996078431372549, },
-						AccentGreen = Input { Value = 0.737254901960784, },
-						AccentBlue = Input { Value = 0.352941176470588, },
+						AccentRed = Input { Value = 0.016, },
+						AccentBlue = Input { Value = 1, },
 						AccentAlpha = Input { Value = 1, }
 					},
 					ViewInfo = OperatorInfo { Pos = { -492.096, 204.214 } },
@@ -806,18 +816,57 @@
 							LINKS_Name = "SurfaceAlpha",
 						}
 					}
+				},
+				Background2_1 = Background {
+					CtrlWShown = false,
+					Inputs = {
+						EffectMask = Input {
+							SourceOp = "Ellipse1_1",
+							Source = "Mask",
+						},
+						GlobalOut = Input { Value = 499, },
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						UseFrameFormatSettings = Input { Value = 1, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						TopLeftRed = Input { Value = 1, },
+						TopLeftGreen = Input { Value = 1, },
+						TopLeftBlue = Input { Value = 1, }
+					},
+					ViewInfo = OperatorInfo { Pos = { -30.9492, 303.993 } },
 				}
 			},
 		},
 		Left = AudioDisplay {
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Right = AudioDisplay {
 			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Transform5AngleControl = BezierSpline {
 			SplineColor = { Red = 14, Green = 221, Blue = 144 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 45, RH = { 7.999992, 0 }, Flags = { Linear = true } },
 				[24] = { 0, LH = { 16.000008, 0 } }
@@ -826,6 +875,13 @@
 		Path1 = PolyPath {
 			DrawMode = "InsertAndModify",
 			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Displacement = Input {
 					SourceOp = "Path1Displacement",
@@ -843,6 +899,14 @@
 		},
 		Path1Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 7.999992, 1 }, Flags = { LockedY = true } },
 				[24] = { 1, LH = { 16.000008, 1 }, Flags = { LockedY = true } }
@@ -850,7 +914,14 @@
 		},
 		CustomTool1NumberIn1 = BezierSpline {
 			SplineColor = { Red = 233, Green = 19, Blue = 5 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 8, 8 }, Flags = { Linear = true } },
 				[24] = { 24, LH = { 16, 16 }, Flags = { Linear = true } }
@@ -864,7 +935,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn2 = LUTBezier {
 			KeyColorSplines = {
@@ -874,7 +952,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn3 = LUTBezier {
 			KeyColorSplines = {
@@ -884,7 +969,14 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		CustomTool1LUTIn4 = LUTBezier {
 			KeyColorSplines = {
@@ -895,43 +987,75 @@
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Grain1Red = LUTBezier {
 			KeyColorSplines = {
 				[0] = {
-					[0] = { 1, RH = { 0.3, 1 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.7, 1 }, Flags = { Linear = true } }
+					[0] = { 1, RH = { 0.333333333333333, 1 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 1 }, Flags = { Linear = true } }
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Grain1Green = LUTBezier {
 			KeyColorSplines = {
 				[0] = {
-					[0] = { 1, RH = { 0.3, 1 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.7, 1 }, Flags = { Linear = true } }
+					[0] = { 1, RH = { 0.333333333333333, 1 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 1 }, Flags = { Linear = true } }
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Grain1Blue = LUTBezier {
 			KeyColorSplines = {
 				[0] = {
-					[0] = { 1, RH = { 0.3, 1 }, Flags = { Linear = true } },
-					[1] = { 1, LH = { 0.7, 1 }, Flags = { Linear = true } }
+					[0] = { 1, RH = { 0.333333333333333, 1 }, Flags = { Linear = true } },
+					[1] = { 1, LH = { 0.666666666666667, 1 }, Flags = { Linear = true } }
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 		},
 		Ellipse1_1WriteLengthControl = BezierSpline {
 			SplineColor = { Red = 141, Green = 167, Blue = 243 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 8, 0 } },
 				[24] = { 1, LH = { 16, 1 } }
@@ -940,7 +1064,13 @@
 		Transform4AngleControl = BezierSpline {
 			SplineColor = { Red = 14, Green = 221, Blue = 144 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { -180, RH = { 7.999992, 0 }, Flags = { Linear = true } },
 				[24] = { 0, LH = { 16.000008, 0 } }
@@ -954,6 +1084,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -970,6 +1101,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -986,6 +1118,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
