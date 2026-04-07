@@ -6,12 +6,12 @@
 			CustomData = { SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/DuoTextAnimation2.setting", Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Outputs = {
 				MainOutput1 = InstanceOutput {
-					SourceOp = "Transform1",
+					SourceOp = "Transform1_1",
 					Source = "Output",
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 396.89, 100.127 },
+				Pos = { 61.7252, 193.641 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -25,14 +25,15 @@
 			},
 			Tools = ordered() {
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = {
 						metadata = {
-							duration_formula = "",
 							lastModified = "Tue Jan 20 19:25:45 2026",
-							GroupID = "CustomTool1",
-							ID = "",
 							Description = "",
+							duration_formula = "",
+							ID = "",
+							GroupID = "CustomTool1",
 							Filled = false
 						},
 					},
@@ -72,7 +73,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
-					NameSet = true,
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn2 = LUTBezier {
 					KeyColorSplines = {
@@ -82,7 +83,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
-					NameSet = true,
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn3 = LUTBezier {
 					KeyColorSplines = {
@@ -92,7 +93,7 @@
 						}
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
-					NameSet = true,
+					CtrlWZoom = false,
 				},
 				CustomTool1LUTIn4 = LUTBezier {
 					KeyColorSplines = {
@@ -103,7 +104,6 @@
 					},
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
 					CtrlWZoom = false,
-					NameSet = true,
 				},
 				Merge5 = Merge {
 					CtrlWZoom = false,
@@ -156,7 +156,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -212,7 +212,7 @@
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Thu Nov 13 10:13:31 2025", Description = "", ID = "", GroupID = "Text1", Filled = false }, },
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -220,7 +220,7 @@
 						LayoutWidth = Input { Value = 0.927397260274, },
 						LayoutRotation = Input { Value = 1, },
 						Path = Input {
-							SourceOp = "Text1Path1",
+							SourceOp = "Text1Path",
 							Source = "Value",
 						},
 						CharacterSpacing = Input { Value = 0.959, },
@@ -251,8 +251,8 @@
 						ShadingMappingAspect1 = Input { Value = 1.024, },
 						Softness1 = Input { Value = 1, },
 						StyledText = Input {
-							SourceOp = "Publish1",
-							Source = "Value",
+							SourceOp = "Follower1",
+							Source = "StyledText",
 						},
 						Font = Input { Value = "Inter", },
 						Style = Input { Value = "Black", },
@@ -269,7 +269,7 @@
 					ViewInfo = OperatorInfo { Pos = { 134.757, 369.353 } },
 					UserControls = ordered() { Range = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", ICS_ControlPage = "Text", INP_SplineType = "Default", LINKS_Name = "Range" }, HeightControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "HeightControl", }, WidthControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "WidthControl", } }
 				},
-				Text1Path1 = BezierSpline {
+				Text1Path = BezierSpline {
 					SplineColor = { Red = 186, Green = 244, Blue = 89 },
 					NameSet = true,
 					KeyFrames = {
@@ -278,7 +278,6 @@
 					}
 				},
 				Text3 = TextPlus {
-					CtrlWShown = false,
 					NameSet = true,
 					CustomData = {
 						metadata = {
@@ -290,7 +289,7 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -333,8 +332,8 @@
 						ShadingMappingAspect1 = Input { Value = 1.024, },
 						Softness1 = Input { Value = 1, },
 						StyledText = Input {
-							SourceOp = "Publish1_1_2",
-							Source = "Value",
+							SourceOp = "Follower2",
+							Source = "StyledText",
 						},
 						Font = Input {
 							SourceOp = "Publish2_1",
@@ -367,7 +366,6 @@
 				},
 				Text3Path = BezierSpline {
 					SplineColor = { Red = 186, Green = 244, Blue = 89 },
-					CtrlWZoom = false,
 					KeyFrames = {
 						[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
 							} }
@@ -380,7 +378,6 @@
 					},
 				},
 				Publish2_1 = PublishText {
-					CtrlWZoom = false,
 					Inputs = {
 						Value = Input { Value = "Questa Grande", }
 					},
@@ -417,7 +414,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -475,7 +472,7 @@
 						Size = { 286.34, 102.005 }
 					},
 				},
-				Transform1 = Transform {
+				Transform1_1 = Transform {
 					CtrlWShown = false,
 					CustomData = {
 						metadata = {
@@ -495,6 +492,7 @@
 					ViewInfo = OperatorInfo { Pos = { 362.066, 142.165 } },
 				},
 				Rectangle1_2_1_1 = RectangleMask {
+					CtrlWShown = false,
 					CustomData = {
 						metadata = {
 							lastModified = "Tue Dec 23 18:07:24 2025",
@@ -512,11 +510,11 @@
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
 						Center = Input {
-							Value = { 0.488896414751921, 0.725141595642654 },
+							Value = { 0.5, 0.725141595642654 },
 							Expression = "self:GetValue(\"CenterControl\", self.HighlightControl)",
 						},
 						Width = Input {
-							Value = 0.729586037910535,
+							Value = 0.819,
 							Expression = "self:GetValue(\"WidthControl\", self.HighlightControl)",
 						},
 						Height = Input { Value = 0.087, },
@@ -530,17 +528,17 @@
 							Source = "Value",
 						},
 						HighlightControl = Input {
-							Value = 11,
+							Value = 16,
 							Expression = "CustomTool1.NumberIn1",
 						}
 					},
 					ViewInfo = OperatorInfo { Pos = { -96.6832, 269.26 } },
 					UserControls = ordered() {
 						CenterControl = {
-							INPID_InputControl = "OffsetControl",
-							LINKID_DataType = "Point",
-							LINKS_Name = "CenterControl",
 							ICS_ControlPage = "Controls",
+							LINKS_Name = "CenterControl",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
 						},
 						WidthControl = {
 							INP_Integer = false,
@@ -576,7 +574,7 @@
 							SourceOp = "Rectangle1_2_1_1",
 							Source = "Mask",
 						},
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -877,8 +875,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							CLRC_ShowWheel = false,
 							INP_SplineType = "Default",
+							CLRC_ShowWheel = false,
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -966,14 +964,57 @@
 		CustomTool1NumberIn1 = BezierSpline {
 			SplineColor = { Red = 233, Green = 19, Blue = 5 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true } },
 				[16] = { 16, LH = { 10.6666666666667, 10.6666666666667 }, Flags = { Linear = true } }
 			}
 		},
+		Follower1 = StyledTextFollower {
+			Inputs = {
+				Order = Input { Value = 7, },
+				Text = Input {
+					SourceOp = "Publish1",
+					Source = "Value",
+				},
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Softness3 = Input { Value = 1, },
+				Softness4 = Input { Value = 1, },
+				Softness5 = Input { Value = 1, },
+				Softness6 = Input { Value = 1, },
+				Softness7 = Input { Value = 1, },
+				Softness8 = Input { Value = 1, }
+			},
+		},
+		Follower2 = StyledTextFollower {
+			Inputs = {
+				Order = Input { Value = 7, },
+				Text = Input {
+					SourceOp = "Publish1_1_2",
+					Source = "Value",
+				},
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Softness3 = Input { Value = 1, },
+				Softness4 = Input { Value = 1, },
+				Softness5 = Input { Value = 1, },
+				Softness6 = Input { Value = 1, },
+				Softness7 = Input { Value = 1, },
+				Softness8 = Input { Value = 1, }
+			},
+		},
 		Path2_1_1_2 = PolyPath {
 			DrawMode = "InsertAndModify",
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -998,6 +1039,7 @@
 		},
 		Path2_1_1_2Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -1012,6 +1054,7 @@
 		},
 		Rectangle1_2_1_1WidthControl = BezierSpline {
 			SplineColor = { Red = 225, Green = 255, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -1230,5 +1273,6 @@
 				Value = Input { Value = 1, }
 			},
 		}
-	}
+	},
+	ActiveTool = "DuoTextAnimation2"
 }

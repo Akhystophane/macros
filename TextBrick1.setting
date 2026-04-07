@@ -12,7 +12,7 @@
 			},
 			Outputs = {
 				MainOutput1 = InstanceOutput {
-					SourceOp = "Transform1",
+					SourceOp = "Transform1_1",
 					Source = "Output",
 				},
 				Output1 = InstanceOutput {
@@ -21,7 +21,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { -755.616, 118.088 },
+				Pos = { 88.2763, 7.93722 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -56,7 +56,7 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -96,8 +96,8 @@
 						ShadingMappingAspect1 = Input { Value = 1.024, },
 						Softness1 = Input { Value = 1, },
 						StyledText = Input {
-							SourceOp = "Publish1_2",
-							Source = "Value",
+							SourceOp = "Follower1",
+							Source = "StyledText",
 						},
 						Font = Input { Value = "Inter", },
 						Style = Input { Value = "Black", },
@@ -113,7 +113,7 @@
 						HeightControl = Input { Value = 187.5, },
 						WidthControl = Input { Value = 653, }
 					},
-					ViewInfo = OperatorInfo { Pos = { 49.0424, 188.96 } },
+					ViewInfo = OperatorInfo { Pos = { 49.0424, 190.979 } },
 					UserControls = ordered() {
 						Range = {
 							INP_MaxAllowed = 1000000,
@@ -146,6 +146,7 @@
 					}
 				},
 				Publish1_2 = PublishText {
+					CtrlWZoom = false,
 					Inputs = {
 						Value = Input { Value = "Cet accident", }
 					},
@@ -171,7 +172,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 508, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -294,7 +295,7 @@
 					SplineColor = { Red = 0, Green = 0, Blue = 0 },
 					CtrlWZoom = false,
 				},
-				Transform1 = Transform {
+				Transform1_1 = Transform {
 					CtrlWShown = false,
 					CustomData = {
 						metadata = {
@@ -544,8 +545,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							INP_SplineType = "Default",
 							CLRC_ShowWheel = false,
+							INP_SplineType = "Default",
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -630,6 +631,24 @@
 				}
 			},
 		},
+		Follower1 = StyledTextFollower {
+			Inputs = {
+				Order = Input { Value = 7, },
+				Text = Input {
+					SourceOp = "Publish1_2",
+					Source = "Value",
+				},
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Softness3 = Input { Value = 1, },
+				Softness4 = Input { Value = 1, },
+				Softness5 = Input { Value = 1, },
+				Softness6 = Input { Value = 1, },
+				Softness7 = Input { Value = 1, },
+				Softness8 = Input { Value = 1, }
+			},
+		},
 		ColorMonitor1LUTIn1 = LUTBezier {
 			KeyColorSplines = {
 				[0] = {
@@ -699,6 +718,7 @@
 			},
 		},
 		Publish1 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -708,6 +728,7 @@
 			},
 		},
 		Publish3 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -717,6 +738,7 @@
 			},
 		},
 		Publish2 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = {
 				Path = {
 					Map = {
@@ -738,5 +760,6 @@
 				Value = Input { Value = 1, }
 			},
 		}
-	}
+	},
+	ActiveTool = "TextBrick1"
 }

@@ -1,7 +1,6 @@
 {
 	Tools = ordered() {
 		DuoTextAnimation1 = GroupOperator {
-			CtrlWZoom = false,
 			NameSet = true,
 			CustomData = { SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/DuoTextAnimation1.setting", Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Outputs = {
@@ -11,7 +10,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 472.752, 105.996 },
+				Pos = { 525.719, -132.006 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -52,6 +51,7 @@
 					},
 				},
 				CustomTool1 = Custom {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Thu Nov 13 10:13:23 2025", Description = "", duration_formula = "", ID = "", GroupID = "CustomTool1", Filled = false }, },
 					Inputs = {
@@ -151,6 +151,7 @@
 					ViewInfo = OperatorInfo { Pos = { 141.205, 149.1 } },
 				},
 				Rectangle1_2_1_1 = RectangleMask {
+					CtrlWShown = false,
 					CustomData = { metadata = { lastModified = "Tue Dec 23 18:07:24 2025", Description = "", ID = "", GroupID = "Highlight1", Filled = false }, },
 					Inputs = {
 						Filter = Input { Value = FuID { "Fast Gaussian" }, },
@@ -213,7 +214,6 @@
 					ViewInfo = OperatorInfo { Pos = { -104.387, 66.0917 } },
 				},
 				Text3_1 = TextPlus {
-					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Mon Nov 17 15:26:30 2025", Description = "", ID = "", GroupID = "Text2", Filled = false }, },
 					Inputs = {
@@ -260,8 +260,8 @@
 						ShadingMappingAspect1 = Input { Value = 1.024, },
 						Softness1 = Input { Value = 1, },
 						StyledText = Input {
-							SourceOp = "Publish1_1_2_1",
-							Source = "Value",
+							SourceOp = "Follower2",
+							Source = "StyledText",
 						},
 						Font = Input {
 							SourceOp = "Publish2_1_1",
@@ -406,6 +406,7 @@
 					ViewInfo = OperatorInfo { Pos = { -96.2254, 248.446 } },
 				},
 				Text1_1_1_1 = TextPlus {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Tue Dec 23 18:07:54 2025", Description = "", ID = "", GroupID = "Text1", Filled = false }, },
 					Inputs = {
@@ -448,8 +449,8 @@
 						ShadingMappingAspect1 = Input { Value = 1.024, },
 						Softness1 = Input { Value = 1, },
 						StyledText = Input {
-							SourceOp = "Publish1_1",
-							Source = "Value",
+							SourceOp = "Follower1",
+							Source = "StyledText",
 						},
 						Font = Input { Value = "Inter", },
 						Style = Input { Value = "Black", },
@@ -467,6 +468,7 @@
 					UserControls = ordered() { Range = { INP_MaxAllowed = 1000000, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", ICS_ControlPage = "Text", INP_SplineType = "Default", LINKS_Name = "Range" }, HeightControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "HeightControl", }, WidthControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Text", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "WidthControl", } }
 				},
 				ColorMonitor1 = Custom {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Mon Dec 29 21:50:09 2025", Description = "", duration_formula = "", ID = "", GroupID = "ColorMonitor1", Filled = false }, },
 					Inputs = {
@@ -543,7 +545,13 @@
 		CustomTool1NumberIn1 = BezierSpline {
 			SplineColor = { Red = 233, Green = 19, Blue = 5 },
 			CtrlWZoom = false,
-			NameSet = true,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			KeyFrames = {
 				[0] = { 0, RH = { 5.33333333333333, 5.33333333333333 }, Flags = { Linear = true } },
 				[16] = { 16, LH = { 10.6666666666667, 10.6666666666667 }, Flags = { Linear = true } }
@@ -557,7 +565,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		CustomTool1LUTIn2 = LUTBezier {
@@ -568,7 +576,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		CustomTool1LUTIn3 = LUTBezier {
@@ -579,7 +587,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
-			NameSet = true,
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		CustomTool1LUTIn4 = LUTBezier {
@@ -591,11 +599,11 @@
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
 			CtrlWZoom = false,
-			NameSet = true,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Path2_1_1_1 = PolyPath {
 			DrawMode = "InsertAndModify",
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Displacement = Input {
@@ -614,6 +622,7 @@
 		},
 		Path2_1_1_1Displacement = BezierSpline {
 			SplineColor = { Red = 255, Green = 0, Blue = 255 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			KeyFrames = {
 				[0] = { 0, RH = { 5.333328, 1 }, Flags = { Linear = true, LockedY = true } },
@@ -622,6 +631,7 @@
 		},
 		Rectangle1_2_1_1WidthControl = BezierSpline {
 			SplineColor = { Red = 225, Green = 255, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			KeyFrames = {
 				[0] = { 0.0001, RH = { 5.18445720512484, 0.811792392869747 }, Flags = { Linear = true } },
@@ -630,12 +640,29 @@
 		},
 		Text3_1Path = BezierSpline {
 			SplineColor = { Red = 186, Green = 244, Blue = 89 },
-			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			KeyFrames = {
 				[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
 					} }
 			}
+		},
+		Follower2 = StyledTextFollower {
+			Inputs = {
+				Order = Input { Value = 7, },
+				Text = Input {
+					SourceOp = "Publish1_1_2_1",
+					Source = "Value",
+				},
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Softness3 = Input { Value = 1, },
+				Softness4 = Input { Value = 1, },
+				Softness5 = Input { Value = 1, },
+				Softness6 = Input { Value = 1, },
+				Softness7 = Input { Value = 1, },
+				Softness8 = Input { Value = 1, }
+			},
 		},
 		Publish1_1_2_1 = PublishText {
 			CtrlWZoom = false,
@@ -645,7 +672,6 @@
 			},
 		},
 		Publish2_1_1 = PublishText {
-			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = "Questa Grande", }
@@ -676,11 +702,38 @@
 		},
 		Text1_1_1_1Path = BezierSpline {
 			SplineColor = { Red = 186, Green = 244, Blue = 89 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			KeyFrames = {
 				[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
 					} }
 			}
+		},
+		Follower1 = StyledTextFollower {
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
+			Inputs = {
+				Order = Input { Value = 7, },
+				Text = Input {
+					SourceOp = "Publish1_1",
+					Source = "Value",
+				},
+				TransformRotation = Input { Value = 1, },
+				Softness1 = Input { Value = 1, },
+				Softness2 = Input { Value = 1, },
+				Softness3 = Input { Value = 1, },
+				Softness4 = Input { Value = 1, },
+				Softness5 = Input { Value = 1, },
+				Softness6 = Input { Value = 1, },
+				Softness7 = Input { Value = 1, },
+				Softness8 = Input { Value = 1, }
+			},
 		},
 		ColorMonitor1LUTIn1 = LUTBezier {
 			KeyColorSplines = {
@@ -690,6 +743,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		ColorMonitor1LUTIn2 = LUTBezier {
@@ -700,6 +754,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		ColorMonitor1LUTIn3 = LUTBezier {
@@ -710,6 +765,7 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		ColorMonitor1LUTIn4 = LUTBezier {
@@ -720,54 +776,66 @@
 				}
 			},
 			SplineColor = { Red = 0, Green = 0, Blue = 0 },
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish1 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish3 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish2 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish4 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = 1, }
 			},
 		},
 		Publish5 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = 1, }
 			},
 		},
 		Publish6 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = 0.737254901960784, }
 			},
 		},
 		Publish7 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = 0.352941176470588, }
 			},
 		},
 		Publish8 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = 1, }
 			},
 		},
 		Publish9 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish10 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish11 = PublishNumber {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 		},
 		Publish12 = PublishNumber {
