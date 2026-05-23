@@ -1,9 +1,9 @@
 {
 	Tools = ordered() {
-		SlideDownVerticalIn1 = GroupOperator {
+		ZoomOutIn1 = GroupOperator {
 			NameSet = true,
 			CustomData = {
-				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/transitions/SlideDownVerticalIn1.setting",
+				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/transitions/ZoomOutIn1.setting",
 				Path = {
 					Map = {
 						["Setting:"] = "Macros:/minimalist/transitions/"
@@ -12,24 +12,24 @@
 			},
 			Inputs = ordered() {
 				Input1 = InstanceInput {
-					SourceOp = "Transform1_1",
+					SourceOp = "Transform2",
 					Source = "Input",
 				}
 			},
 			Outputs = {
 				Output1 = InstanceOutput {
-					SourceOp = "CustomTool1_1",
+					SourceOp = "CustomTool1_3",
 					Source = "Output",
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 271.554, 129.21 },
+				Pos = { -1101.08, 323.875 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
 					RemoveRouters = true
 				},
-				Size = { 234.032, 136.384, 117.016, 24.2424 },
+				Size = { 270.947, 189.24, 117.016, 24.2424 },
 				Direction = "Horizontal",
 				PipeStyle = "Direct",
 				Scale = 1,
@@ -39,7 +39,7 @@
 				Background3_1 = Background {
 					CtrlWShown = false,
 					Inputs = {
-						GlobalOut = Input { Value = 757, },
+						GlobalOut = Input { Value = 164, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -48,36 +48,7 @@
 					},
 					ViewInfo = OperatorInfo { Pos = { 289.232, 70.247 } },
 				},
-				Transform1_1 = Transform {
-					CtrlWShown = false,
-					CustomData = {
-						metadata = {
-							lastModified = "Sun Dec 28 17:50:46 2025",
-							Description = "",
-							ID = "",
-							GroupID = "Transform1",
-							Filled = false
-						},
-					},
-					Inputs = {
-						MotionBlur = Input { Value = 1, },
-						Center = Input { Expression = "self:GetValue(\"CenterControl\", CustomTool1_1.NumberIn1)", },
-						CenterControl = Input {
-							SourceOp = "Path3",
-							Source = "Position",
-						}
-					},
-					ViewInfo = OperatorInfo { Pos = { 375.575, 109.256 } },
-					UserControls = ordered() {
-						CenterControl = {
-							ICS_ControlPage = "Controls",
-							INPID_InputControl = "OffsetControl",
-							LINKID_DataType = "Point",
-							LINKS_Name = "CenterControl",
-						}
-					}
-				},
-				CustomTool1_1 = Custom {
+				CustomTool1_3 = Custom {
 					CtrlWShown = false,
 					NameSet = true,
 					CustomData = {
@@ -92,7 +63,7 @@
 					},
 					Inputs = {
 						NumberIn1 = Input {
-							SourceOp = "CustomTool1_1NumberIn1",
+							SourceOp = "CustomTool1_3NumberIn1",
 							Source = "Value",
 						},
 						LUTIn1 = Input {
@@ -120,13 +91,13 @@
 				},
 				Merge4_1_1 = Merge {
 					Inputs = {
-						Blend = Input { Expression = "self:GetValue(\"BlendControl\", CustomTool1_1.NumberIn1)", },
+						Blend = Input { Expression = "self:GetValue(\"BlendControl\", CustomTool1_3.NumberIn1)", },
 						Background = Input {
 							SourceOp = "Background3_1",
 							Source = "Output",
 						},
 						Foreground = Input {
-							SourceOp = "Transform1_1",
+							SourceOp = "Transform2",
 							Source = "Output",
 						},
 						PerformDepthMerge = Input { Value = 0, },
@@ -135,7 +106,7 @@
 							Source = "Value",
 						}
 					},
-					ViewInfo = OperatorInfo { Pos = { 397.264, 71.1741 } },
+					ViewInfo = OperatorInfo { Pos = { 396.535, 71.1741 } },
 					UserControls = ordered() {
 						BlendControl = {
 							INP_Integer = false,
@@ -146,53 +117,38 @@
 							LINKS_Name = "BlendControl",
 						}
 					}
-				}
-			},
-		},
-		Path3 = PolyPath {
-			DrawMode = "InsertAndModify",
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist/transitions/"
-					}
 				},
-			},
-			Inputs = {
-				Displacement = Input {
-					SourceOp = "Path3Displacement",
-					Source = "Value",
-				},
-				PolyLine = Input {
-					Value = Polyline {
-						Points = {
-							{ Linear = true, LockY = true, X = 0, Y = 1.36523, RX = 0, RY = -0.455076666666667 },
-							{ Linear = true, LockY = true, X = 0, Y = 0, LX = 0, LY = 0.455076666666667 }
+				Transform2 = Transform {
+					CtrlWShown = false,
+					Inputs = {
+						MotionBlur = Input { Value = 1, },
+						Quality = Input { Value = 4, },
+						ShutterAngle = Input { Value = 297.6, },
+						CenterBias = Input { Value = -0.05, },
+						SampleSpread = Input { Value = 3.48, },
+						Size = Input { Expression = "self:GetValue(\"SizeControl\", CustomTool1_3.NumberIn1)", },
+						SizeControl = Input {
+							SourceOp = "Transform2SizeControl",
+							Source = "Value",
 						}
 					},
+					ViewInfo = OperatorInfo { Pos = { 371.883, 108.976 } },
+					UserControls = ordered() {
+						SizeControl = {
+							INP_Integer = false,
+							LINKID_DataType = "Number",
+							ICS_ControlPage = "Controls",
+							INPID_InputControl = "SliderControl",
+							INP_SplineType = "Default",
+							LINKS_Name = "SizeControl",
+						}
+					}
 				}
 			},
 		},
-		Path3Displacement = BezierSpline {
-			SplineColor = { Red = 255, Green = 0, Blue = 178 },
-			CtrlWZoom = false,
-			CustomData = {
-				Path = {
-					Map = {
-						["Setting:"] = "Macros:/minimalist/transitions/"
-					}
-				},
-			},
-			KeyFrames = {
-				[0] = { 0, RH = { 0.76, 0.869999999999999 }, Flags = { Linear = true, LockedY = true } },
-				[20] = { 1, LH = { -0.3, 0.939999999999999 }, Flags = { LockedY = true } }
-			}
-		},
-		CustomTool1_1NumberIn1 = BezierSpline {
+		CustomTool1_3NumberIn1 = BezierSpline {
 			SplineColor = { Red = 233, Green = 19, Blue = 5 },
 			CtrlWZoom = false,
-			NameSet = true,
 			CustomData = {
 				Path = {
 					Map = {
@@ -284,9 +240,23 @@
 				},
 			},
 			KeyFrames = {
-				[0] = { 0, RH = { 0.0166666666666667, 0.333333333333333 }, Flags = { Linear = true } },
-				[0.05] = { 1, LH = { 0.0333333333333333, 0.666666666666667 }, RH = { 6.7, 1 }, Flags = { Linear = true } },
-				[20] = { 1, LH = { 13.35, 1 }, Flags = { Linear = true } }
+				[0] = { 0, RH = { 3.33333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+				[10] = { 1, LH = { 6.66666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+			}
+		},
+		Transform2SizeControl = BezierSpline {
+			SplineColor = { Red = 241, Green = 53, Blue = 179 },
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/transitions/"
+					}
+				},
+			},
+			KeyFrames = {
+				[0] = { 3, RH = { 6.66666, 1 }, Flags = { Linear = true } },
+				[20] = { 1, LH = { 13.33334, 1 } }
 			}
 		}
 	}
