@@ -1,0 +1,16 @@
+macro_info:
+  description: >-
+    Talking head footage ��� use when a person speaking on camera is the primary
+    visual. The footage occupies the full frame.
+  type_description: >-
+    Talking head footage — use when a person speaking on camera is the primary
+    visual. The footage occupies the full frame.
+  pos_possibility: &id001
+    mode: multi_zone
+    zones:
+    - top_main
+    - bottom_main
+  style_family: minimalist
+pos_possibility: *id001
+variables:
+- name: Footage1

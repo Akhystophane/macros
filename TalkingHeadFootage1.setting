@@ -1,0 +1,179 @@
+{
+	Tools = ordered() {
+		Footage1 = GroupOperator {
+			Outputs = {
+				MainOutput1 = InstanceOutput {
+					SourceOp = "Transform1",
+					Source = "Output",
+				}
+			},
+			ViewInfo = GroupInfo { Pos = { 0, 0 } },
+			Tools = ordered() {
+				Transform1 = Transform {
+					CtrlWZoom = false,
+					CustomData = {
+						metadata = {
+							Description = "",
+							Filled = false,
+							lastModified = "Sat Apr 11 20:04:42 2026",
+							ID = "",
+							GroupID = "Macro_Transform1"
+						},
+					},
+					Inputs = {
+						Input = Input {
+							SourceOp = "CustomTool1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 741.57, -31.8209 } },
+				},
+				CustomTool1 = Custom {
+					CustomData = {
+						metadata = {
+							Description = "",
+							Filled = false,
+							duration_formula = "",
+							lastModified = "Sat Apr 11 19:49:47 2026",
+							ID = "",
+							GroupID = "CustomTool1"
+						},
+					},
+					Inputs = {
+						LUTIn1 = Input {
+							SourceOp = "CustomTool1LUTIn1",
+							Source = "Value",
+						},
+						LUTIn2 = Input {
+							SourceOp = "CustomTool1LUTIn2",
+							Source = "Value",
+						},
+						LUTIn3 = Input {
+							SourceOp = "CustomTool1LUTIn3",
+							Source = "Value",
+						},
+						LUTIn4 = Input {
+							SourceOp = "CustomTool1LUTIn4",
+							Source = "Value",
+						},
+						Image1 = Input {
+							SourceOp = "Resize1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 631.57, -31.8209 } },
+				},
+				CustomTool1LUTIn1 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn2 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn3 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				CustomTool1LUTIn4 = LUTBezier {
+					KeyColorSplines = {
+						[0] = {
+							[0] = { 0, RH = { 0.333333333333333, 0.333333333333333 }, Flags = { Linear = true } },
+							[1] = { 1, LH = { 0.666666666666667, 0.666666666666667 }, Flags = { Linear = true } }
+						}
+					},
+					SplineColor = { Red = 0, Green = 0, Blue = 0 },
+					CtrlWZoom = false,
+				},
+				Resize1 = BetterResize {
+					Inputs = {
+						Width = Input { Value = 1080, },
+						Height = Input { Value = 1920, },
+						HiQOnly = Input { Value = 0, },
+						PixelAspect = Input { Value = { 1, 1 }, },
+						Input = Input {
+							SourceOp = "MediaIn1",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 521.57, -31.8209 } },
+				},
+				MediaIn1 = MediaIn {
+					ExtentSet = true,
+					CustomData = {
+						MediaProps = {
+							MEDIA_AUDIO_TRACKS_DESC = {
+								{
+									MEDIA_AUDIO_BIT_DEPTH = 32,
+									MEDIA_AUDIO_FRAME_RATE = 25,
+									MEDIA_AUDIO_NUM_CHANNELS = 1,
+									MEDIA_AUDIO_SAMPLE_RATE = 44100,
+									MEDIA_AUDIO_START_TIME = 0,
+									MEDIA_AUDIO_TRACK_ID = "a0b2cc1a-f3c5-4f5d-ad67-aa8e436889c5",
+									MEDIA_AUDIO_TRACK_NAME = "hook_video.mp4"
+								}
+							},
+							MEDIA_AUDIO_TRACKS_NUM = 1,
+							MEDIA_FORMAT_TYPE = "QuickTime",
+							MEDIA_HAS_AUDIO = true,
+							MEDIA_HEIGHT = 1312,
+							MEDIA_IS_SOURCE_RES = true,
+							MEDIA_MARK_IN = 0,
+							MEDIA_MARK_OUT = 170,
+							MEDIA_NAME = "hook_video.mp4",
+							MEDIA_NUM_FRAMES = 171,
+							MEDIA_NUM_LAYERS = 1,
+							MEDIA_PAR = 1,
+							MEDIA_PATH = "/Users/emmanuellandau/Downloads/hook_video.mp4",
+							MEDIA_SRC_FRAME_RATE = 25,
+							MEDIA_START_FRAME = 0,
+							MEDIA_WIDTH = 736
+						},
+						MEDIA_ID = "a0b2cc1a-f3c5-4f5d-ad67-aa8e436889c5",
+						metadata = {
+							Description = "",
+							Filled = false,
+							lastModified = "Sat Apr 11 19:49:20 2026",
+							ID = "",
+							GroupID = "Footage1"
+						}
+					},
+					Inputs = {
+						GlobalOut = Input { Value = 170, },
+						MediaSource = Input { Value = FuID { "MediaPool" }, },
+						MediaID = Input { Value = "a0b2cc1a-f3c5-4f5d-ad67-aa8e436889c5", },
+						AudioTrack = Input { Value = FuID { "No_Audo_Track" }, },
+						Layer = Input { Value = "", },
+						ClipTimeEnd = Input { Value = 170, },
+						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
+						DeepOutputMode = Input {
+							Value = 0,
+							Disabled = true,
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 400.619, -35.6791 } },
+					Version = 1
+				}
+			},
+		}
+	},
+	ActiveTool = "Footage1"
+}
