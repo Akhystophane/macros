@@ -1,6 +1,7 @@
 {
 	Tools = ordered() {
 		TrioTextAnimation1 = GroupOperator {
+			CtrlWZoom = false,
 			CustomData = {
 				SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/TrioTextAnimation1.setting",
 				Path = {
@@ -16,7 +17,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 470.283, 428.62 },
+				Pos = { 455.032, 250.958 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -161,7 +162,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -208,9 +209,12 @@
 					}
 				},
 				Publish1 = PublishText {
-					CtrlWZoom = false,
 					Inputs = {
-						Value = Input { Value = "IIIIIIIIIIIIIII", }
+						Value = Input {
+							Value = StyledText {
+								Value = "IIIIIIIIIII"
+							},
+						}
 					},
 				},
 				Text1 = TextPlus {
@@ -225,7 +229,7 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -270,7 +274,7 @@
 						Font = Input { Value = "Inter", },
 						Style = Input { Value = "Black", },
 						Size = Input {
-							Value = 0.266447368421053,
+							Value = 0.290591538461538,
 							Expression = "math.min(\n    self.WidthControl  / math.abs(AutoDomain1.Output.DataWindow[3] - AutoDomain1.Output.DataWindow[1]),\n    self.HeightControl / math.abs(AutoDomain1.Output.DataWindow[4] - AutoDomain1.Output.DataWindow[2])\n)",
 						},
 						VerticalJustificationNew = Input { Value = 3, },
@@ -284,7 +288,6 @@
 				},
 				Text1Path = BezierSpline {
 					SplineColor = { Red = 186, Green = 244, Blue = 89 },
-					NameSet = true,
 					KeyFrames = {
 						[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
 							} }
@@ -312,14 +315,14 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						Center = Input {
-							Value = { 0.4, 0.5484375 },
-							Expression = "Point(0.4, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[4]/1920) + (12/1920))",
+							Value = { 0.472, 0.5484375 },
+							Expression = "Point(0.472, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[4]/1920) + (12/1920))",
 						},
 						LayoutWidth = Input { Value = 0.927397260274, },
 						LayoutRotation = Input { Value = 1, },
@@ -364,7 +367,7 @@
 						},
 						Style = Input { Value = "Regular", },
 						Size = Input {
-							Value = 0.0803858520900322,
+							Value = 0.0723361002879892,
 							Expression = "math.min(\n    self.WidthControl  / math.abs(AutoDomain594030.Output.DataWindow[3] - AutoDomain594030.Output.DataWindow[1]),\n    self.HeightControl / math.abs(AutoDomain594030.Output.DataWindow[4] - AutoDomain594030.Output.DataWindow[2])\n)",
 						},
 						VerticalTopCenterBottom = Input { Value = 1, },
@@ -395,12 +398,16 @@
 					}
 				},
 				Publish1_1_2 = PublishText {
-					CtrlWZoom = false,
 					Inputs = {
-						Value = Input { Value = "Ne vient pas", }
+						Value = Input {
+							Value = StyledText {
+								Value = "Ne vient pas de de de de"
+							},
+						}
 					},
 				},
 				Publish2_1 = PublishText {
+					CtrlWZoom = false,
 					Inputs = {
 						Value = Input { Value = "Questa Grande", }
 					},
@@ -442,14 +449,14 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						Center = Input {
-							Value = { 0.56, 0.447916666666667 },
-							Expression = "Point(0.56, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[2]/1920) - (12/1920))\n",
+							Value = { 0.52, 0.447916666666667 },
+							Expression = "Point(0.52, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[2]/1920) - (12/1920))\n",
 						},
 						LayoutWidth = Input { Value = 0.927397260274, },
 						LayoutRotation = Input { Value = 1, },
@@ -494,7 +501,7 @@
 						},
 						Style = Input { Value = "Regular", },
 						Size = Input {
-							Value = 0.0763122727272727,
+							Value = 0.0732967893500392,
 							Expression = "math.min(\n    self.WidthControl  / math.abs(AutoDomain234.Output.DataWindow[3] - AutoDomain234.Output.DataWindow[1]),\n    self.HeightControl / math.abs(AutoDomain234.Output.DataWindow[4] - AutoDomain234.Output.DataWindow[2])\n)",
 						},
 						VerticalTopCenterBottom = Input { Value = -1, },
@@ -525,12 +532,16 @@
 					}
 				},
 				Publish1_1 = PublishText {
-					CtrlWZoom = false,
 					Inputs = {
-						Value = Input { Value = "Mark Zuckerberg", }
+						Value = Input {
+							Value = StyledText {
+								Value = "Mark Zuckerbergggggggg"
+							},
+						}
 					},
 				},
 				Publish2 = PublishText {
+					CtrlWZoom = false,
 					Inputs = {
 						Value = Input { Value = "Questa Grande", }
 					},
@@ -547,7 +558,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -623,7 +634,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -741,7 +752,7 @@
 							SourceOp = "Rectangle1_2_1_1",
 							Source = "Mask",
 						},
-						GlobalOut = Input { Value = 521, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -781,11 +792,11 @@
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
 						Center = Input {
-							Value = { 0.5, 0.725141595642654 },
+							Value = { 0.136158, 0.725141595642654 },
 							Expression = "self:GetValue(\"CenterControl\", self.HighlightControl)",
 						},
 						Width = Input {
-							Value = 0.638,
+							Value = 0.0001,
 							Expression = "self:GetValue(\"WidthControl\", self.HighlightControl)",
 						},
 						Height = Input { Value = 0.087, },
@@ -798,18 +809,15 @@
 							SourceOp = "Rectangle1_2_1_1WidthControl",
 							Source = "Value",
 						},
-						HighlightControl = Input {
-							Value = 16,
-							Expression = "CustomTool1.NumberIn1",
-						}
+						HighlightControl = Input { Expression = "CustomTool1.NumberIn1", }
 					},
 					ViewInfo = OperatorInfo { Pos = { -84.0041, 239.472 } },
 					UserControls = ordered() {
 						CenterControl = {
-							INPID_InputControl = "OffsetControl",
-							LINKID_DataType = "Point",
-							LINKS_Name = "CenterControl",
 							ICS_ControlPage = "Controls",
+							LINKS_Name = "CenterControl",
+							LINKID_DataType = "Point",
+							INPID_InputControl = "OffsetControl",
 						},
 						WidthControl = {
 							INP_Integer = false,
@@ -1092,8 +1100,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							INP_SplineType = "Default",
 							CLRC_ShowWheel = false,
+							INP_SplineType = "Default",
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -1194,6 +1202,14 @@
 			}
 		},
 		Follower1 = StyledTextFollower {
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
@@ -1212,6 +1228,13 @@
 			},
 		},
 		Follower3 = StyledTextFollower {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
@@ -1230,6 +1253,13 @@
 			},
 		},
 		Follower2 = StyledTextFollower {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
@@ -1508,5 +1538,6 @@
 				Value = Input { Value = 1, }
 			},
 		}
-	}
+	},
+	ActiveTool = "TrioTextAnimation1"
 }
