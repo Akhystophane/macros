@@ -1,6 +1,7 @@
 {
 	Tools = ordered() {
 		DuoTextAnimation1 = GroupOperator {
+			CtrlWZoom = false,
 			NameSet = true,
 			CustomData = { SxSFilename = "/Users/emmanuellandau/Library/Application Support/Blackmagic Design/DaVinci Resolve/Fusion/Macros/minimalist/DuoTextAnimation1.setting", Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Outputs = {
@@ -10,7 +11,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 525.719, -132.006 },
+				Pos = { 621.771, 274.067 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -129,7 +130,7 @@
 							SourceOp = "Rectangle1_2_1_1",
 							Source = "Mask",
 						},
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -161,11 +162,11 @@
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
 						Center = Input {
-							Value = { 0.506158151222112, 0.725141595642654 },
+							Value = { 0.136158, 0.725141595642654 },
 							Expression = "self:GetValue(\"CenterControl\", self.HighlightControl)",
 						},
 						Width = Input {
-							Value = 0.811,
+							Value = 0.0001,
 							Expression = "self:GetValue(\"WidthControl\", CustomTool1.NumberIn1)",
 						},
 						Height = Input { Value = 0.087, },
@@ -178,13 +179,10 @@
 							SourceOp = "Rectangle1_2_1_1WidthControl",
 							Source = "Value",
 						},
-						HighlightControl = Input {
-							Value = 16,
-							Expression = "CustomTool1.NumberIn1",
-						}
+						HighlightControl = Input { Expression = "CustomTool1.NumberIn1", }
 					},
 					ViewInfo = OperatorInfo { Pos = { 257.026, 148.152 } },
-					UserControls = ordered() { CenterControl = { ICS_ControlPage = "Controls", LINKS_Name = "CenterControl", LINKID_DataType = "Point", INPID_InputControl = "OffsetControl", }, WidthControl = { INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", ICS_ControlPage = "Controls", INP_SplineType = "Default", LINKS_Name = "WidthControl", }, HighlightControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Controls", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "HighlightControl", } }
+					UserControls = ordered() { CenterControl = { INPID_InputControl = "OffsetControl", LINKID_DataType = "Point", LINKS_Name = "CenterControl", ICS_ControlPage = "Controls", }, WidthControl = { INP_Integer = false, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", ICS_ControlPage = "Controls", INP_SplineType = "Default", LINKS_Name = "WidthControl", }, HighlightControl = { INP_Integer = false, LINKID_DataType = "Number", ICS_ControlPage = "Controls", INPID_InputControl = "SliderControl", INP_SplineType = "Default", LINKS_Name = "HighlightControl", } }
 				},
 				Merge3_1 = Merge {
 					CtrlWShown = false,
@@ -217,14 +215,14 @@
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Mon Nov 17 15:26:30 2025", Description = "", ID = "", GroupID = "Text2", Filled = false }, },
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						Center = Input {
-							Value = { 0.6, 0.459895833333333 },
-							Expression = "Point(0.6, (frame1_1:GetValue(\"Output\",DisplayFrame).DataWindow[2]/1920) + (12/1920))",
+							Value = { 0.555, 0.459895833333333 },
+							Expression = "Point(0.555, (frame1_1:GetValue(\"Output\",DisplayFrame).DataWindow[2]/1920) + (12/1920))",
 						},
 						LayoutWidth = Input { Value = 0.927397260274, },
 						LayoutRotation = Input { Value = 1, },
@@ -319,7 +317,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -366,7 +364,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -410,7 +408,7 @@
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Tue Dec 23 18:07:54 2025", Description = "", ID = "", GroupID = "Text1", Filled = false }, },
 					Inputs = {
-						GlobalOut = Input { Value = 499, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -538,7 +536,7 @@
 						}
 					},
 					ViewInfo = OperatorInfo { Pos = { 283.345, 100.759 } },
-					UserControls = ordered() { InkRed = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "InkRed", }, InkBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "InkBlue", }, InkGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "InkGreen", }, InkAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "InkAlpha", }, AccentRed = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "AccentRed", }, AccentGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "AccentGreen", }, AccentBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "AccentBlue", }, AccentAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "AccentAlpha", }, Ink2Red = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Red", }, Ink2Green = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Green", }, Ink2Blue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Blue", }, Ink2Alpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Alpha", }, Accent2Red = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Red", }, Accent2Blue = { INP_MaxAllowed = 1000000, INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_MaxScale = 1, IC_ControlGroup = 5, ICS_ControlPage = "Controls", INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", IC_ControlID = 2, INP_SplineType = "Default", CLRC_ShowWheel = false, LINKS_Name = "Accent2Blue" }, Accent2Green = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Green", }, Accent2Alpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Alpha", }, Surface = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceRed", }, SurfaceGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceGreen", }, SurfaceBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceBlue", }, SurfaceAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceAlpha", } }
+					UserControls = ordered() { InkRed = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "InkRed", }, InkBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "InkBlue", }, InkGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "InkGreen", }, InkAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 2, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "InkAlpha", }, AccentRed = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "AccentRed", }, AccentGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "AccentGreen", }, AccentBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "AccentBlue", }, AccentAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 3, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "AccentAlpha", }, Ink2Red = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Red", }, Ink2Green = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Green", }, Ink2Blue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Blue", }, Ink2Alpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 4, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "Ink2Alpha", }, Accent2Red = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Red", }, Accent2Blue = { INP_MaxAllowed = 1000000, INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_MaxScale = 1, IC_ControlGroup = 5, ICS_ControlPage = "Controls", INP_MinScale = 0, INP_MinAllowed = -1000000, LINKID_DataType = "Number", IC_ControlID = 2, CLRC_ShowWheel = false, INP_SplineType = "Default", LINKS_Name = "Accent2Blue" }, Accent2Green = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Green", }, Accent2Alpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 5, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "Accent2Alpha", }, Surface = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 0, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceRed", }, SurfaceGreen = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 1, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceGreen", }, SurfaceBlue = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 2, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceBlue", }, SurfaceAlpha = { INP_Integer = false, CLRC_NoSliders = false, INPID_InputControl = "ColorControl", CLRC_ColorSpace = "HSV", INP_SplineType = "Default", IC_ControlGroup = 6, CLRC_ShowWheel = false, LINKID_DataType = "Number", IC_ControlID = 3, ICS_ControlPage = "Controls", LINKS_Name = "SurfaceAlpha", } }
 				}
 			},
 		},
@@ -647,6 +645,13 @@
 			}
 		},
 		Follower2 = StyledTextFollower {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
@@ -665,13 +670,13 @@
 			},
 		},
 		Publish1_1_2_1 = PublishText {
-			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = "Mark Zuckerberg", }
 			},
 		},
 		Publish2_1_1 = PublishText {
+			CtrlWZoom = false,
 			CustomData = { Path = { Map = { ["Setting:"] = "Macros:/minimalist/" } }, },
 			Inputs = {
 				Value = Input { Value = "Questa Grande", }
@@ -845,5 +850,6 @@
 				Value = Input { Value = 1, }
 			},
 		}
-	}
+	},
+	ActiveTool = "DuoTextAnimation1"
 }

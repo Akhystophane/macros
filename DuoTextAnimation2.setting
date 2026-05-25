@@ -11,7 +11,7 @@
 				}
 			},
 			ViewInfo = GroupInfo {
-				Pos = { 61.7252, 193.641 },
+				Pos = { 482.211, 335.536 },
 				Flags = {
 					AllowPan = false,
 					AutoSnap = true,
@@ -156,7 +156,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 508, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -209,10 +209,11 @@
 					},
 				},
 				Text1 = TextPlus {
+					CtrlWShown = false,
 					NameSet = true,
 					CustomData = { metadata = { lastModified = "Thu Nov 13 10:13:31 2025", Description = "", ID = "", GroupID = "Text1", Filled = false }, },
 					Inputs = {
-						GlobalOut = Input { Value = 508, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -271,7 +272,7 @@
 				},
 				Text1Path = BezierSpline {
 					SplineColor = { Red = 186, Green = 244, Blue = 89 },
-					NameSet = true,
+					CtrlWZoom = false,
 					KeyFrames = {
 						[32] = { 0, Flags = { Linear = true, LockedY = true }, Value = Polyline {
 							} }
@@ -289,14 +290,14 @@
 						},
 					},
 					Inputs = {
-						GlobalOut = Input { Value = 508, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
 						["Gamut.SLogVersion"] = Input { Value = FuID { "SLog2" }, },
 						Center = Input {
-							Value = { 0.4, 0.5484375 },
-							Expression = "Point(0.4, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[4]/1920) + (12/1920))\n",
+							Value = { 0.47, 0.5484375 },
+							Expression = "Point(0.47, (frame1:GetValue(\"Output\",DisplayFrame).DataWindow[4]/1920) + (12/1920))\n",
 						},
 						LayoutWidth = Input { Value = 0.927397260274, },
 						LayoutRotation = Input { Value = 1, },
@@ -372,12 +373,16 @@
 					}
 				},
 				Publish1_1_2 = PublishText {
-					CtrlWZoom = false,
 					Inputs = {
-						Value = Input { Value = "Mark Zuckerberg", }
+						Value = Input {
+							Value = StyledText {
+								Value = "Mark Zuckerberg"
+							},
+						}
 					},
 				},
 				Publish2_1 = PublishText {
+					CtrlWZoom = false,
 					Inputs = {
 						Value = Input { Value = "Questa Grande", }
 					},
@@ -414,7 +419,7 @@
 					CtrlWShown = false,
 					NameSet = true,
 					Inputs = {
-						GlobalOut = Input { Value = 508, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -510,11 +515,11 @@
 						UseFrameFormatSettings = Input { Value = 1, },
 						ClippingMode = Input { Value = FuID { "None" }, },
 						Center = Input {
-							Value = { 0.5, 0.725141595642654 },
+							Value = { 0.136158, 0.725141595642654 },
 							Expression = "self:GetValue(\"CenterControl\", self.HighlightControl)",
 						},
 						Width = Input {
-							Value = 0.819,
+							Value = 0.0001,
 							Expression = "self:GetValue(\"WidthControl\", self.HighlightControl)",
 						},
 						Height = Input { Value = 0.087, },
@@ -527,18 +532,15 @@
 							SourceOp = "Rectangle1_2_1_1WidthControl",
 							Source = "Value",
 						},
-						HighlightControl = Input {
-							Value = 16,
-							Expression = "CustomTool1.NumberIn1",
-						}
+						HighlightControl = Input { Expression = "CustomTool1.NumberIn1", }
 					},
 					ViewInfo = OperatorInfo { Pos = { -96.6832, 269.26 } },
 					UserControls = ordered() {
 						CenterControl = {
-							ICS_ControlPage = "Controls",
-							LINKS_Name = "CenterControl",
-							LINKID_DataType = "Point",
 							INPID_InputControl = "OffsetControl",
+							LINKID_DataType = "Point",
+							LINKS_Name = "CenterControl",
+							ICS_ControlPage = "Controls",
 						},
 						WidthControl = {
 							INP_Integer = false,
@@ -574,7 +576,7 @@
 							SourceOp = "Rectangle1_2_1_1",
 							Source = "Mask",
 						},
-						GlobalOut = Input { Value = 508, },
+						GlobalOut = Input { Value = 570, },
 						Width = Input { Value = 1080, },
 						Height = Input { Value = 1920, },
 						UseFrameFormatSettings = Input { Value = 1, },
@@ -875,8 +877,8 @@
 							INP_MinAllowed = -1000000,
 							LINKID_DataType = "Number",
 							IC_ControlID = 2,
-							INP_SplineType = "Default",
 							CLRC_ShowWheel = false,
+							INP_SplineType = "Default",
 							LINKS_Name = "Accent2Blue"
 						},
 						Accent2Green = {
@@ -977,6 +979,14 @@
 			}
 		},
 		Follower1 = StyledTextFollower {
+			CtrlWZoom = false,
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
@@ -995,6 +1005,13 @@
 			},
 		},
 		Follower2 = StyledTextFollower {
+			CustomData = {
+				Path = {
+					Map = {
+						["Setting:"] = "Macros:/minimalist/"
+					}
+				},
+			},
 			Inputs = {
 				Order = Input { Value = 7, },
 				Text = Input {
